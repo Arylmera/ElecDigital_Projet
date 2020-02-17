@@ -9391,8 +9391,6 @@ D = Direct mounting &lt;p&gt;
 <segment>
 <pinref part="X2" gate="G$1" pin="5"/>
 <wire x1="167.64" y1="38.1" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
-<label x="167.64" y="27.94" size="1.778" layer="95"/>
-<label x="160.02" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
