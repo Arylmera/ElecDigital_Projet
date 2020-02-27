@@ -1,0 +1,16 @@
+#include <main.h>
+
+void main()
+{
+   setup_low_volt_detect(FALSE);
+
+	//Example blinking LED program
+	while(true)
+	{
+		output_low(LED);
+		delay_ms(DELAY);
+		output_high(LED);
+		delay_ms(DELAY);
+	}
+
+}
