@@ -1,9 +1,9 @@
-CCS PCH C Compiler, Version 5.008, 5967               02-mars-20 10:51
+CCS PCH C Compiler, Version 5.008, 5967               02-mars-20 11:08
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\test\main.lst
 
-               ROM used:   108 bytes (0%)
-                           Largest free fragment is 32660
+               ROM used:   118 bytes (0%)
+                           Largest free fragment is 32650
                RAM used:   5 (0%) at main() level
                            7 (0%) worst case
                Stack used: 1 locations
@@ -99,11 +99,19 @@ CCS PCH C Compiler, Version 5.008, 5967               02-mars-20 10:51
 0062:  MOVFF  05,F8A
 ....................       b_value++; 
 0066:  INCF   05,F
-0068:  BRA    0042
+....................       if(b_value > 10) { 
+0068:  MOVF   05,W
+006A:  SUBLW  0A
+006C:  BC    0072
+....................       output_high(PIN_E2); 
+006E:  BCF    F96.2
+0070:  BSF    F8D.2
+....................       } 
+0072:  BRA    0042
 ....................    } 
 ....................  
 .................... } 
-006A:  SLEEP 
+0074:  SLEEP 
 
 Configuration Fuses:
    Word  1: 2200   HS NOOSCSEN

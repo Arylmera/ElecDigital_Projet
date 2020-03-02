@@ -18,7 +18,7 @@ void main()
       output_b(b_value);
       b_value++;
       if(b_value > 10) {
-      output_high(PIN_E2);
+      output_high(PIN_D1);
       }
    }
 
