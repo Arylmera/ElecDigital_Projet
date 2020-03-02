@@ -31,12 +31,12 @@ ROM Allocation:
 00003E  @cinit2
 
 Project Directory:
-    C:\Users\guill\Desktop\test\
+    W:\Ephec\ElecDigitalProjet\ccs\test\
 
 Project Files:
-    main.c                                                  [27-févr.-20 10:58  CRC=B723CC71]
-    W:\Ephec\ElecDigitalProjet\ccs\test\main.h              [27-févr.-20 10:34  CRC=784CF644]
-    ..\..\..\..\Program Files (x86)\PICC\Devices\18F458.h   [03-juil.-13 14:28  CRC=1AB1DF0F]
+    main.c                                                  [02-mars-20 10:51  CRC=B723CC71]
+    main.h                                                  [27-févr.-20 10:34  CRC=784CF644]
+    C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 14:28  CRC=1AB1DF0F]
 
 Source signature=64D480D3
 

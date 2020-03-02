@@ -14,8 +14,8 @@ Stack size: 31
 Lines Stmts  %   Files
 ----- ----- ---  -----
    23    11 100  main.c
-   16     0   0  W:\Ephec\ElecDigitalProjet\ccs\test\main.h
-  766     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\18F458.h
+   16     0   0  main.h
+  766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
 ----- -----
   805    11 Total
 

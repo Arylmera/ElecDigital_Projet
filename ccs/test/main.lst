@@ -1,6 +1,6 @@
-CCS PCH C Compiler, Version 5.008, 5967               27-févr.-20 10:58
+CCS PCH C Compiler, Version 5.008, 5967               02-mars-20 10:51
 
-               Filename:   C:\Users\guill\Desktop\test\main.lst
+               Filename:   W:\Ephec\ElecDigitalProjet\ccs\test\main.lst
 
                ROM used:   108 bytes (0%)
                            Largest free fragment is 32660
@@ -77,11 +77,11 @@ CCS PCH C Compiler, Version 5.008, 5967               27-févr.-20 10:58
 ....................       output_high(PIN_E0); 
 0042:  BCF    F96.0
 0044:  BSF    F8D.0
-....................       output_high(PIN_E1); 
+....................       output_low(PIN_E1); 
 0046:  BCF    F96.1
-0048:  BSF    F8D.1
-....................       delay_ms(1000); 
-004A:  MOVLW  04
+0048:  BCF    F8D.1
+....................       delay_ms(500); 
+004A:  MOVLW  02
 004C:  MOVWF  06
 004E:  MOVLW  FA
 0050:  MOVWF  07
@@ -91,9 +91,9 @@ CCS PCH C Compiler, Version 5.008, 5967               27-févr.-20 10:58
 ....................       output_low(PIN_E0); 
 0058:  BCF    F96.0
 005A:  BCF    F8D.0
-....................       output_low(PIN_E1); 
+....................       output_high(PIN_E1); 
 005C:  BCF    F96.1
-005E:  BCF    F8D.1
+005E:  BSF    F8D.1
 ....................       output_b(b_value); 
 0060:  CLRF   F93
 0062:  MOVFF  05,F8A

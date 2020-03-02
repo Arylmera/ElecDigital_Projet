@@ -11,10 +11,10 @@ void main()
    while(true)
    {
       output_high(PIN_E0);
-      output_low(PIN_E1);
-      delay_ms(500);
-      output_low(PIN_E0);
       output_high(PIN_E1);
+      delay_ms(1000);
+      output_low(PIN_E0);
+      output_low(PIN_E1);
       output_b(b_value);
       b_value++;
    }
