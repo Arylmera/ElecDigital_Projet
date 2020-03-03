@@ -1,7 +1,8 @@
-D G "__PCH__" 0 27 ""5.008""
-D G "__DEVICE__" 0 27 "458"
-D G "__DATE__" 0 27 ""02-mars-20""
-D G "__TIME__" 0 27 ""11:08:18"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "DELAY" 1 13 "1000"
+D G "__PCH__" 0 40 ""5.008""
+D G "__DEVICE__" 0 40 "458"
+D G "__DATE__" 0 40 ""03-mars-20""
+D G "__TIME__" 0 40 ""18:58:30"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -861,9 +862,13 @@ d G "INT_CANRX1" 2 762 "0x00A302"
 d G "INT_CANRX0" 2 763 "0x00A301"
 D G "LED" 1 12 "PIN_None"
 D G "DELAY" 1 13 "1000"
-F G "main" 0 4 "void()" `633 
-C L "main" 0 7 1 "FUNCTION"
-V L "b_value" 0 9 "int8" `636 
+V G "b_value" 0 3 "int8" `633 
+V L "value" 0 5 "int8" `635 
+F G "outputValueParser" 0 5 "int8(int8 value)" `634 
+V L "output" 0 6 "int8" `636 
+V L "x" 0 9 "int8" `637 
+V L "i" 0 11 "int8" `641 
+F G "MAIN" 0 20 "void()" `642 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

@@ -1,0 +1,34 @@
+#include <main.h>
+
+int b_value;
+int b_otp_value;
+
+void main()
+{
+   setup_low_volt_detect(FALSE);
+   b_value = 0;
+   b_otp_value = 0;
+    
+   while(true)
+   {
+   
+   if (b_value < 10) { b_otp_value = b_value;}
+   else {
+    int x = b_value;
+    x = x%10;
+    int i = b_value;
+    i = i/10;
+    
+    b_otp_value = x + i*16;
+   }
+   
+   output_b( b_otp_value );
+   output_high(PIN_E1);
+   delay_ms(500);
+   output_low(PIN_E1);
+   b_value++;
+   
+   }
+
+}
+

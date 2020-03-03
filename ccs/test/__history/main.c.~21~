@@ -1,0 +1,40 @@
+#include <main.h>
+
+int b_value;
+int segL_value;
+int segR_value;
+unsigned int seg(unsigned int num) {
+  switch (num) {
+    case 0 : return 0xC0;
+    case 1 : return 0xF9;
+    case 2 : return 0xA4;
+    case 3 : return 0xB0;
+    case 4 : return 0x99;
+    case 5 : return 0x92;
+    case 6 : return 0x82;
+    case 7 : return 0xF8;
+    case 8 : return 0x80;
+    case 9 : return 0x90;
+   }
+}
+
+void main()
+{
+   setup_low_volt_detect(FALSE);
+   b_value = 0;
+    
+   while(true)
+   {
+   segL_value = 0;
+   segR_value = 0;
+   
+   segR_value = seg(b_value % 10);
+   segL_value = seg((b_value/10) % 10);
+   
+   output_b(segL_value);
+   
+   delay_ms(500);
+   b_value++;
+   }
+
+}
