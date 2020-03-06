@@ -1,37 +1,37 @@
-CCS PCH C Compiler, Version 5.008, 5967               03-mars-20 18:56
+CCS PCH C Compiler, Version 5.008, 5967               05-mars-20 14:47
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\test\main.lst
 
-               ROM used:   200 bytes (1%)
-                           Largest free fragment is 32568
-               RAM used:   7 (0%) at main() level
-                           11 (1%) worst case
-               Stack used: 1 locations
+               ROM used:   214 bytes (1%)
+                           Largest free fragment is 32554
+               RAM used:   6 (0%) at main() level
+                           12 (1%) worst case
+               Stack used: 2 locations
                Stack size: 31
 
 *
-0000:  GOTO   0054
+0000:  GOTO   0098
 .................... #include <main.h> 
 .................... #include <18F458.h> 
 .................... //////// Standard Header file for the PIC18F458 device //////////////// 
 .................... #device PIC18F458 
-0004:  MOVF   09,W
+0004:  MOVF   0A,W
 0006:  CLRF   01
-0008:  SUBWF  08,W
+0008:  SUBWF  09,W
 000A:  BC    0012
-000C:  MOVFF  08,00
+000C:  MOVFF  09,00
 0010:  BRA    002A
 0012:  CLRF   00
 0014:  MOVLW  08
-0016:  MOVWF  0A
-0018:  RLCF   08,F
+0016:  MOVWF  0B
+0018:  RLCF   09,F
 001A:  RLCF   00,F
-001C:  MOVF   09,W
+001C:  MOVF   0A,W
 001E:  SUBWF  00,W
 0020:  BTFSC  FD8.0
 0022:  MOVWF  00
 0024:  RLCF   01,F
-0026:  DECFSZ 0A,F
+0026:  DECFSZ 0B,F
 0028:  BRA    0018
 002A:  RETURN 0
 ....................  
@@ -45,25 +45,26 @@ CCS PCH C Compiler, Version 5.008, 5967               03-mars-20 18:56
 .................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
 ....................  
 .................... #use delay(crystal=20MHz) 
-002C:  CLRF   FEA
-002E:  MOVLW  09
-0030:  MOVWF  FE9
-0032:  MOVF   FEF,W
-0034:  BZ    0050
-0036:  MOVLW  06
-0038:  MOVWF  01
-003A:  CLRF   00
-003C:  DECFSZ 00,F
-003E:  BRA    003C
-0040:  DECFSZ 01,F
-0042:  BRA    003A
-0044:  MOVLW  7B
-0046:  MOVWF  00
-0048:  DECFSZ 00,F
-004A:  BRA    0048
-004C:  DECFSZ FEF,F
-004E:  BRA    0036
-0050:  GOTO   00BA (RETURN)
+*
+0070:  CLRF   FEA
+0072:  MOVLW  06
+0074:  MOVWF  FE9
+0076:  MOVF   FEF,W
+0078:  BZ    0094
+007A:  MOVLW  06
+007C:  MOVWF  01
+007E:  CLRF   00
+0080:  DECFSZ 00,F
+0082:  BRA    0080
+0084:  DECFSZ 01,F
+0086:  BRA    007E
+0088:  MOVLW  7B
+008A:  MOVWF  00
+008C:  DECFSZ 00,F
+008E:  BRA    008C
+0090:  DECFSZ FEF,F
+0092:  BRA    007A
+0094:  GOTO   00C8 (RETURN)
 .................... #use rs232(baud=9600,parity=N,xmit=0,rcv=0,bits=8,stream=PORT1) 
 ....................  
 .................... #define LED PIN_None 
@@ -73,87 +74,95 @@ CCS PCH C Compiler, Version 5.008, 5967               03-mars-20 18:56
 ....................  
 ....................  
 .................... int b_value; 
-.................... int b_otp_value; 
+....................  
+.................... int outputValueParser(int value){ 
+*
+002C:  CLRF   06
+....................    int output = 0; 
+....................    if (b_value < 10) { output = value;} 
+002E:  MOVF   04,W
+0030:  SUBLW  09
+0032:  BNC   003A
+0034:  MOVFF  05,06
+0038:  BRA    0068
+....................    else { 
+....................     int x = value; 
+003A:  MOVFF  05,07
+....................     x = x%10; 
+003E:  MOVFF  07,09
+0042:  MOVLW  0A
+0044:  MOVWF  0A
+0046:  RCALL  0004
+0048:  MOVFF  00,07
+....................     int i = value; 
+004C:  MOVFF  05,08
+....................     i = i/10; 
+0050:  MOVFF  08,09
+0054:  MOVLW  0A
+0056:  MOVWF  0A
+0058:  RCALL  0004
+005A:  MOVFF  01,08
+....................      
+....................     output = x + i*16; 
+005E:  MOVF   08,W
+0060:  MULLW  10
+0062:  MOVF   FF3,W
+0064:  ADDWF  07,W
+0066:  MOVWF  06
+....................    } 
+....................    return output; 
+0068:  MOVFF  06,01
+006C:  GOTO   00B4 (RETURN)
+.................... } 
 ....................  
 .................... void main() 
-0054:  CLRF   FF8
-0056:  BCF    FD0.7
-0058:  BSF    00.0
-005A:  BSF    FC1.0
-005C:  BSF    FC1.1
-005E:  BSF    FC1.2
-0060:  BCF    FC1.3
-0062:  MOVLW  07
-0064:  MOVWF  FB4
+*
+0098:  CLRF   FF8
+009A:  BCF    FD0.7
+009C:  BSF    00.0
+009E:  BSF    FC1.0
+00A0:  BSF    FC1.1
+00A2:  BSF    FC1.2
+00A4:  BCF    FC1.3
+00A6:  MOVLW  07
+00A8:  MOVWF  FB4
 .................... { 
 ....................    setup_low_volt_detect(FALSE); 
-0066:  CLRF   FD2
+00AA:  CLRF   FD2
 ....................    b_value = 0; 
-0068:  CLRF   04
-....................    b_otp_value = 0; 
-006A:  CLRF   05
+00AC:  CLRF   04
+....................  
 ....................      
 ....................    while(true) 
 ....................    { 
-....................     
-....................    if (b_value < 10) { b_otp_value = b_value;} 
-006C:  MOVF   04,W
-006E:  SUBLW  09
-0070:  BNC   0078
-0072:  MOVFF  04,05
-0076:  BRA    00A6
-....................    else { 
-....................     int x = b_value; 
-0078:  MOVFF  04,06
-....................     x = x%10; 
-007C:  MOVFF  06,08
-0080:  MOVLW  0A
-0082:  MOVWF  09
-0084:  RCALL  0004
-0086:  MOVFF  00,06
-....................     int i = b_value; 
-008A:  MOVFF  04,07
-....................     i = i/10; 
-008E:  MOVFF  07,08
-0092:  MOVLW  0A
-0094:  MOVWF  09
-0096:  RCALL  0004
-0098:  MOVFF  01,07
-....................      
-....................     b_otp_value = x + i*16; 
-009C:  MOVF   07,W
-009E:  MULLW  10
-00A0:  MOVF   FF3,W
-00A2:  ADDWF  06,W
-00A4:  MOVWF  05
-....................    } 
-....................     
-....................    output_b( b_otp_value ); 
-00A6:  CLRF   F93
-00A8:  MOVFF  05,F8A
+....................    output_b( outputValueParser(b_value) ); 
+00AE:  MOVFF  04,05
+00B2:  BRA    002C
+00B4:  CLRF   F93
+00B6:  MOVFF  01,F8A
 ....................    output_high(PIN_E1); 
-00AC:  BCF    F96.1
-00AE:  BSF    F8D.1
+00BA:  BCF    F96.1
+00BC:  BSF    F8D.1
 ....................    delay_ms(500); 
-00B0:  MOVLW  02
-00B2:  MOVWF  08
-00B4:  MOVLW  FA
-00B6:  MOVWF  09
-00B8:  BRA    002C
-00BA:  DECFSZ 08,F
-00BC:  BRA    00B4
+00BE:  MOVLW  02
+00C0:  MOVWF  05
+00C2:  MOVLW  FA
+00C4:  MOVWF  06
+00C6:  BRA    0070
+00C8:  DECFSZ 05,F
+00CA:  BRA    00C2
 ....................    output_low(PIN_E1); 
-00BE:  BCF    F96.1
-00C0:  BCF    F8D.1
+00CC:  BCF    F96.1
+00CE:  BCF    F8D.1
 ....................    b_value++; 
-00C2:  INCF   04,F
-00C4:  BRA    006C
+00D0:  INCF   04,F
+00D2:  BRA    00AE
 ....................     
 ....................    } 
 ....................  
 .................... } 
 ....................  
-00C6:  SLEEP 
+00D4:  SLEEP 
 
 Configuration Fuses:
    Word  1: 2200   HS NOOSCSEN

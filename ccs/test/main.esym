@@ -1,8 +1,7 @@
-D G "DELAY" 1 13 "1000"
-D G "__PCH__" 0 40 ""5.008""
-D G "__DEVICE__" 0 40 "458"
-D G "__DATE__" 0 40 ""03-mars-20""
-D G "__TIME__" 0 40 ""18:58:30"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "__PCH__" 0 38 ""5.008""
+D G "__DEVICE__" 0 38 "458"
+D G "__DATE__" 0 38 ""05-mars-20""
+D G "__TIME__" 0 38 ""14:47:22"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 

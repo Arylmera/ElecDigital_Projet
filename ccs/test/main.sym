@@ -4,14 +4,15 @@
 002     @SCRATCH
 003     @SCRATCH
 004     b_value
-005     b_otp_value
-006     main.x
-007     main.i
-008     @DIV88.P1
-008     main.@SCRATCH1
+005     outputValueParser.value
+005     MAIN.@SCRATCH1
+006     @delay_ms1.P1
+006     outputValueParser.output
+007     outputValueParser.x
+008     outputValueParser.i
 009     @DIV88.P1
-009     @delay_ms1.P2
-00A     @DIV88.@SCRATCH1
+00A     @DIV88.P1
+00B     @DIV88.@SCRATCH1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
@@ -21,31 +22,32 @@ FBC     CCP_2_HIGH
 FBE     CCP_1
 FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
 FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P3
-FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
 FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000004  @DIV88
-00002C  @delay_ms1
-000054  main
-000054  @cinit1
-000066  @cinit2
+00002C  outputValueParser
+000070  @delay_ms1
+000098  MAIN
+000098  @cinit1
+0000AA  @cinit2
 
 Project Directory:
     W:\Ephec\ElecDigitalProjet\ccs\test\
 
 Project Files:
-    main.c                                                  [03-mars-20 18:56  CRC=B048E1E6]
+    main.c                                                  [05-mars-20 14:47  CRC=D4719D21]
     main.h                                                  [27-févr.-20 10:34  CRC=784CF644]
     C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 14:28  CRC=1AB1DF0F]
 
-Source signature=5DF99648
+Source signature=82225183
 
 Units:
     main (main)

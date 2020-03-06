@@ -13,7 +13,7 @@ int outputValueParser(int value){
     
     output = x + i*16;
    }
-   return output;
+   return output
 }
 
 void main()

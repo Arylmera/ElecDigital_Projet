@@ -1,3 +1,3 @@
-*** Error 76 "main.c" Line 17(1,2): Expect ;
-      1 Errors,  0 Warnings.
-Build Failed.
+      Memory usage:   ROM=1%      RAM=0% - 1%
+      0 Errors,  0 Warnings.
+Build Successful.
