@@ -46,21 +46,26 @@ void triggerSonde(){
 */
 void main()
 {
+   delay_ms(1000);                              // Boot-up delay
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);     // initiating timer
    setup_low_volt_detect(FALSE);
    set_tris_c(0x01000000); // set RC1 as input (ECHO)
+   set_timer1(0);
+   
+   enable_interrupts(INT_TIMER0);
+   enable_interrupts(GLOBAL);
    
    while(true)
    {
    b = 0;
    
    triggerSonde();
+   set_timer1(0);
    
-   while(echo == 0){}
-   while(echo == 1){
-      time++;
-      delay_ms(1);
-   }
+   while(!echo){}
+   while(echo){}
    
+   time = get_timer();
    b = parseDist(time);
    
    output_b(outputValueParser(b));

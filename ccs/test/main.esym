@@ -1,7 +1,8 @@
-D G "__PCH__" 0 38 ""5.008""
-D G "__DEVICE__" 0 38 "458"
-D G "__DATE__" 0 38 ""05-mars-20""
-D G "__TIME__" 0 38 ""14:47:22"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "echo" 0 6 "pin_C1"
+D G "__PCH__" 0 73 ""5.008""
+D G "__DEVICE__" 0 73 "458"
+D G "__DATE__" 0 73 ""07-mars-20""
+D G "__TIME__" 0 73 ""13:46:54"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -861,13 +862,23 @@ d G "INT_CANRX1" 2 762 "0x00A302"
 d G "INT_CANRX0" 2 763 "0x00A301"
 D G "LED" 1 12 "PIN_None"
 D G "DELAY" 1 13 "1000"
-V G "b_value" 0 3 "int8" `633 
-V L "value" 0 5 "int8" `635 
-F G "outputValueParser" 0 5 "int8(int8 value)" `634 
-V L "output" 0 6 "int8" `636 
-V L "x" 0 9 "int8" `637 
-V L "i" 0 11 "int8" `641 
-F G "MAIN" 0 20 "void()" `642 
+D G "trigger" 0 5 "pin_C0"
+D G "echo" 0 6 "pin_C1"
+V G "b" 0 8 "int8" `633 
+V G "time" 0 9 "int8" `634  "* transofmation de la valeur en valeur base 16"
+V L "value" 0 14 "int8" `636 
+F G "outputValueParser" 0 14 "int8(int8 value)" `635 
+V L "output" 0 15 "int8" `637 
+V L "x" 0 18 "int8" `638 
+V L "i" 0 20 "int8" `642 
+C L "parseDist" 0 28 1 "*"
+V L "dist" 0 31 "int8" `644 
+F G "parseDist" 0 31 "int8(int8 dist)" `643 
+C L "triggerSonde" 0 35 1 "*"
+F G "triggerSonde" 0 38 "void()" `645 
+C L "MAIN" 0 44 1 "*"
+F G "MAIN" 0 48 "void()" `646 
+C L "MAIN" 0 44 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

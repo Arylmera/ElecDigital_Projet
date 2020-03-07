@@ -1,12 +1,6 @@
 #include <main.h>
 
-#use fast_io(C)
-
-#define trigger pin_C0
-#define echo pin_C1
-
 int b;
-int time;
 
 /*
 * transofmation de la valeur en valeur base 16
@@ -26,20 +20,22 @@ int outputValueParser(int value){
 }
 
 /*
-* récupération distance
+* transformation du temps en distance
 */
-int parseDist(int dist){
-  return dist/58;
+int timeToDist(int time){
+   return time/58.82;
 }
 
 /*
 * trigger de la sonde
 */
 void triggerSonde(){
-   output_high(trigger);
-   delay_us(10);
-   output_low(trigger);
+   output_high(PIN_C0);
+   delay_ms(0.1);
+   output_low(PIN_C0);
 }
+
+void
 
 /*
 * fonction principale
@@ -47,24 +43,19 @@ void triggerSonde(){
 void main()
 {
    setup_low_volt_detect(FALSE);
-   set_tris_c(0x01000000); // set RC1 as input (ECHO)
-   
+   set_tris_c(Ox00000000);
+    
    while(true)
    {
-   b = 0;
-   
+  
+   output_high(PIN_E0);
    triggerSonde();
+   waitEcho();
+   b = timeToDist(
+   output_low(PIN_E0);
    
-   while(echo == 0){}
-   while(echo == 1){
-      time++;
-      delay_ms(1);
-   }
    
-   b = parseDist(time);
-   
-   output_b(outputValueParser(b));
-   delay_ms(100);
+   output_b( outputValueParser(b) );
    }
 
 }

@@ -1,48 +1,50 @@
 
-ROM used:   214/16384 (1%)
-            214/16384 (1%) including unused fragments
+ROM used:   246/16384 (1%)
+            246/16384 (1%) including unused fragments
 
             0.3 Average locations per line
-            11.9 Average locations per statement
+            8.8 Average locations per statement
 
-RAM used:   6/1536 (0%) at main() level
-            12/1536 (1%) worst case
+RAM used:   7/1536 (0%) at main() level
+            13/1536 (1%) worst case
 
 Stack used: 2 worst case (2 in main + 0 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   37    18 100  main.c
+   72    28 100  main.c
    16     0   0  main.h
   766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
 ----- -----
-  819    18 Total
+  854    28 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     40   9    1             @delay_ms1
-0     68  16    2   281  6.2  outputValueParser
-0     40   9    3             @DIV88
-0     62  14    1   158  2.6  MAIN
- Inline         0             @cinit1
+0     40   8    1             @delay_ms1
+0     68  14    2   281  6.2  outputValueParser
+0     40   8    3             @DIV88
+0     16   3    1    31  1.7  parseDist
+0     18   4    0    48  1.1  triggerSonde
+0     60  12    1   280  3.2  MAIN
+ Inline         0   315  3.7  @cinit1
 
 Program metrics:
-    Functions               2
-    Statements              18
-    Comments                127
-    Volume (V)              532
-    Difficulty (D)          8.2
-    Effort to implement (E) 4362
-    Time to implement (T)   4 minutes
+    Functions               5
+    Statements              28
+    Comments                140
+    Volume (V)              1360
+    Difficulty (D)          15.8
+    Effort to implement (E) 21524
+    Time to implement (T)   20 minutes
     Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   1
-    Maintainability (MI)    95
+    Cyclomatic Complexity   2
+    Maintainability (MI)    161
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
-00004-07FFE   210  32554  
+00004-07FFE   242  32522  
 
 
 

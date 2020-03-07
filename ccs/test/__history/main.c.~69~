@@ -1,12 +1,10 @@
 #include <main.h>
-
 #use fast_io(C)
-
 #define trigger pin_C0
 #define echo pin_C1
 
 int b;
-int time;
+int check;
 
 /*
 * transofmation de la valeur en valeur base 16
@@ -46,24 +44,25 @@ void triggerSonde(){
 */
 void main()
 {
+   delay_ms(1000);                              // Boot-up delay
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);     // initiating timer
    setup_low_volt_detect(FALSE);
    set_tris_c(0x01000000); // set RC1 as input (ECHO)
+   set_timer1(0);
    
    while(true)
    {
+   check = 0;
    b = 0;
    
    triggerSonde();
+   set_timer1(0);
+   while(!input(echo) && (get_timer1() < 1000));
+   b = get_timer1();
+   b = parseDist(b);
    
-   while(echo == 0){}
-   while(echo == 1){
-      time++;
-      delay_ms(1);
-   }
-   
-   b = parseDist(time);
-   
-   output_b(outputValueParser(b));
+   output_b(b);
+   //output_b( outputValueParser(b) );
    delay_ms(100);
    }
 

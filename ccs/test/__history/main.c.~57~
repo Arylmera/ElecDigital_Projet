@@ -1,0 +1,76 @@
+#include <main.h>
+
+int b, count, i;
+
+/*
+* transofmation de la valeur en valeur base 16
+*/
+int outputValueParser(int value){
+   int output = 0;
+   if (b < 10) { output = value;}
+   else {
+    int x = value;
+    x = x%10;
+    int i = value;
+    i = i/10;
+    
+    output = x + i*16;
+   }
+   return output;
+}
+
+/*
+* transformation du temps en distance
+*/
+int timeToDist(int time){
+   return time/58.82; // vitesse song 340 m/s  -> d = (34000*t)/2 -> delta time 1 - time 2 / 58.82 cm 
+}
+
+/*
+* trigger de la sonde
+*/
+void triggerSonde(){
+   output_high(PIN_C0);
+   delay_ms(0.1);
+   output_low(PIN_C0);
+}
+
+/*
+* wait for the echo from the sonde
+*/
+void waitEcho(){
+   i = 0;
+  set_timer0(0);
+  count = 0;                             // Reset Timer0
+  while(!input(PIN_C1) && (i < 1000))
+    i = count * 256 + get_timer0();
+  if(i > 990)
+    return 0;
+  else
+    return 1;
+   
+}
+
+/*
+* fonction principale
+*/
+void main()
+{
+   setup_low_volt_detect(FALSE);
+   set_tris_c(0x01000000); // set RC1 as input (ECHO)
+    
+   while(true)
+   {
+  
+   output_high(PIN_E0);
+   triggerSonde();
+   waitEcho();
+   b = timeToDist(
+   output_low(PIN_E0);
+   
+   
+   output_b( outputValueParser(b) );
+   }
+
+}
+

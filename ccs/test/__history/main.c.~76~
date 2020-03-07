@@ -55,8 +55,8 @@ void main()
    
    triggerSonde();
    
-   while(echo == 0){}
-   while(echo == 1){
+   while(!echo){}
+   while(echo){
       time++;
       delay_ms(1);
    }
