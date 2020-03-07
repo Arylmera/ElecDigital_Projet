@@ -29,7 +29,7 @@ int outputValueParser(int value){
 * récupération distance
 */
 int parseDist(int time){
-  return time * 0.034;
+  return time * 0.034 / 2;
 }
 
 /*

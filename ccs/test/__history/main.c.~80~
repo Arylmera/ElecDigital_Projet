@@ -28,8 +28,8 @@ int outputValueParser(int value){
 /*
 * récupération distance
 */
-int parseDist(int time){
-  return time * 0.034;
+int parseDist(int dist){
+  return dist/58;
 }
 
 /*
@@ -47,12 +47,11 @@ void triggerSonde(){
 void main()
 {
    setup_low_volt_detect(FALSE);
-   set_tris_c(2); // set RC1 as input (ECHO)
+   set_tris_c(0x01000000); // set RC1 as input (ECHO)
    
    while(true)
    {
    b = 0;
-   time = 0;
    
    triggerSonde();
    
@@ -63,6 +62,7 @@ void main()
    }
    
    b = parseDist(time);
+   
    output_b(outputValueParser(b));
    delay_ms(100);
    }

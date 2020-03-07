@@ -1,40 +1,208 @@
-CCS PCH C Compiler, Version 5.008, 5967               07-mars-20 13:46
+CCS PCH C Compiler, Version 5.008, 5967               07-mars-20 14:51
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\test\main.lst
 
-               ROM used:   246 bytes (1%)
-                           Largest free fragment is 32522
+               ROM used:   676 bytes (2%)
+                           Largest free fragment is 32092
                RAM used:   7 (0%) at main() level
-                           13 (1%) worst case
+                           18 (1%) worst case
                Stack used: 2 locations
                Stack size: 31
 
 *
-0000:  GOTO   00BA
+0000:  GOTO   0252
 .................... #include <main.h> 
 .................... #include <18F458.h> 
 .................... //////// Standard Header file for the PIC18F458 device //////////////// 
 .................... #device PIC18F458 
 *
-0016:  MOVF   0B,W
-0018:  CLRF   01
-001A:  SUBWF  0A,W
-001C:  BC    0024
-001E:  MOVFF  0A,00
-0022:  BRA    003C
-0024:  CLRF   00
-0026:  MOVLW  08
-0028:  MOVWF  0C
-002A:  RLCF   0A,F
-002C:  RLCF   00,F
-002E:  MOVF   0B,W
-0030:  SUBWF  00,W
-0032:  BTFSC  FD8.0
-0034:  MOVWF  00
-0036:  RLCF   01,F
-0038:  DECFSZ 0C,F
-003A:  BRA    002A
-003C:  RETURN 0
+0016:  MOVLW  8E
+0018:  MOVWF  00
+001A:  MOVFF  08,01
+001E:  MOVFF  07,02
+0022:  CLRF   03
+0024:  MOVF   01,F
+0026:  BNZ   003A
+0028:  MOVFF  02,01
+002C:  CLRF   02
+002E:  MOVLW  08
+0030:  SUBWF  00,F
+0032:  MOVF   01,F
+0034:  BNZ   003A
+0036:  CLRF   00
+0038:  BRA    004A
+003A:  BCF    FD8.0
+003C:  BTFSC  01.7
+003E:  BRA    0048
+0040:  RLCF   02,F
+0042:  RLCF   01,F
+0044:  DECF   00,F
+0046:  BRA    003A
+0048:  BCF    01.7
+004A:  GOTO   0184 (RETURN)
+004E:  MOVF   07,W
+0050:  BTFSC  FD8.2
+0052:  BRA    0136
+0054:  MOVWF  00
+0056:  MOVF   0B,W
+0058:  BTFSC  FD8.2
+005A:  BRA    0136
+005C:  ADDWF  00,F
+005E:  BNC   0068
+0060:  MOVLW  81
+0062:  ADDWF  00,F
+0064:  BC    0136
+0066:  BRA    0070
+0068:  MOVLW  7F
+006A:  SUBWF  00,F
+006C:  BNC   0136
+006E:  BZ    0136
+0070:  MOVFF  08,0F
+0074:  MOVF   0C,W
+0076:  XORWF  0F,F
+0078:  BSF    08.7
+007A:  BSF    0C.7
+007C:  MOVF   0A,W
+007E:  MULWF  0E
+0080:  MOVFF  FF4,11
+0084:  MOVF   09,W
+0086:  MULWF  0D
+0088:  MOVFF  FF4,03
+008C:  MOVFF  FF3,10
+0090:  MULWF  0E
+0092:  MOVF   FF3,W
+0094:  ADDWF  11,F
+0096:  MOVF   FF4,W
+0098:  ADDWFC 10,F
+009A:  MOVLW  00
+009C:  ADDWFC 03,F
+009E:  MOVF   0A,W
+00A0:  MULWF  0D
+00A2:  MOVF   FF3,W
+00A4:  ADDWF  11,F
+00A6:  MOVF   FF4,W
+00A8:  ADDWFC 10,F
+00AA:  MOVLW  00
+00AC:  CLRF   02
+00AE:  ADDWFC 03,F
+00B0:  ADDWFC 02,F
+00B2:  MOVF   08,W
+00B4:  MULWF  0E
+00B6:  MOVF   FF3,W
+00B8:  ADDWF  10,F
+00BA:  MOVF   FF4,W
+00BC:  ADDWFC 03,F
+00BE:  MOVLW  00
+00C0:  ADDWFC 02,F
+00C2:  MOVF   08,W
+00C4:  MULWF  0D
+00C6:  MOVF   FF3,W
+00C8:  ADDWF  03,F
+00CA:  MOVF   FF4,W
+00CC:  ADDWFC 02,F
+00CE:  MOVLW  00
+00D0:  CLRF   01
+00D2:  ADDWFC 01,F
+00D4:  MOVF   0A,W
+00D6:  MULWF  0C
+00D8:  MOVF   FF3,W
+00DA:  ADDWF  10,F
+00DC:  MOVF   FF4,W
+00DE:  ADDWFC 03,F
+00E0:  MOVLW  00
+00E2:  ADDWFC 02,F
+00E4:  ADDWFC 01,F
+00E6:  MOVF   09,W
+00E8:  MULWF  0C
+00EA:  MOVF   FF3,W
+00EC:  ADDWF  03,F
+00EE:  MOVF   FF4,W
+00F0:  ADDWFC 02,F
+00F2:  MOVLW  00
+00F4:  ADDWFC 01,F
+00F6:  MOVF   08,W
+00F8:  MULWF  0C
+00FA:  MOVF   FF3,W
+00FC:  ADDWF  02,F
+00FE:  MOVF   FF4,W
+0100:  ADDWFC 01,F
+0102:  INCF   00,F
+0104:  BTFSC  01.7
+0106:  BRA    0112
+0108:  RLCF   10,F
+010A:  RLCF   03,F
+010C:  RLCF   02,F
+010E:  RLCF   01,F
+0110:  DECF   00,F
+0112:  MOVLW  00
+0114:  BTFSS  10.7
+0116:  BRA    012C
+0118:  INCF   03,F
+011A:  ADDWFC 02,F
+011C:  ADDWFC 01,F
+011E:  MOVF   01,W
+0120:  BNZ   012C
+0122:  MOVF   02,W
+0124:  BNZ   012C
+0126:  MOVF   03,W
+0128:  BNZ   012C
+012A:  INCF   00,F
+012C:  BTFSC  0F.7
+012E:  BSF    01.7
+0130:  BTFSS  0F.7
+0132:  BCF    01.7
+0134:  BRA    013E
+0136:  CLRF   00
+0138:  CLRF   01
+013A:  CLRF   02
+013C:  CLRF   03
+013E:  GOTO   01A6 (RETURN)
+0142:  MOVLW  8E
+0144:  MOVWF  00
+0146:  MOVF   07,W
+0148:  SUBWF  00,F
+014A:  MOVFF  08,02
+014E:  MOVFF  09,01
+0152:  BSF    02.7
+0154:  MOVF   00,F
+0156:  BZ    016A
+0158:  BCF    FD8.0
+015A:  MOVF   02,F
+015C:  BNZ   0162
+015E:  MOVF   01,F
+0160:  BZ    016A
+0162:  RRCF   02,F
+0164:  RRCF   01,F
+0166:  DECFSZ 00,F
+0168:  BRA    0158
+016A:  BTFSS  08.7
+016C:  BRA    0178
+016E:  COMF   01,F
+0170:  COMF   02,F
+0172:  INCF   01,F
+0174:  BTFSC  FD8.2
+0176:  INCF   02,F
+0178:  GOTO   01B8 (RETURN)
+*
+01BE:  MOVF   0B,W
+01C0:  CLRF   01
+01C2:  SUBWF  0A,W
+01C4:  BC    01CC
+01C6:  MOVFF  0A,00
+01CA:  BRA    01E4
+01CC:  CLRF   00
+01CE:  MOVLW  08
+01D0:  MOVWF  0C
+01D2:  RLCF   0A,F
+01D4:  RLCF   00,F
+01D6:  MOVF   0B,W
+01D8:  SUBWF  00,W
+01DA:  BTFSC  FD8.0
+01DC:  MOVWF  00
+01DE:  RLCF   01,F
+01E0:  DECFSZ 0C,F
+01E2:  BRA    01D2
+01E4:  RETURN 0
 ....................  
 .................... #list 
 ....................  
@@ -47,25 +215,25 @@ CCS PCH C Compiler, Version 5.008, 5967               07-mars-20 13:46
 ....................  
 .................... #use delay(crystal=20MHz) 
 *
-0092:  CLRF   FEA
-0094:  MOVLW  06
-0096:  MOVWF  FE9
-0098:  MOVF   FEF,W
-009A:  BZ    00B6
-009C:  MOVLW  06
-009E:  MOVWF  01
-00A0:  CLRF   00
-00A2:  DECFSZ 00,F
-00A4:  BRA    00A2
-00A6:  DECFSZ 01,F
-00A8:  BRA    00A0
-00AA:  MOVLW  7B
-00AC:  MOVWF  00
-00AE:  DECFSZ 00,F
-00B0:  BRA    00AE
-00B2:  DECFSZ FEF,F
-00B4:  BRA    009C
-00B6:  GOTO   00F2 (RETURN)
+022A:  CLRF   FEA
+022C:  MOVLW  06
+022E:  MOVWF  FE9
+0230:  MOVF   FEF,W
+0232:  BZ    024E
+0234:  MOVLW  06
+0236:  MOVWF  01
+0238:  CLRF   00
+023A:  DECFSZ 00,F
+023C:  BRA    023A
+023E:  DECFSZ 01,F
+0240:  BRA    0238
+0242:  MOVLW  7B
+0244:  MOVWF  00
+0246:  DECFSZ 00,F
+0248:  BRA    0246
+024A:  DECFSZ FEF,F
+024C:  BRA    0234
+024E:  GOTO   02A0 (RETURN)
 .................... #use rs232(baud=9600,parity=N,xmit=0,rcv=0,bits=8,stream=PORT1) 
 ....................  
 .................... #define LED PIN_None 
@@ -87,56 +255,73 @@ CCS PCH C Compiler, Version 5.008, 5967               07-mars-20 13:46
 .................... */ 
 .................... int outputValueParser(int value){ 
 *
-004E:  CLRF   07
+01E6:  CLRF   07
 ....................    int output = 0; 
 ....................    if (b < 10) { output = value;} 
-0050:  MOVF   04,W
-0052:  SUBLW  09
-0054:  BNC   005C
-0056:  MOVFF  06,07
-005A:  BRA    008A
+01E8:  MOVF   04,W
+01EA:  SUBLW  09
+01EC:  BNC   01F4
+01EE:  MOVFF  06,07
+01F2:  BRA    0222
 ....................    else { 
 ....................     int x = value; 
-005C:  MOVFF  06,08
+01F4:  MOVFF  06,08
 ....................     x = x%10; 
-0060:  MOVFF  08,0A
-0064:  MOVLW  0A
-0066:  MOVWF  0B
-0068:  RCALL  0016
-006A:  MOVFF  00,08
+01F8:  MOVFF  08,0A
+01FC:  MOVLW  0A
+01FE:  MOVWF  0B
+0200:  RCALL  01BE
+0202:  MOVFF  00,08
 ....................     int i = value; 
-006E:  MOVFF  06,09
+0206:  MOVFF  06,09
 ....................     i = i/10; 
-0072:  MOVFF  09,0A
-0076:  MOVLW  0A
-0078:  MOVWF  0B
-007A:  RCALL  0016
-007C:  MOVFF  01,09
+020A:  MOVFF  09,0A
+020E:  MOVLW  0A
+0210:  MOVWF  0B
+0212:  RCALL  01BE
+0214:  MOVFF  01,09
 ....................      
 ....................     output = x + i*16; 
-0080:  MOVF   09,W
-0082:  MULLW  10
-0084:  MOVF   FF3,W
-0086:  ADDWF  08,W
-0088:  MOVWF  07
+0218:  MOVF   09,W
+021A:  MULLW  10
+021C:  MOVF   FF3,W
+021E:  ADDWF  08,W
+0220:  MOVWF  07
 ....................    } 
 ....................    return output; 
-008A:  MOVFF  07,01
-008E:  GOTO   00E6 (RETURN)
+0222:  MOVFF  07,01
+0226:  GOTO   0294 (RETURN)
 .................... } 
 ....................  
 .................... /* 
 .................... * récupération distance 
 .................... */ 
-.................... int parseDist(int dist){ 
-....................   return dist/58; 
+.................... int parseDist(int time){ 
+....................   return time * 0.034; 
 *
-003E:  MOVFF  06,0A
-0042:  MOVLW  3A
-0044:  MOVWF  0B
-0046:  RCALL  0016
-0048:  MOVF   01,W
-004A:  GOTO   00DC (RETURN)
+017C:  CLRF   08
+017E:  MOVFF  06,07
+0182:  BRA    0016
+0184:  MOVFF  03,0A
+0188:  MOVFF  02,09
+018C:  MOVFF  01,08
+0190:  MOVFF  00,07
+0194:  MOVLW  96
+0196:  MOVWF  0E
+0198:  MOVLW  43
+019A:  MOVWF  0D
+019C:  MOVLW  0B
+019E:  MOVWF  0C
+01A0:  MOVLW  7A
+01A2:  MOVWF  0B
+01A4:  BRA    004E
+01A6:  MOVFF  03,0A
+01AA:  MOVFF  02,09
+01AE:  MOVFF  01,08
+01B2:  MOVFF  00,07
+01B6:  BRA    0142
+01B8:  MOVF   01,W
+01BA:  GOTO   028A (RETURN)
 .................... } 
 ....................  
 .................... /* 
@@ -154,7 +339,7 @@ CCS PCH C Compiler, Version 5.008, 5967               07-mars-20 13:46
 000E:  NOP   
 ....................    output_low(trigger); 
 0010:  BCF    F8B.0
-0012:  GOTO   00D6 (RETURN)
+0012:  GOTO   0270 (RETURN)
 .................... } 
 ....................  
 .................... /* 
@@ -162,56 +347,67 @@ CCS PCH C Compiler, Version 5.008, 5967               07-mars-20 13:46
 .................... */ 
 .................... void main() 
 *
-00BA:  CLRF   FF8
-00BC:  BCF    FD0.7
-00BE:  BSF    00.0
-00C0:  BSF    FC1.0
-00C2:  BSF    FC1.1
-00C4:  BSF    FC1.2
-00C6:  BCF    FC1.3
-00C8:  MOVLW  07
-00CA:  MOVWF  FB4
+0252:  CLRF   FF8
+0254:  BCF    FD0.7
+0256:  BSF    00.0
+0258:  BSF    FC1.0
+025A:  BSF    FC1.1
+025C:  BSF    FC1.2
+025E:  BCF    FC1.3
+0260:  MOVLW  07
+0262:  MOVWF  FB4
 .................... { 
 ....................    setup_low_volt_detect(FALSE); 
-00CC:  CLRF   FD2
-....................    set_tris_c(0x01000000); // set RC1 as input (ECHO) 
-00CE:  MOVLW  00
-00D0:  MOVWF  F94
+0264:  CLRF   FD2
+....................    set_tris_c(2); // set RC1 as input (ECHO) 
+0266:  MOVLW  02
+0268:  MOVWF  F94
 ....................     
 ....................    while(true) 
 ....................    { 
 ....................    b = 0; 
-00D2:  CLRF   04
+026A:  CLRF   04
+....................    time = 0; 
+026C:  CLRF   05
 ....................     
 ....................    triggerSonde(); 
-00D4:  BRA    0004
+026E:  BRA    0004
 ....................     
-....................    while(echo == 0){} 
-....................    while(echo == 1){ 
-....................       time++; 
-....................       delay_ms(1); 
+....................    while(input(echo) == 0){} 
+0270:  BTFSS  F82.1
+0272:  BRA    0270
+....................    while(input(echo) == 1){ 
+0274:  BTFSS  F82.1
+0276:  BRA    0284
+....................       time = time + 1; 
+0278:  MOVLW  01
+027A:  ADDWF  05,F
+....................       delay_us(1); 
+027C:  BRA    027E
+027E:  BRA    0280
+0280:  NOP   
+0282:  BRA    0274
 ....................    } 
 ....................     
 ....................    b = parseDist(time); 
-00D6:  MOVFF  05,06
-00DA:  BRA    003E
-00DC:  MOVFF  01,04
-....................     
+0284:  MOVFF  05,06
+0288:  BRA    017C
+028A:  MOVFF  01,04
 ....................    output_b(outputValueParser(b)); 
-00E0:  MOVFF  04,06
-00E4:  BRA    004E
-00E6:  CLRF   F93
-00E8:  MOVFF  01,F8A
+028E:  MOVFF  04,06
+0292:  BRA    01E6
+0294:  CLRF   F93
+0296:  MOVFF  01,F8A
 ....................    delay_ms(100); 
-00EC:  MOVLW  64
-00EE:  MOVWF  06
-00F0:  BRA    0092
-00F2:  BRA    00D2
+029A:  MOVLW  64
+029C:  MOVWF  06
+029E:  BRA    022A
+02A0:  BRA    026A
 ....................    } 
 ....................  
 .................... } 
 ....................  
-00F4:  SLEEP 
+02A2:  SLEEP 
 
 Configuration Fuses:
    Word  1: 2200   HS NOOSCSEN
