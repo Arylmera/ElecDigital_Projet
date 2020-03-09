@@ -13111,7 +13111,7 @@ D = Direct mounting &lt;p&gt;
 <wire x1="111.76" y1="53.34" x2="93.98" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="N$33" class="0">
 <segment>
 <wire x1="35.56" y1="-45.72" x2="35.56" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="4"/>

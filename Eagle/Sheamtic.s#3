@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.1">
+<eagle version="9.5.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -13030,15 +13030,7 @@ D = Direct mounting &lt;p&gt;
 <wire x1="50.8" y1="58.42" x2="30.48" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="58.42" x2="30.48" y2="48.26" width="0.1524" layer="91"/>
 <junction x="30.48" y="48.26"/>
-<wire x1="7.62" y1="48.26" x2="7.62" y2="53.34" width="0.1524" layer="91"/>
-<junction x="7.62" y="48.26"/>
-<wire x1="7.62" y1="53.34" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
 <junction x="30.48" y="58.42"/>
-<wire x1="7.62" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="53.34" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
-<junction x="7.62" y="53.34"/>
-<pinref part="IC1" gate="G$1" pin="OSC1/CLKIN"/>
-<wire x1="43.18" y1="27.94" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="58.42" x2="30.48" y2="66.04" width="0.1524" layer="91"/>
 </segment>
@@ -13355,6 +13347,14 @@ D = Direct mounting &lt;p&gt;
 <pinref part="IC1" gate="G$1" pin="RC1/T1OSI"/>
 <wire x1="48.26" y1="88.9" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$33" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="OSC1/CLKIN"/>
+<wire x1="43.18" y1="27.94" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="53.34" x2="43.18" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="-2.54" y1="53.34" x2="43.18" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

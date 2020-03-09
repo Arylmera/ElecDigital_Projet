@@ -12903,16 +12903,9 @@ D = Direct mounting &lt;p&gt;
 <label x="132.08" y="-5.08" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="7"/>
-<wire x1="43.18" y1="-93.98" x2="27.94" y2="-93.98" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-93.98" x2="27.94" y2="-91.44" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="7"/>
 <wire x1="27.94" y1="-91.44" x2="27.94" y2="-88.9" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-88.9" x2="27.94" y2="-53.34" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="-53.34" x2="43.18" y2="-53.34" width="0.1524" layer="91"/>
-<junction x="27.94" y="-53.34"/>
+<wire x1="27.94" y1="-88.9" x2="27.94" y2="-50.8" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="5"/>
-<wire x1="27.94" y1="-53.34" x2="27.94" y2="-50.8" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-50.8" x2="27.94" y2="-48.26" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="-48.26" x2="43.18" y2="-48.26" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="6"/>
@@ -12920,7 +12913,6 @@ D = Direct mounting &lt;p&gt;
 <junction x="27.94" y="-50.8"/>
 <pinref part="IC3" gate="G$1" pin="6"/>
 <wire x1="27.94" y1="-91.44" x2="43.18" y2="-91.44" width="0.1524" layer="91"/>
-<junction x="27.94" y="-91.44"/>
 <pinref part="IC3" gate="G$1" pin="5"/>
 <wire x1="43.18" y1="-88.9" x2="27.94" y2="-88.9" width="0.1524" layer="91"/>
 <junction x="27.94" y="-88.9"/>
@@ -13011,6 +13003,16 @@ D = Direct mounting &lt;p&gt;
 <wire x1="129.54" y1="93.98" x2="119.38" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="119.38" y1="93.98" x2="119.38" y2="99.06" width="0.1524" layer="91"/>
 <label x="121.92" y="101.6" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC3" gate="G$1" pin="7"/>
+<wire x1="43.18" y1="-93.98" x2="38.1" y2="-93.98" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="7"/>
+<wire x1="43.18" y1="-53.34" x2="38.1" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-53.34" x2="17.78" y2="-53.34" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="-93.98" x2="38.1" y2="-53.34" width="0.1524" layer="91"/>
+<junction x="38.1" y="-53.34"/>
+<label x="15.24" y="-53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$2" class="0">
