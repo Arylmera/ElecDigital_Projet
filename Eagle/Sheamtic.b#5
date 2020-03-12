@@ -2310,6 +2310,12 @@ design rules under a new name.</description>
 <wire x1="39.0525" y1="6.0325" x2="15.5575" y2="6.0325" width="0.381" layer="16"/>
 <wire x1="45.72" y1="12.7" x2="39.0525" y2="6.0325" width="0.381" layer="16"/>
 <wire x1="45.72" y1="12.7" x2="45.7708" y2="12.7" width="0.381" layer="16"/>
+<polygon width="0.4572" layer="16" isolate="0.02031875">
+<vertex x="0" y="80.01"/>
+<vertex x="99.06" y="80.01"/>
+<vertex x="99.06" y="0"/>
+<vertex x="0" y="0"/>
+</polygon>
 </signal>
 <signal name="N$2">
 <contactref element="S1" pad="1"/>
