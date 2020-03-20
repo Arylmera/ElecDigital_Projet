@@ -14,11 +14,20 @@ public class Gui extends JFrame {
 	public Gui() {
 		setLayout(new FlowLayout());
 		
-		labelEntreeSonde = new JLabel("Entrée des données dans la sonde");
+		labelEntreeSonde = new JLabel("Entrer un nombre dans la sonde");
 		add(labelEntreeSonde);
 		
 		texteEntreeSonde = new JTextField(10);
 		add(texteEntreeSonde);
+		// key listener pour empêcher tout caractère sauf les numéros, le backspace et la virgule (numérique)
+		texteEntreeSonde.addKeyListener(new KeyAdapter() {
+			public void keyTyped(KeyEvent e) {
+				char chr = e.getKeyChar();
+				if((chr < '0' || chr > '9') && chr != '\b' && chr != '.') {
+					e.consume();
+				}
+			}
+		});
 		
 		
 		boutonEntreeSonde = new JButton("Confirmer");
@@ -36,7 +45,7 @@ public class Gui extends JFrame {
 	}
 	
 	public static void main(String args[]) {
-	 Fenetre();
+		Fenetre();
 	}
 	
 	
