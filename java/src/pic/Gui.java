@@ -9,15 +9,15 @@ public class Gui extends JFrame {
 	private JLabel labelEntreeSonde;
 	private JButton boutonEntreeSonde;
 	private JTextField texteEntreeSonde;
-	private double valeurSonde = 0.0;
+	private static double valeurSonde = 0.0;
 	
 	
-	public double getValeurSonde() {
-		return this.valeurSonde;
+	public static double getValeurSonde() {
+		return Gui.valeurSonde;
 	}
 	
-	public void setValeurSonde(double valeur) {
-		this.valeurSonde = valeur;
+	public static void setValeurSonde(double valeur) {
+		Gui.valeurSonde = valeur;
 	}
 	
 	public Gui() {
@@ -63,3 +63,4 @@ public class Gui extends JFrame {
 	
 	
 }
+
