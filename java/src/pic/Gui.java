@@ -9,8 +9,16 @@ public class Gui extends JFrame {
 	private JLabel labelEntreeSonde;
 	private JButton boutonEntreeSonde;
 	private JTextField texteEntreeSonde;
-	private double valeurSonde;
+	private double valeurSonde = 0.0;
 	
+	
+	public double getValeurSonde() {
+		return this.valeurSonde;
+	}
+	
+	public void setValeurSonde(double valeur) {
+		this.valeurSonde = valeur;
+	}
 	
 	public Gui() {
 		setLayout(new FlowLayout());
