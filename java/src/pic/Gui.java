@@ -9,6 +9,7 @@ public class Gui extends JFrame {
 	private JLabel labelEntreeSonde;
 	private JButton boutonEntreeSonde;
 	private JTextField texteEntreeSonde;
+	private double valeurSonde;
 	
 	
 	public Gui() {
@@ -32,7 +33,11 @@ public class Gui extends JFrame {
 		
 		boutonEntreeSonde = new JButton("Confirmer");
 		add(boutonEntreeSonde);
-
+		boutonEntreeSonde.addActionListener(new ActionListener(){
+			   public void actionPerformed(ActionEvent ae){
+			      valeurSonde = Double.parseDouble(texteEntreeSonde.getText());
+			   }
+			});
 	}
 	
 	public static void Fenetre() {
