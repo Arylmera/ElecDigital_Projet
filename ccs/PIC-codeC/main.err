@@ -6,5 +6,3 @@
 *** Error 12 "main.c" Line 68(31,37): Undefined identifier   TMR0IF
 *** Error 12 "main.c" Line 69(11,15): Undefined identifier   TMR0
 *** Error 12 "main.c" Line 70(4,9): Undefined identifier   T0CON
-      8 Errors,  0 Warnings.
-Build Failed.
