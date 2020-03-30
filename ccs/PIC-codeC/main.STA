@@ -1,0 +1,58 @@
+
+ROM used:   2350/16384 (7%)
+            2350/16384 (7%) including unused fragments
+
+            2.7 Average locations per line
+            65.3 Average locations per statement
+
+RAM used:   16/1536 (1%) at main() level
+            48/1536 (3%) worst case
+
+Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   88    36 100  main.c
+   16     0   0  ..\test\main.h
+  766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
+----- -----
+  870    36 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     38   1    1             @delay_ms1
+0      6   0    1             @PUTCHAR_1_
+0    340   7   12   299  6.5  outputValueParser
+0    118   3   10             @FLT
+0     64   1    5    31  1.7  @FTOSD
+0    144   3   13             @DIV3232
+0    346   7   14             @DIVFF
+0    242   5   11    31  1.7  @MULFF
+0     54   1    4   519  5.2  @DTOF
+0    618  13   16    48  1.1  @ADDFF
+0     36   1    4    35  1.7  parseDist
+0     18   0    0    48  1.1  triggerSonde
+0    284   6    4   507  5.1  MAIN
+0     38   1    2   704  6.1  @PSTRINGR_629
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               9
+    Statements              36
+    Comments                143
+    Volume (V)              3303
+    Difficulty (D)          30.3
+    Effort to implement (E) 100084
+    Time to implement (T)   1 hours, 33 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   4
+    Maintainability (MI)    112
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-07FFE  2346  30418  
+
+
+

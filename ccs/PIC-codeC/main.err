@@ -1,0 +1,10 @@
+*** Error 12 "main.c" Line 53(4,9): Undefined identifier   T0CON
+*** Error 12 "main.c" Line 54(4,10): Undefined identifier   TMR0IF
+*** Error 12 "main.c" Line 55(4,8): Undefined identifier   TMR0
+*** Error 12 "main.c" Line 66(4,8): Undefined identifier   TMR0
+*** Error 12 "main.c" Line 67(4,9): Undefined identifier   T0CON
+*** Error 12 "main.c" Line 68(31,37): Undefined identifier   TMR0IF
+*** Error 12 "main.c" Line 69(11,15): Undefined identifier   TMR0
+*** Error 12 "main.c" Line 70(4,9): Undefined identifier   T0CON
+      8 Errors,  0 Warnings.
+Build Failed.
