@@ -30,7 +30,7 @@ int8 outputValueParser(int8 value){
 
 double parseDist(double time){
   //return time / (343);
-  return time / 58.82;
+  return time / 147.05;
 }
 
 /*
@@ -66,7 +66,7 @@ void main()
    distance = parseDist(time);
    b = (int) (distance);
    
-   if(b > 99){
+   if(b > 99 && b < 999){
       b = b / 10;
       output_high(dot);
    }

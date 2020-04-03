@@ -1,14 +1,13 @@
 #include <main.h>
+#include <math.h>
 #use fast_io(C)
 
 #define trigger pin_C0
 #define echo pin_C1
 #define dot pin_E2
 
-#int_TIMER1
-
-int8 b = 0;
-int time;
+int8 b;
+double time;
 double distance;
 
 /*
@@ -30,7 +29,7 @@ int8 outputValueParser(int8 value){
 
 double parseDist(double time){
   //return time / (343);
-  return time / 58.82;
+  return time / 147.05;
 }
 
 /*
@@ -49,33 +48,40 @@ void main()
 {
    setup_low_volt_detect(FALSE);
    set_tris_c(2); // set RC1 as input (ECHO)
-   
-   setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
+
+   int c = 0;
    
    while(true)
    {
+   b = 0.0;
+   time = 0.0;
    
-   time = 0;
    triggerSonde();
    
-   while(input(echo) == 0){} // attente début
+   while(input(echo) == 0); // attente début
    set_timer1(0);
-   while(input(echo) == 1){} // attente fin ou overflow
+   while(input(echo) == 1); // attente fin ou overflow
    time = get_timer1();
    
    distance = parseDist(time);
-   b = (int) (distance);
-   
-   if(b > 99){
-      b = b / 10;
+   distance = Math.round(distance);
+   if(distance > 99 && distance < 999){
+      distance = distance / 10;
+      output_high(dot);
+   }
+   else if (distance > 999){
+      distance = 99;
       output_high(dot);
    }
    else {
       output_low(dot);
    }
    
-   output_b(outputValueParser(b));
+   b = distance;
    
+   //output_b(outputValueParser(b));
+   output_b(b);
+   c++;
    delay_ms(400);
    }
 

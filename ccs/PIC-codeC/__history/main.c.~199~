@@ -30,7 +30,7 @@ int8 outputValueParser(int8 value){
 
 double parseDist(double time){
   //return time / (343);
-  return time / 58.82;
+  return time / 147.05;
 }
 
 /*
