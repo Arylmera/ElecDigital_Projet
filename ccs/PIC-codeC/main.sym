@@ -3,84 +3,69 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
-004     b
-005     time
-006-009 distance
-00A-00D @SFTOI.P1
-00A-00B @ITOF.P2
-00A     outputValueParser.value
-00A     MAIN.@SCRATCH1
-00B     outputValueParser.output
-00B     @delay_ms1.P1
-00B     MAIN.@SCRATCH2
-00C-00F outputValueParser.x
-00C     MAIN.@SCRATCH3
-00D     MAIN.@SCRATCH4
-00E-011 parseDist.time
-010     outputValueParser.i
-011     @DIV88.P1
-011     outputValueParser.@SCRATCH1
-012     @DIV88.P1
-012-015 @DIVFF.P2
-012     outputValueParser.@SCRATCH2
-013     outputValueParser.@SCRATCH3
-013     @DIV88.@SCRATCH1
-014     outputValueParser.@SCRATCH4
-015-018 @DIV3232.P1
-016-019 @DIVFF.P1
-019-01C @DIV3232.P1
-01A     @DIVFF.@SCRATCH1
-01B     @DIVFF.@SCRATCH2
-01C     @DIVFF.@SCRATCH3
-01D     @DIV3232.@SCRATCH1
-01D     @DIVFF.@SCRATCH4
-01E     @DIV3232.@SCRATCH2
-01E     @DIVFF.@SCRATCH5
-01F     @DIV3232.@SCRATCH3
-01F     @DIVFF.@SCRATCH6
-020     @DIV3232.@SCRATCH4
-021     @DIV3232.@SCRATCH5
+004-007 time
+008     distance
+009-00C parseDist.time
+009     outputValueParser.value
+009     MAIN.@SCRATCH1
+00A     outputValueParser.output
+00A     @delay_ms1.P1
+00B     outputValueParser.x
+00C     outputValueParser.i
+00D     @DIV88.P1
+00D-010 @SFTOI.P2
+00D     parseDist.@SCRATCH1
+00E-011 @DIVFF.P1
+00E-00F @ITOF.P2
+00E     @DIV88.P3
+00F     @DIV88.@SCRATCH1
+012-015 @DIVFF.P1
+016     @DIVFF.@SCRATCH1
+017     @DIVFF.@SCRATCH2
+018     @DIVFF.@SCRATCH3
+019     @DIVFF.@SCRATCH4
+01A     @DIVFF.@SCRATCH5
+01B     @DIVFF.@SCRATCH6
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
 FBB     CCP_2
 FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P3
-FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000004  triggerSonde
 000016  @ITOF
-00004E  @DIVFF
-0001AA  parseDist
-0001D0  @SFTOI
-00020A  @DIV88
-000232  @DIV3232
-0002C2  outputValueParser
-000332  @delay_ms1
-00035A  @cinit1
-00035A  MAIN
-00036E  @cinit2
+00004C  @SFTOI
+000084  @DIVFF
+0001E0  parseDist
+000234  @DIV88
+00025C  outputValueParser
+0002A0  @delay_ms1
+0002C8  MAIN
+0002C8  @cinit1
+0002DA  @cinit2
 
 Project Directory:
     W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
 
 Project Files:
-    main.c                                                  [03-avr.-20 08:53  CRC=0D0C1FFC]
+    main.c                                                  [03-avr.-20 09:06  CRC=116EE05C]
     ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
     C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
 
-Source signature=BABCD45E
+Source signature=BF1F94BE
 
 Units:
     main (main)

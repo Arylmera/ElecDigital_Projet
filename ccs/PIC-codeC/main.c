@@ -7,20 +7,19 @@
 
 #int_TIMER1
 
-int8 b = 0;
-int time;
-double distance;
+double time;
+int distance;
 
 /*
 * transofmation de la valeur en valeur base 16
 */
-int8 outputValueParser(int8 value){
-   int8 output = 0;
-   if (b < 10) { output = value;}
+int outputValueParser(int value){
+   int output = 0;
+   if (value < 10) { output = value;}
    else {
-    long long x = value;
+    int x = value;
     x = x % 10;
-    int8 i = (int8) value;
+    int i = value;
     i = i/10;
     
     output = x + i*16;
@@ -28,9 +27,11 @@ int8 outputValueParser(int8 value){
    return output;
 }
 
-double parseDist(double time){
-  //return time / (343);
-  return time / 58.82;
+/*
+* parsing temps => distance
+*/
+int parseDist(double time){
+  return (int) time / 58.82;
 }
 
 /*
@@ -64,17 +65,16 @@ void main()
    time = get_timer1();
    
    distance = parseDist(time);
-   b = (int) (distance);
    
-   if(b > 99){
-      b = b / 10;
+   if(distance > 99){
+      distance = distance / 10;
       output_high(dot);
    }
    else {
       output_low(dot);
    }
    
-   output_b(outputValueParser(b));
+   output_b(outputValueParser(distance));
    
    delay_ms(400);
    }
