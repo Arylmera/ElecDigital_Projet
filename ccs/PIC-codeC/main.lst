@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:11
+CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:23
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\main.lst
 
@@ -92,6 +92,8 @@ CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:11
 .................... #define trigger pin_C0 
 .................... #define echo pin_C1 
 .................... #define dot pin_E2 
+.................... #define in pin_C7 
+.................... #define out pin_C6 
 ....................  
 .................... #int_TIMER1 
 ....................  
@@ -285,6 +287,7 @@ CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:11
 0198:  BRA    0076
 019A:  CLRF   F93
 019C:  MOVFF  01,F8A
+....................     
 ....................     
 ....................    delay_ms(500); 
 01A0:  MOVLW  02

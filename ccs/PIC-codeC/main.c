@@ -4,6 +4,8 @@
 #define trigger pin_C0
 #define echo pin_C1
 #define dot pin_E2
+#define in pin_C7
+#define out pin_C6
 
 #int_TIMER1
 
@@ -74,6 +76,7 @@ void main()
    }
    
    output_b(outputValueParser(distance));
+   
    
    delay_ms(500);
    }

@@ -1,7 +1,8 @@
-D G "__PCH__" 0 84 ""5.008""
-D G "__DEVICE__" 0 84 "458"
-D G "__DATE__" 0 84 ""11-avr.-20""
-D G "__TIME__" 0 84 ""18:11:06"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "output" 0 8 "pin_C6"
+D G "__PCH__" 0 68 ""5.008""
+D G "__DEVICE__" 0 68 "458"
+D G "__DATE__" 0 68 ""11-avr.-20""
+D G "__TIME__" 0 68 ""18:23:11"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -864,23 +865,25 @@ D G "DELAY" 1 13 "1000"
 D G "trigger" 0 4 "pin_C0"
 D G "echo" 0 5 "pin_C1"
 D G "dot" 0 6 "pin_E2"
-V G "time" 0 10 "int16" `633 
-V G "distance" 0 10 "int16" `634 
-V G "x" 0 10 "int16" `635 
-V G "i" 0 10 "int16" `636  "* transofmation de la valeur en valeur base 16"
-V L "value" 0 15 "int16" `638 
-F G "outputValueParser" 0 15 "int16(int16 value)" `637 
-V L "output" 0 16 "int8" `639 
-C L "parseDist" 0 29 1 "*"
-V L "time" 0 32 "int16" `644 
-F G "parseDist" 0 32 "int16(int16 time)" `643 
-C L "triggerSonde" 0 36 1 "*"
-F G "triggerSonde" 0 39 "void()" `645 
-C L "MAIN" 0 45 1 "*"
-F G "MAIN" 0 49 "void()" `646 
-C L "MAIN" 0 45 1 "FUNCTION"
-C L "MAIN" 0 45 1 "FUNCTION"
-C L "MAIN" 0 45 1 "FUNCTION"
+D G "in" 0 7 "pin_C7"
+D G "out" 0 8 "pin_C6"
+V G "time" 0 12 "int16" `633 
+V G "distance" 0 12 "int16" `634 
+V G "x" 0 12 "int16" `635 
+V G "i" 0 12 "int16" `636  "* transofmation de la valeur en valeur base 16"
+V L "value" 0 17 "int16" `638 
+F G "outputValueParser" 0 17 "int16(int16 value)" `637 
+V L "output" 0 18 "int8" `639 
+C L "parseDist" 0 31 1 "*"
+V L "time" 0 34 "int16" `644 
+F G "parseDist" 0 34 "int16(int16 time)" `643 
+C L "triggerSonde" 0 38 1 "*"
+F G "triggerSonde" 0 41 "void()" `645 
+C L "MAIN" 0 47 1 "*"
+F G "MAIN" 0 51 "void()" `646 
+C L "MAIN" 0 47 1 "FUNCTION"
+C L "MAIN" 0 47 1 "FUNCTION"
+C L "MAIN" 0 47 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
