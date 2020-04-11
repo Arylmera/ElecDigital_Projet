@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:08
+CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:11
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\main.lst
 
@@ -166,13 +166,13 @@ CCS PCH C Compiler, Version 5.008, 5967               11-avr.-20 18:08
 .................... * parsing temps => distance 
 .................... */ 
 .................... int16 parseDist(int16 time){ 
-....................   return time / (340 * 2) ; 
+....................   return time / (340) ; 
 *
 0058:  MOVFF  0D,10
 005C:  MOVFF  0C,0F
-0060:  MOVLW  02
+0060:  MOVLW  01
 0062:  MOVWF  12
-0064:  MOVLW  A8
+0064:  MOVLW  54
 0066:  MOVWF  11
 0068:  RCALL  0016
 006A:  MOVFF  02,03

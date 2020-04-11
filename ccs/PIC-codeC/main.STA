@@ -24,7 +24,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     40   5    1             @delay_ms1
 0    126  15    3   273  5.5  outputValueParser
 0     66   8    5   273  5.5  @DIV1616
-0     30   3    2    44  2.1  parseDist
+0     30   3    2    35  1.7  parseDist
 0     18   2    0    48  1.1  triggerSonde
 0    150  17    2   511  5.2  MAIN
  Inline         0   511  5.2  @cinit1
@@ -33,11 +33,11 @@ Program metrics:
     Functions               6
     Statements              36
     Comments                142
-    Volume (V)              2376
-    Difficulty (D)          25.1
-    Effort to implement (E) 59607
-    Time to implement (T)   55 minutes
-    Est Delivered Bugs (B)  1
+    Volume (V)              2357
+    Difficulty (D)          24.6
+    Effort to implement (E) 57999
+    Time to implement (T)   54 minutes
+    Est Delivered Bugs (B)  0
     Cyclomatic Complexity   4
     Maintainability (MI)    158
 

@@ -1,7 +1,7 @@
 D G "__PCH__" 0 84 ""5.008""
 D G "__DEVICE__" 0 84 "458"
 D G "__DATE__" 0 84 ""11-avr.-20""
-D G "__TIME__" 0 84 ""18:08:33"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "__TIME__" 0 84 ""18:11:06"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -875,9 +875,9 @@ C L "parseDist" 0 29 1 "*"
 V L "time" 0 32 "int16" `644 
 F G "parseDist" 0 32 "int16(int16 time)" `643 
 C L "triggerSonde" 0 36 1 "*"
-F G "triggerSonde" 0 39 "void(int32 ,int32 )" `645 
+F G "triggerSonde" 0 39 "void()" `645 
 C L "MAIN" 0 45 1 "*"
-F G "MAIN" 0 49 "void(int32 )" `646 
+F G "MAIN" 0 49 "void()" `646 
 C L "MAIN" 0 45 1 "FUNCTION"
 C L "MAIN" 0 45 1 "FUNCTION"
 C L "MAIN" 0 45 1 "FUNCTION"

@@ -30,7 +30,7 @@ int16 outputValueParser(int16 value){
 * parsing temps => distance
 */
 int16 parseDist(int16 time){
-  return time / (340 * 2) ;
+  return time / (340) ;
 }
 
 /*
