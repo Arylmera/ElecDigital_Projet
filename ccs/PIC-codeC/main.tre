@@ -1,6 +1,7 @@
 ÀÄmain
    ÀÄMAIN  0/162  Ram=1
       ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
       ÃÄtriggerSonde  0/18  Ram=0
       ÃÄ@ITOF  0/54  Ram=2
       ÃÄparseDist  0/84  Ram=5

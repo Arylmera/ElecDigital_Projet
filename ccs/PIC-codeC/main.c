@@ -9,6 +9,7 @@
 
 double time;
 int distance;
+int x, i;
 
 /*
 * transofmation de la valeur en valeur base 16
@@ -17,9 +18,9 @@ int outputValueParser(int value){
    int output = 0;
    if (value < 10) { output = value;}
    else {
-    int x = value;
+    x = value;
     x = x % 10;
-    int i = value;
+    i = value;
     i = i/10;
     
     output = x + i*16;

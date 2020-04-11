@@ -5,27 +5,27 @@
 003     @SCRATCH
 004-007 time
 008     distance
-009-00C parseDist.time
-009     outputValueParser.value
-009     MAIN.@SCRATCH1
-00A     outputValueParser.output
-00A     @delay_ms1.P1
-00B     outputValueParser.x
-00C     outputValueParser.i
+009     x
+00A     i
+00B     outputValueParser.value
+00B-00E parseDist.time
+00B     MAIN.@SCRATCH1
+00C     @delay_ms1.P1
+00C     outputValueParser.output
 00D     @DIV88.P1
-00D-010 @SFTOI.P2
-00D     parseDist.@SCRATCH1
-00E-011 @DIVFF.P1
-00E-00F @ITOF.P2
-00E     @DIV88.P3
+00E     @DIV88.P1
+00F-012 @SFTOI.P1
 00F     @DIV88.@SCRATCH1
-012-015 @DIVFF.P1
-016     @DIVFF.@SCRATCH1
-017     @DIVFF.@SCRATCH2
-018     @DIVFF.@SCRATCH3
-019     @DIVFF.@SCRATCH4
-01A     @DIVFF.@SCRATCH5
-01B     @DIVFF.@SCRATCH6
+00F     parseDist.@SCRATCH1
+010-013 @DIVFF.P1
+010-011 @ITOF.P2
+014-017 @DIVFF.P1
+018     @DIVFF.@SCRATCH1
+019     @DIVFF.@SCRATCH2
+01A     @DIVFF.@SCRATCH3
+01B     @DIVFF.@SCRATCH4
+01C     @DIVFF.@SCRATCH5
+01D     @DIVFF.@SCRATCH6
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
@@ -39,8 +39,8 @@ FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @READ_PROGRAM_MEMORY.P1
 FE9-FEA @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PROGRAM_MEMORY.P3
-FE9-FEA @WRITE_PACKED_MEMORY.P4
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
@@ -58,17 +58,19 @@ ROM Allocation:
 0002DA  @cinit2
 
 Project Directory:
-    W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
+    D:\Utilisateurs\Arnaud\Documents\GitHub\ElecDigital_Projet\ccs\PIC-codeC\
 
 Project Files:
-    main.c                                                  [03-avr.-20 09:06  CRC=116EE05C]
-    ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
-    C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
+    main.c                                                  [11-avr.-20 15:20  CRC=9108E1E3]
+    main.h                                                  [03-avr.-20 16:27  CRC=784CF644]
+    C:\Program Files (x86)\PICC\Devices\18F458.h            [23-mars-20 10:14  CRC=3B8B3D55]
 
-Source signature=BF1F94BE
+Source signature=806C52D1
+Program memory checksum=0000
+Hex file CRC=C1DB
 
 Units:
-    main (main)
+    D:\Utilisateurs\Arnaud\Documents\GitHub\ElecDigital_Projet\ccs\PIC-codeC\main (main)
 
 Compiler Settings:
     Processor:      PIC18F458
@@ -77,6 +79,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   main.xsym
