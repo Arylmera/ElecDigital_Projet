@@ -1,6 +1,5 @@
 #include <main.h>
 #use fast_io(C)
-#use delay(clock=20M)
 
 #define trigger pin_C0
 #define echo pin_C1
@@ -8,20 +7,20 @@
 
 #int_TIMER1
 
-int8 b = 0;
-int time;
-double distance;
+double time;
+int16 distance;
+int16 x, i;
 
 /*
 * transofmation de la valeur en valeur base 16
 */
-int8 outputValueParser(int8 value){
-   int8 output = 0;
-   if (b < 10) { output = value;}
+int outputValueParser(int16 value){
+   int16 output = 0;
+   if (value < 10) { output = value;}
    else {
-    long long x = value;
+    x = value;
     x = x % 10;
-    int8 i = (int8) value;
+    i = value;
     i = i/10;
     
     output = x + i*16;
@@ -29,9 +28,11 @@ int8 outputValueParser(int8 value){
    return output;
 }
 
-double parseDist(double time){
-  //return time / (343);
-  return time / 147.05;
+/*
+* parsing temps => distance
+*/
+int16 parseDist(double time){
+  return (int16) time / 58.82;
 }
 
 /*
@@ -55,34 +56,26 @@ void main()
    
    while(true)
    {
-   //b = 0;
-   //time = 0.0;
    
+   time = 0;
    triggerSonde();
    
-   while(input(echo) == 0); // attente début
+   while(input(echo) == 0){} // attente début
    set_timer1(0);
-   while(input(echo) == 1); // attente fin ou overflow
+   while(input(echo) == 1){} // attente fin ou overflow
    time = get_timer1();
    
    distance = parseDist(time);
-   b = (int) (distance);
    
-   /*
-   if(b > 99 && b < 999){
-      b = b / 10;
-      output_high(dot);
-   }
-   else if (b > 999){
-      b = 99;
+   if(distance > 99){
+      distance = distance / 10;
       output_high(dot);
    }
    else {
       output_low(dot);
    }
-   */
    
-   output_b(outputValueParser(b));
+   output_b(outputValueParser(time));
    
    delay_ms(400);
    }

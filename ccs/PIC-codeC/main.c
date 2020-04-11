@@ -7,14 +7,12 @@
 
 #int_TIMER1
 
-double time;
-int distance;
-int x, i;
+int16 time, distance, x, i;
 
 /*
 * transofmation de la valeur en valeur base 16
 */
-int outputValueParser(int value){
+int16 outputValueParser(int16 value){
    int output = 0;
    if (value < 10) { output = value;}
    else {
@@ -31,8 +29,8 @@ int outputValueParser(int value){
 /*
 * parsing temps => distance
 */
-int parseDist(double time){
-  return (int) time / 58.82;
+int16 parseDist(int16 time){
+  return time / (340 * 2) ;
 }
 
 /*
@@ -77,7 +75,7 @@ void main()
    
    output_b(outputValueParser(distance));
    
-   delay_ms(400);
+   delay_ms(500);
    }
 
 }
