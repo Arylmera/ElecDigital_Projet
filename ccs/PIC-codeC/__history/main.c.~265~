@@ -36,7 +36,7 @@ int16 outputValueParser(int16 value){
 * parsing temps => distance
 */
 int16 parseDist(int16 time){
-  return time / (285) ; // theoriquement 343 m/s
+  return time / (320) ;
 }
 
 /*

@@ -36,7 +36,7 @@ int16 outputValueParser(int16 value){
 * parsing temps => distance
 */
 int16 parseDist(int16 time){
-  return time / (285) ; // theoriquement 343 m/s
+  return time / (343) ;
 }
 
 /*
@@ -76,6 +76,15 @@ void main()
    // temps => distance
    distance = parseDist(time);
    
+   // gestion du point si > que 100 !> cm -> m
+   if(distance > 99){
+      distance = distance / 10;
+      output_high(dot);
+   }
+   else {
+      output_low(dot);
+   }
+   
    // vérification borne minVal
    if (distance < minVal){
       // allumer red => trop proche
@@ -87,19 +96,8 @@ void main()
       output_high(GREEN);
       output_low(RED);
    }
-   
    // envois distance JAVA
    //putc(distance);
-   
-   // gestion du point si > que 100 !> cm -> m
-   if(distance > 99){
-      distance = distance / 10;
-      output_high(dot);
-   }
-   else {
-      output_low(dot);
-   }
-   
    // afichage sur 7seg de la distance
    output_b(outputValueParser(distance));
    

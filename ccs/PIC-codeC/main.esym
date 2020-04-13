@@ -1,8 +1,7 @@
-D G "output" 0 8 "pin_C6"
-D G "__PCH__" 0 68 ""5.008""
-D G "__DEVICE__" 0 68 "458"
-D G "__DATE__" 0 68 ""11-avr.-20""
-D G "__TIME__" 0 68 ""18:23:11"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "__PCH__" 0 113 ""5.008""
+D G "__DEVICE__" 0 113 "458"
+D G "__DATE__" 0 113 ""13-avr.-20""
+D G "__TIME__" 0 113 ""11:00:01"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -862,28 +861,42 @@ d G "INT_CANRX1" 2 762 "0x00A302"
 d G "INT_CANRX0" 2 763 "0x00A301"
 D G "LED" 1 12 "PIN_None"
 D G "DELAY" 1 13 "1000"
-D G "trigger" 0 4 "pin_C0"
-D G "echo" 0 5 "pin_C1"
-D G "dot" 0 6 "pin_E2"
-D G "in" 0 7 "pin_C7"
-D G "out" 0 8 "pin_C6"
-V G "time" 0 12 "int16" `633 
-V G "distance" 0 12 "int16" `634 
-V G "x" 0 12 "int16" `635 
-V G "i" 0 12 "int16" `636  "* transofmation de la valeur en valeur base 16"
-V L "value" 0 17 "int16" `638 
-F G "outputValueParser" 0 17 "int16(int16 value)" `637 
-V L "output" 0 18 "int8" `639 
-C L "parseDist" 0 31 1 "*"
-V L "time" 0 34 "int16" `644 
-F G "parseDist" 0 34 "int16(int16 time)" `643 
-C L "triggerSonde" 0 38 1 "*"
-F G "triggerSonde" 0 41 "void()" `645 
-C L "MAIN" 0 47 1 "*"
-F G "MAIN" 0 51 "void()" `646 
-C L "MAIN" 0 47 1 "FUNCTION"
-C L "MAIN" 0 47 1 "FUNCTION"
-C L "MAIN" 0 47 1 "FUNCTION"
+D G "trigger" 0 6 "pin_C0"
+D G "echo" 0 7 "pin_C1"
+D G "dot" 0 8 "pin_E2"
+D G "RX" 0 9 "pin_C7"
+D G "TX" 0 10 "pin_C6"
+D G "GREEN" 0 11 "pin_E0"
+D G "RED" 0 12 "pin_E1"
+V G "time" 0 16 "int16" `636 
+V G "distance" 0 16 "int16" `637 
+V G "x" 0 16 "int16" `638 
+V G "i" 0 16 "int16" `639 
+V G "minVal" 0 16 "int16" `640  "* transofmation de la valeur en valeur base 16"
+V L "value" 0 21 "int16" `642 
+F G "outputValueParser" 0 21 "int16(int16 value)" `641 
+V L "output" 0 22 "int8" `643 
+C L "parseDist" 0 35 1 "*"
+V L "time" 0 38 "int16" `648 
+F G "parseDist" 0 38 "int16(int16 time)" `647 
+C L "parseDist" 0 35 1 "FUNCTION"
+C L "triggerSonde" 0 42 1 "*"
+F G "triggerSonde" 0 45 "void()" `649 
+C L "MAIN" 0 51 1 "*"
+F G "MAIN" 0 55 "void()" `650 
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 3 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
+C L "MAIN" 0 51 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
@@ -1020,3 +1033,5 @@ F B "puts" 1 2
 F B "getch" 0 1
 F B "gets" 1 3
 F B "kbhit" 0 1
+F B "set_uart_speed" 1 3
+F B "setup_uart" 1 3

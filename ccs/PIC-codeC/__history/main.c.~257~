@@ -1,21 +1,23 @@
 #include <main.h>
 #use fast_io(C)
 
+#use rs232(baud=19200, parity=N, xmit=PIN_C6, rcv=PIN_C7)
+
 #define trigger pin_C0
 #define echo pin_C1
 #define dot pin_E2
+#define RX pin_C7
+#define TX pin_C6
 
 #int_TIMER1
 
-double time;
-int16 distance;
-int16 x, i;
+int16 time, distance, x, i, minVal;
 
 /*
 * transofmation de la valeur en valeur base 16
 */
-int outputValueParser(int16 value){
-   int16 output = 0;
+int16 outputValueParser(int16 value){
+   int output = 0;
    if (value < 10) { output = value;}
    else {
     x = value;
@@ -31,8 +33,8 @@ int outputValueParser(int16 value){
 /*
 * parsing temps => distance
 */
-int16 parseDist(double time){
-  return (int16) time / 58.82;
+int16 parseDist(int16 time){
+  return time / (343) ;
 }
 
 /*
@@ -50,13 +52,14 @@ void triggerSonde(){
 void main()
 {
    setup_low_volt_detect(FALSE);
-   set_tris_c(2); // set RC1 as input (ECHO)
+   set_tris_c(0b01000010); // set RC1 as input (ECHO)
    
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
    
    while(true)
    {
    
+   minVal = 
    time = 0;
    triggerSonde();
    
@@ -75,9 +78,10 @@ void main()
       output_low(dot);
    }
    
-   output_b(outputValueParser(time));
+   output_b(outputValueParser(distance));
    
-   delay_ms(400);
+   
+   delay_ms(500);
    }
 
 }

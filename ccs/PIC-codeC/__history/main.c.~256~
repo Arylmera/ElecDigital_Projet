@@ -4,23 +4,23 @@
 #define trigger pin_C0
 #define echo pin_C1
 #define dot pin_E2
+#define RX pin_C7
+#define TX pin_C6
 
 #int_TIMER1
 
-int8 b = 0;
-int time;
-double distance;
+int16 time, distance, x, i;
 
 /*
 * transofmation de la valeur en valeur base 16
 */
-int8 outputValueParser(int8 value){
-   int8 output = 0;
-   if (b < 10) { output = value;}
+int16 outputValueParser(int16 value){
+   int output = 0;
+   if (value < 10) { output = value;}
    else {
-    long long x = value;
+    x = value;
     x = x % 10;
-    int8 i = (int8) value;
+    i = value;
     i = i/10;
     
     output = x + i*16;
@@ -28,8 +28,11 @@ int8 outputValueParser(int8 value){
    return output;
 }
 
-double parseDist(double time){
-  return time / 58.82;
+/*
+* parsing temps => distance
+*/
+int16 parseDist(int16 time){
+  return time / (343) ;
 }
 
 /*
@@ -47,7 +50,7 @@ void triggerSonde(){
 void main()
 {
    setup_low_volt_detect(FALSE);
-   set_tris_c(2); // set RC1 as input (ECHO)
+   set_tris_c(0b01000010); // set RC1 as input (ECHO)
    
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
    
@@ -63,20 +66,19 @@ void main()
    time = get_timer1();
    
    distance = parseDist(time);
-   b = (int) (distance);
    
-   if(b > 99){
-      b = b / 10;
+   if(distance > 99){
+      distance = distance / 10;
       output_high(dot);
    }
    else {
       output_low(dot);
    }
    
-   printf('', %d, b);
-   output_b(outputValueParser(b));
+   output_b(outputValueParser(distance));
    
-   delay_ms(400);
+   
+   delay_ms(500);
    }
 
 }
