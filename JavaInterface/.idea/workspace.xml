@@ -1,46 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="JavaInterface.jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JavaInterface_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/jssc_2_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaInterface.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jssc-2.8.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Envoie_Recu_Donnees$Reader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Envoie_Recu_Donnees.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Gui$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Gui$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Gui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Envoie_Recu_Donnees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gui$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/.idea/libraries/jssc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/Envoie_Recu_Donnees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/Gui$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/Gui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java/jssc-2.8.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/ElecDigitalProjet.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jar elec/elec.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/.idea/java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/bin/pic/Gui$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/bin/pic/Gui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/src/pic/Envoie_Recu_Donnees.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java/src/pic/Gui.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Envoie_Recu_Donnees.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Envoie_Recu_Donnees.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587299703486</updated>
-      <workItem from="1587299707224" duration="425000" />
+      <workItem from="1587299707224" duration="772000" />
     </task>
     <servers />
   </component>

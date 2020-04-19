@@ -3,10 +3,9 @@ package pic;
 import jssc.*;
 import java.io.*;
 
-
 public class Envoie_Recu_Donnees {
 	private static SerialPort portSerie;
-	static double valeur = Gui.getValeurSonde();
+	static double valeur = pic.Gui.getValeurSonde();
 	
 	public static void main(String[] args) {
 		String[] nomPorts = SerialPortList.getPortNames();
@@ -43,7 +42,7 @@ public class Envoie_Recu_Donnees {
 		
 		}
 		catch(SerialPortException err){
-			System.out.println("Erreur d'écriture " + err);
+			System.out.println("Erreur d'ï¿½criture " + err);
 		}
 	}
 	
@@ -55,7 +54,7 @@ public class Envoie_Recu_Donnees {
 			if(e.isRXCHAR() && e.getEventValue() > 0 ) {
 				try {
 					String valeurRecue = portSerie.readString(e.getEventValue());
-					System.out.println("Les données reçues du port sont " + valeurRecue);
+					System.out.println("Les donnï¿½es reï¿½ues du port sont " + valeurRecue);
 				}
 				catch(SerialPortException ex) {
 					System.out.println("Erreur " + ex);
