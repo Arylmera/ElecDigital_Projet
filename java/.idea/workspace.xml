@@ -46,7 +46,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="Y:/OneDrive/Ephec/ElecDigitalProjet/JavaInterface" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -133,6 +133,7 @@
       <workItem from="1587298200062" duration="564000" />
       <workItem from="1587298804893" duration="387000" />
       <workItem from="1587299257041" duration="1056000" />
+      <workItem from="1587300835394" duration="72000" />
     </task>
     <servers />
   </component>
@@ -172,9 +173,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="899" y="377" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587299469978" />
-    <state x="1502" y="455" key="FileChooserDialogImpl" timestamp="1586768603937">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="894" y="403" key="FileChooserDialogImpl" timestamp="1587300904719">
+      <screen x="0" y="0" width="2048" height="1240" />
     </state>
+    <state x="894" y="403" key="FileChooserDialogImpl/0.0.2048.1240@0.0.2048.1240" timestamp="1587300904719" />
     <state x="1502" y="455" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1586768603937" />
     <state x="396" y="199" key="SettingsEditor" timestamp="1587299147926">
       <screen x="0" y="0" width="1792" height="1120" />

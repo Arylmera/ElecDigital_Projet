@@ -11,7 +11,7 @@ public class Envoie_Recu_Donnees {
 		String[] nomPorts = SerialPortList.getPortNames();
 		
 		if(nomPorts.length == 0) {
-			System.out.println("Il n'y a pas de ports, utilise VSPE");
+			System.out.println("Il n'y a pas de ports disponibles.");
 			
 			try {
 				System.in.read();
@@ -42,22 +42,21 @@ public class Envoie_Recu_Donnees {
 		
 		}
 		catch(SerialPortException err){
-			System.out.println("Erreur d'�criture " + err);
+			System.out.println("Erreur d'envois || " + err);
 		}
 	}
 	
 	public static class Reader implements SerialPortEventListener {
 		
 		@Override
-		
 		public void serialEvent(SerialPortEvent e) {
 			if(e.isRXCHAR() && e.getEventValue() > 0 ) {
 				try {
 					String valeurRecue = portSerie.readString(e.getEventValue());
-					System.out.println("Les donn�es re�ues du port sont " + valeurRecue);
+					System.out.println("Les données reçues du port sont " + valeurRecue);
 				}
 				catch(SerialPortException ex) {
-					System.out.println("Erreur " + ex);
+					System.out.println("Erreur de réception || " + ex);
 				}
 			
 			

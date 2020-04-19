@@ -23,12 +23,12 @@ public class Gui extends JFrame {
 	public Gui() {
 		setLayout(new FlowLayout());
 		
-		labelEntreeSonde = new JLabel("Entrer un nombre dans la sonde");
+		labelEntreeSonde = new JLabel("Distance avant alerte");
 		add(labelEntreeSonde);
 		
 		texteEntreeSonde = new JTextField(10);
 		add(texteEntreeSonde);
-		// key listener pour empêcher tout caractère sauf les numéros, le backspace et la virgule (numérique)
+		// key listener pour empÃ©cher tout caractÃ¨re sauf les numÃ©ros, le backspace et la virgule (numÃ©rique)
 		texteEntreeSonde.addKeyListener(new KeyAdapter() {
 			public void keyTyped(KeyEvent e) {
 				char chr = e.getKeyChar();
@@ -52,7 +52,7 @@ public class Gui extends JFrame {
 		 Gui fenetre = new Gui();
 		 fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		 fenetre.setTitle("Projet Electronique Digitale");
-		 fenetre.setSize(300,400);
+		 fenetre.setSize(600,400);
 		 fenetre.setLocationRelativeTo(null);
 		 fenetre.setVisible(true);
 	}
