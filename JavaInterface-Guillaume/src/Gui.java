@@ -10,7 +10,7 @@ public class Gui extends JFrame {
 	private JLabel guiLabelMax = new JLabel("Distance avant alerte");
 	private JButton guiBtnMax = new JButton("Confirmer");
 	private JTextField guiValeurMax = new JTextField(10);
-	private static JTextArea guiText = new JTextArea();
+	private static JTextArea guiText = new JTextArea(400, 200);
 	private static double valeurSonde = 0.0;
 	private static SerialPort portSerie;
 
@@ -18,13 +18,16 @@ public class Gui extends JFrame {
 		Fenetre();
 		listPorts();
 	}
-	
-	public Gui() {
-		setLayout(new FlowLayout());
 
+	/**
+	 * GUI builder
+	 */
+	public Gui() {
+		// build layout
+		setLayout(new FlowLayout());
 		add(guiLabelMax);
-		add(guiBtnMax);
 		add(guiValeurMax);
+		add(guiBtnMax);
 		add(guiText);
 
 		// key listener pour empécher tout caractère sauf les numéros, le backspace et la virgule (numérique)
@@ -46,6 +49,9 @@ public class Gui extends JFrame {
 
 	}
 
+	/**
+	 * setup fenetre GUI
+	 */
 	public static void Fenetre() {
 		Gui fenetre = new Gui();
 		fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -55,6 +61,9 @@ public class Gui extends JFrame {
 		fenetre.setVisible(true);
 	}
 
+	/**
+	 * liste des port disponibles
+	 */
 	public static void listPorts(){
 		String[] nomPorts = SerialPortList.getPortNames();
 
@@ -77,6 +86,10 @@ public class Gui extends JFrame {
 		}
 	}
 
+	/**
+	 * envois des donées a la pic
+	 * @param valeurSonde
+	 */
 	public static void sendData(int valeurSonde){
 
 		portSerie = new SerialPort("COM2");
@@ -101,6 +114,9 @@ public class Gui extends JFrame {
 		}
 	}
 
+	/**
+	 * réception des données dynamique depuis la pic
+	 */
 	public static class Reader implements SerialPortEventListener {
 		@Override
 		public void serialEvent(SerialPortEvent e) {
