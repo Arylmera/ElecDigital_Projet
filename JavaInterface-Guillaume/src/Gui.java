@@ -1,16 +1,14 @@
 
+import jssc.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
-import jssc.*;
 
 public class Gui extends JFrame {
 
-	private JLabel guiLabelMax = new JLabel("Distance avant alerte");
-	private JButton guiBtnMax = new JButton("Confirmer");
-	private JTextField guiValeurMax = new JTextField(10);
-	private static JTextArea guiText = new JTextArea(400, 200);
+	private final JTextField guiValeurMax = new JTextField(10);
+	private static final JTextArea guiText = new JTextArea(400, 200);
 	private static double valeurSonde = 0.0;
 	private static SerialPort portSerie;
 
@@ -25,8 +23,10 @@ public class Gui extends JFrame {
 	public Gui() {
 		// build layout
 		setLayout(new FlowLayout());
+		JLabel guiLabelMax = new JLabel("Distance avant alerte");
 		add(guiLabelMax);
 		add(guiValeurMax);
+		JButton guiBtnMax = new JButton("Confirmer");
 		add(guiBtnMax);
 		add(guiText);
 
@@ -120,17 +120,16 @@ public class Gui extends JFrame {
 	public static class Reader implements SerialPortEventListener {
 		@Override
 		public void serialEvent(SerialPortEvent e) {
-			if(e.isRXCHAR() && e.getEventValue() > 0 ) {
-				try {
-					String valeurRecue = portSerie.readString(e.getEventValue());
-					System.out.println("Les données reçues du port sont " + valeurRecue);
-					guiText.append(" Distance = "+ valeurRecue + "\n");
+			if(e.isRXCHAR()) {
+				if (e.getEventValue() > 0 ) {
+					try {
+						String valeurRecue = portSerie.readString(e.getEventValue());
+						System.out.println("Les données reçues du port sont " + valeurRecue);
+						guiText.append(" Distance = " + valeurRecue + "\n");
+					} catch (SerialPortException ex) {
+						System.out.println("Erreur de réception || " + ex);
+					}
 				}
-				catch(SerialPortException ex) {
-					System.out.println("Erreur de réception || " + ex);
-				}
-
-
 			}
 		}
 

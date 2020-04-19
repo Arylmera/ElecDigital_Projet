@@ -5,6 +5,24 @@
       <artifact name="JavaInterface-Guillaume.jar" />
     </artifacts-to-build>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -88,12 +106,23 @@
       <workItem from="1587299707224" duration="2357000" />
       <workItem from="1587302184473" duration="362000" />
       <workItem from="1587323830246" duration="2737000" />
-      <workItem from="1587326877735" duration="297000" />
+      <workItem from="1587326877735" duration="1450000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="293" y="-1058" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587324650022">
@@ -104,39 +133,43 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="633" y="356" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587300069218" />
-    <state width="1344" height="266" key="GridCell.Tab.0.bottom" timestamp="1587326741922">
+    <state width="1677" height="259" key="GridCell.Tab.0.bottom" timestamp="1587328344127">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.bottom/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070592" />
     <state width="1750" height="186" key="GridCell.Tab.0.bottom/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344305" />
     <state width="1750" height="313" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385151" />
-    <state width="1344" height="266" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1587326741922" />
-    <state width="1344" height="266" key="GridCell.Tab.0.center" timestamp="1587326741922">
+    <state width="1677" height="259" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1587328344127" />
+    <state width="1677" height="259" key="GridCell.Tab.0.center" timestamp="1587328344127">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.center/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070590" />
     <state width="1750" height="186" key="GridCell.Tab.0.center/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344304" />
     <state width="1750" height="313" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385150" />
-    <state width="1344" height="266" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1587326741922" />
-    <state width="1344" height="266" key="GridCell.Tab.0.left" timestamp="1587326741922">
+    <state width="1677" height="259" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1587328344127" />
+    <state width="1677" height="259" key="GridCell.Tab.0.left" timestamp="1587328344127">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.left/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070589" />
     <state width="1750" height="186" key="GridCell.Tab.0.left/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344303" />
     <state width="1750" height="313" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385149" />
-    <state width="1344" height="266" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1587326741922" />
-    <state width="1344" height="266" key="GridCell.Tab.0.right" timestamp="1587326741922">
+    <state width="1677" height="259" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1587328344127" />
+    <state width="1677" height="259" key="GridCell.Tab.0.right" timestamp="1587328344127">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.right/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070591" />
     <state width="1750" height="186" key="GridCell.Tab.0.right/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344304" />
     <state width="1750" height="313" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385150" />
-    <state width="1344" height="266" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1587326741922" />
+    <state width="1677" height="259" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1587328344127" />
     <state x="737" y="176" key="SettingsEditor" timestamp="1587326852372">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="-154" y="-1259" key="SettingsEditor/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587324409182" />
     <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1587300146802" />
     <state x="737" y="176" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1587326852372" />
+    <state x="1527" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587328040165">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1527" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.3440.1400@0.0.3440.1400" timestamp="1587328040165" />
   </component>
 </project>
