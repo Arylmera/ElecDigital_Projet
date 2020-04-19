@@ -43,6 +43,7 @@ public class Gui extends JFrame {
 		boutonEntreeSonde.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent ae){
 				valeurSonde = Double.parseDouble(texteEntreeSonde.getText());
+				System.out.println(valeurSonde);
 			}
 		});
 	}
