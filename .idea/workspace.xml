@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="390b8af3-459a-43c9-9ce0-5f4a83ac6b30" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/.idea/libraries/jssc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/Envoie_Recu_Donnees.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/Gui$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/Gui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/Gui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java/jssc-2.8.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ElecDigitalProjet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jar elec/elec.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/.idea/java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/bin/pic/Gui$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/bin/pic/Gui.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/pic/Envoie_Recu_Donnees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/pic/Gui.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="390b8af3-459a-43c9-9ce0-5f4a83ac6b30" name="Default Changelist" comment="" />
+      <created>1587299613610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587299613610</updated>
+      <workItem from="1587299620274" duration="86000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="264" y="141" key="new project wizard" timestamp="1587299703449">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="264" y="141" key="new project wizard/0.0.1792.1120@0.0.1792.1120" timestamp="1587299703449" />
+  </component>
+</project>

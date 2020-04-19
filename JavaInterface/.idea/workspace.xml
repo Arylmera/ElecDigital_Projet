@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/JavaInterface_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jssc_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaInterface.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jssc-2.8.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Envoie_Recu_Donnees$Reader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Envoie_Recu_Donnees.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Gui$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Gui$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/JavaInterface/pic/Gui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Envoie_Recu_Donnees.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gui$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/.idea/libraries/jssc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/Envoie_Recu_Donnees.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/Gui$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/Gui.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/Gui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java/jssc-2.8.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/ElecDigitalProjet.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jar elec/elec.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/.idea/java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/.idea/java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/bin/pic/Gui$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/bin/pic/Gui.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/src/pic/Envoie_Recu_Donnees.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/src/pic/Gui.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1alAFdkd88xxyQGboy7CxDms8s9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pic.Gui" />
+      <module name="JavaInterface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Gui" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="" />
+      <created>1587299703486</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587299703486</updated>
+      <workItem from="1587299707224" duration="425000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="633" y="356" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587300069218">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="633" y="356" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587300069218" />
+    <state x="384" y="141" key="SettingsEditor" timestamp="1587300146802">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1587300146802" />
+  </component>
+</project>
