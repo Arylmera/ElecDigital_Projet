@@ -46,7 +46,6 @@ public class Gui extends JFrame {
 			System.out.println(valeurSonde);
 			sendData((int) valeurSonde);
 		});
-
 	}
 
 	/**
@@ -132,8 +131,6 @@ public class Gui extends JFrame {
 				}
 			}
 		}
-
-
 	}
 }
 

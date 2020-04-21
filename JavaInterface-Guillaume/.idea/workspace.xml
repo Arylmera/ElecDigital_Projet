@@ -24,7 +24,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="" />
+    <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid8144.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInterface/Gui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInterface/Gui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInterface/Gui$Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInterface/Gui$Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaInterface/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaInterface/Gui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.err" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.err" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +112,9 @@
       <workItem from="1587323830246" duration="2737000" />
       <workItem from="1587326877735" duration="1450000" />
       <workItem from="1587328954248" duration="28000" />
+      <workItem from="1587382902984" duration="263000" />
+      <workItem from="1587383224618" duration="787000" />
+      <workItem from="1587385871839" duration="19000" />
     </task>
     <servers />
   </component>
