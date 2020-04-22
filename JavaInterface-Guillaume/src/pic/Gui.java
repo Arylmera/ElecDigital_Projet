@@ -1,3 +1,4 @@
+package pic;
 
 import jssc.*;
 import javax.swing.*;
