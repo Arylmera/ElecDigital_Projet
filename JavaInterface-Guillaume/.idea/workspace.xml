@@ -25,8 +25,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proteus/ProjectElecDigit.pdsprj.LAPTOP-1T71EL63.Arnaud.workspace" beforeDir="false" afterPath="$PROJECT_DIR$/../Proteus/ProjectElecDigit.pdsprj.LAPTOP-1T71EL63.Arnaud.workspace" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,20 +61,20 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jssc-2.8.0.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Gui (1)">
+  <component name="RunManager" selected="JAR Application.JavaInterface.jar">
     <configuration name="Gui (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pic.Gui" />
       <module name="JavaInterface" />
@@ -99,10 +101,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JavaInterface.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/JavaInterface_Guillaume_jar/JavaInterface.jar" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Gui (1)" />
+        <item itemvalue="JAR Application.JavaInterface.jar" />
         <item itemvalue="Application.Gui" />
+        <item itemvalue="Application.Gui (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +131,7 @@
       <workItem from="1587382902984" duration="263000" />
       <workItem from="1587383224618" duration="2440000" />
       <workItem from="1587464919994" duration="1059000" />
+      <workItem from="1587555261213" duration="157000" />
     </task>
     <servers />
   </component>
@@ -136,6 +144,20 @@
         <entry key="MAIN">
           <value>
             <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -155,43 +177,49 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="633" y="356" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587300069218" />
-    <state x="1495" y="461" key="FileChooserDialogImpl" timestamp="1587549423397">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="834" y="342" key="FileChooserDialogImpl" timestamp="1587555295100">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="834" y="342" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1587555295100" />
     <state x="1495" y="461" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1587549423397" />
-    <state width="1677" height="208" key="GridCell.Tab.0.bottom" timestamp="1587465150905">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1587555420397">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.bottom/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070592" />
     <state width="1750" height="186" key="GridCell.Tab.0.bottom/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344305" />
     <state width="1750" height="313" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385151" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587555420397" />
     <state width="1677" height="208" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1587465150905" />
-    <state width="1677" height="208" key="GridCell.Tab.0.center" timestamp="1587465150905">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1587555420397">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.center/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070590" />
     <state width="1750" height="186" key="GridCell.Tab.0.center/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344304" />
     <state width="1750" height="313" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385150" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587555420397" />
     <state width="1677" height="208" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1587465150905" />
-    <state width="1677" height="208" key="GridCell.Tab.0.left" timestamp="1587465150905">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1587555420396">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.left/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070589" />
     <state width="1750" height="186" key="GridCell.Tab.0.left/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344303" />
     <state width="1750" height="313" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385149" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587555420396" />
     <state width="1677" height="208" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1587465150905" />
-    <state width="1677" height="208" key="GridCell.Tab.0.right" timestamp="1587465150905">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1587555420397">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="3398" height="186" key="GridCell.Tab.0.right/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587326070591" />
     <state width="1750" height="186" key="GridCell.Tab.0.right/-891.-1440.3440.1440/0.0.1792.1120@0.0.1792.1120" timestamp="1587326344304" />
     <state width="1750" height="313" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1587301385150" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587555420397" />
     <state width="1677" height="208" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1587465150905" />
-    <state x="737" y="176" key="SettingsEditor" timestamp="1587326852372">
-      <screen x="0" y="0" width="3440" height="1400" />
+    <state x="411" y="131" key="SettingsEditor" timestamp="1587555302829">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-154" y="-1259" key="SettingsEditor/-891.-1440.3440.1440/0.0.1792.1120@-891.-1440.3440.1440" timestamp="1587324409182" />
     <state x="384" y="141" key="SettingsEditor/0.0.1792.1120@0.0.1792.1120" timestamp="1587300146802" />
+    <state x="411" y="131" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587555302829" />
     <state x="737" y="176" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1587326852372" />
     <state x="1527" y="610" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587328040165">
       <screen x="0" y="0" width="3440" height="1400" />
