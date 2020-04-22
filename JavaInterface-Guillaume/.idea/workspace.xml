@@ -59,14 +59,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/jssc-2.8.0.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -123,7 +123,7 @@
       <workItem from="1587328954248" duration="28000" />
       <workItem from="1587382902984" duration="263000" />
       <workItem from="1587383224618" duration="2440000" />
-      <workItem from="1587464919994" duration="261000" />
+      <workItem from="1587464919994" duration="1059000" />
     </task>
     <servers />
   </component>
@@ -143,6 +143,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1273" y="294" key="#Project_Structure" timestamp="1587549429012">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1273" y="294" key="#Project_Structure/0.0.3440.1400@0.0.3440.1400" timestamp="1587549429012" />
     <state x="293" y="-1058" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587324650022">
       <screen x="-891" y="-1440" width="3440" height="1440" />
     </state>
@@ -151,6 +155,10 @@
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state x="633" y="356" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1587300069218" />
+    <state x="1495" y="461" key="FileChooserDialogImpl" timestamp="1587549423397">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1495" y="461" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1587549423397" />
     <state width="1677" height="208" key="GridCell.Tab.0.bottom" timestamp="1587465150905">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>

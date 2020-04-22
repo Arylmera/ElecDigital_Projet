@@ -1,6 +1,9 @@
 package pic;
 
+//import gnu.io.*;
 import jssc.*;
+import jssc.SerialPort;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
