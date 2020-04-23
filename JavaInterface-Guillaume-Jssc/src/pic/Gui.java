@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Gui extends JFrame {
 
 	private final JTextField guiValeurMax = new JTextField(10);
-	private static final JTextArea guiText = new JTextArea(400, 200);
+	private static final JTextArea guiText = new JTextArea(40, 20);
 	private static double valeurSonde = 0.0;
 	private static SerialPort portSerie;
 
