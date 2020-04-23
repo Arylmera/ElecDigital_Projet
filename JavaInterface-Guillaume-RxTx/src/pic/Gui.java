@@ -131,6 +131,7 @@ public class Gui extends JFrame {
 	 */
 	static class SerialListener implements SerialPortEventListener {
 		public void serialEvent(SerialPortEvent event) {
+			System.out.println("Valeur détectée sur le port");
 			if ( event.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
 				try {
 					int available;
