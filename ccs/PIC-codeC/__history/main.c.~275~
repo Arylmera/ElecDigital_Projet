@@ -89,7 +89,7 @@ void main()
    }
    
    // envois distance JAVA
-   putc(distance);
+   //putc(distance);
    
    // gestion du point si > que 100 !> cm -> m
    if(distance > 99){

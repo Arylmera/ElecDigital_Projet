@@ -1,9 +1,9 @@
 
-ROM used:   484/16384 (1%)
-            484/16384 (1%) including unused fragments
+ROM used:   498/16384 (2%)
+            498/16384 (2%) including unused fragments
 
-            0.5 Average locations per line
-            11.0 Average locations per statement
+            0.6 Average locations per line
+            11.1 Average locations per statement
 
 RAM used:   16/1536 (1%) at main() level
             22/1536 (1%) worst case
@@ -13,38 +13,39 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  112    44 100  main.c
+  112    45 100  main.c
    16     0   0  ..\test\main.h
   766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
 ----- -----
-  894    44 Total
+  894    45 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
 0     40   4    1             @delay_ms1
+0     10   1    0             @PUTCHARI_BIU_2
 0    126  13    3   273  5.5  outputValueParser
-0     66   7    5   511  5.2  @DIV1616
+0     66   7    5             @DIV1616
 0     30   3    2    35  1.7  parseDist
 0     18   2    0    48  1.1  triggerSonde
-0    200  21    2   708  5.8  MAIN
+0    204  20    2   737  5.8  MAIN
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               5
-    Statements              44
-    Comments                155
-    Volume (V)              2121
-    Difficulty (D)          19.6
-    Effort to implement (E) 41514
-    Time to implement (T)   38 minutes
+    Functions               4
+    Statements              45
+    Comments                154
+    Volume (V)              1390
+    Difficulty (D)          14.0
+    Effort to implement (E) 19523
+    Time to implement (T)   18 minutes
     Est Delivered Bugs (B)  0
-    Cyclomatic Complexity   4
-    Maintainability (MI)    140
+    Cyclomatic Complexity   3
+    Maintainability (MI)    92
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
-00004-07FFE   480  32284  
+00004-07FFE   494  32270  
 
 
 

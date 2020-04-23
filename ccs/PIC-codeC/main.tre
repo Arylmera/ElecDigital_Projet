@@ -1,9 +1,10 @@
 ÀÄmain
-   ÀÄMAIN  0/200  Ram=2
+   ÀÄMAIN  0/204  Ram=2
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄtriggerSonde  0/18  Ram=0
       ÃÄparseDist  0/30  Ram=2
       ³  ÀÄ@DIV1616  0/66  Ram=5
+      ÃÄ@PUTCHARI_BIU_2  0/10  Ram=0
       ÃÄ@DIV1616  0/66  Ram=5
       ÃÄoutputValueParser  0/126  Ram=3
       ³  ÃÄ@DIV1616  0/66  Ram=5

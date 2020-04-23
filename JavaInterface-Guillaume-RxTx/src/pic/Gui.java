@@ -61,7 +61,7 @@ public class Gui extends JFrame {
 		guiBtnMax.addActionListener(ae -> {
 			try {
 				minValue = Integer.parseInt(guiValeurMax.getText());
-				System.out.println(minValue);
+				System.out.println("Envois de la valeur minimale : " + minValue);
 				// send value to pic
 				sendData(minValue);
 			}
