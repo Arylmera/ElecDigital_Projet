@@ -137,6 +137,7 @@ public class Gui extends JFrame {
 	public static void close(){
 		try {
 			serialPort.close();
+			System.exit(0);
 		}
 		catch (Exception e){
 			System.out.println(" error in close = " + e.getMessage());
