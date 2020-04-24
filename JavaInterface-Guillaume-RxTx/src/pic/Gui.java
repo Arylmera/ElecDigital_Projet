@@ -33,9 +33,6 @@ public class Gui extends JFrame {
 		catch ( Exception e ) {
 			e.printStackTrace();
 		}
-		finally {
-			close();
-		}
 	}
 
 	/**
@@ -49,6 +46,8 @@ public class Gui extends JFrame {
 		add(guiValeurMax);
 		JButton guiBtnMax = new JButton("Confirmer");
 		add(guiBtnMax);
+		JButton guiBtnClose = new JButton("Close");
+		add(guiBtnClose);
 		add(guiText);
 
 		// key listener pour empécher tout caractère sauf les numéros, le backspace et la virgule (numérique)
@@ -70,6 +69,15 @@ public class Gui extends JFrame {
 				sendData(minValue);
 			}
 			catch (NumberFormatException | IOException e){}
+		});
+
+		guiBtnClose.addActionListener(ae -> {
+			try {
+				close();
+			}
+			catch (Exception e){
+				System.out.println("Error in btn close : " + e.getMessage());
+			}
 		});
 	}
 
@@ -126,7 +134,7 @@ public class Gui extends JFrame {
 	/**
 	 * fermeture du port serial
 	 */
-	public void close(){
+	public static void close(){
 		try {
 			serialPort.close();
 		}
