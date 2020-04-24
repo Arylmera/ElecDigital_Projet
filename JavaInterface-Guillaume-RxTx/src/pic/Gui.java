@@ -13,6 +13,7 @@ public class Gui extends JFrame {
 
 	private static OutputStream outStream;
 	private static InputStream inStream;
+	private static SerialPort serialPort;
 	private final JTextField guiValeurMax = new JTextField(10);
 	private static final JTextArea guiText = new JTextArea(20, 20);
 	private static int minValue = 0;
@@ -26,11 +27,14 @@ public class Gui extends JFrame {
 	 */
 	public static void main(String[] args) {
 		try {
-			connect("COM1");
+			connect("COM2");
 			Fenetre();
 		}
 		catch ( Exception e ) {
 			e.printStackTrace();
+		}
+		finally {
+			close();
 		}
 	}
 
@@ -98,7 +102,7 @@ public class Gui extends JFrame {
 	 */
 	private static void connect(String portName) throws IOException, NoSuchPortException, PortInUseException {
 		CommPortIdentifier portId = CommPortIdentifier.getPortIdentifier(portName);
-		SerialPort serialPort = (SerialPort) portId.open("ElecJavaInterface", timeOut);
+		serialPort = (SerialPort) portId.open("ElecJavaInterface", timeOut);
 		try {
 			serialPort.setSerialPortParams(baudRate, SerialPort.DATABITS_8, SerialPort.STOPBITS_1, SerialPort.PARITY_NONE);
 		} catch (UnsupportedCommOperationException ex) { System.err.println(ex.getMessage());}
@@ -114,7 +118,21 @@ public class Gui extends JFrame {
 			serialPort.addEventListener(new SerialListener());
 			serialPort.notifyOnDataAvailable(true);
 		}
-		catch (Exception e) {}
+		catch (Exception e) {
+			System.out.println(" error in open = " + e.getMessage());
+		}
+	}
+
+	/**
+	 * fermeture du port serial
+	 */
+	public void close(){
+		try {
+			serialPort.close();
+		}
+		catch (Exception e){
+			System.out.println(" error in close = " + e.getMessage());
+		}
 	}
 
 	/**
@@ -133,13 +151,20 @@ public class Gui extends JFrame {
 		public void serialEvent(SerialPortEvent event) {
 			System.out.println("Valeur détectée sur le port");
 			if ( event.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
+				System.out.println("if");
 				try {
-					int available;
-					available = inStream.available();
+					System.out.println("try");
+					int available = inStream.available();
+					System.out.println("available : " + available);
 					byte[] chunck = new byte[available];
-					inStream.read(chunck, 0, available);
-					String value = new String(chunck);
-					printText(value);
+					System.out.println("chunck : " + chunck);
+					if (available > 0) {
+						inStream.read(chunck, 0, available);
+						System.out.println("chunk after read : " + chunck);
+						String value = new String(chunck);
+						System.out.println("value : " + value);
+						printText(value);
+					}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

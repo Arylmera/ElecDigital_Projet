@@ -61,9 +61,12 @@ void main()
    while(true)
    {
    
-   // setup des valeurs et récupération minValue envoyé par JAVA
-   minVal = 100;
+   // setup des valeurs
    time = 0;
+   
+   // récupération minValue envoyé par JAVA
+   minVal = 100;// (int16) getc();
+   
    // déclanchement de la sonde
    triggerSonde();
    

@@ -13,11 +13,11 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  112    45 100  main.c
+  115    45 100  main.c
    16     0   0  ..\test\main.h
   766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
 ----- -----
-  894    45 Total
+  897    45 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -33,14 +33,14 @@ Page ROM  %  RAM   Vol Diff  Functions:
 Program metrics:
     Functions               4
     Statements              45
-    Comments                154
+    Comments                156
     Volume (V)              1390
     Difficulty (D)          14.0
     Effort to implement (E) 19523
     Time to implement (T)   18 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   3
-    Maintainability (MI)    92
+    Maintainability (MI)    89
 
  Segment     Used  Free
 -----------  ----  ----

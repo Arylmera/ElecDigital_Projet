@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.008, 5967               23-avr.-20 17:51
+CCS PCH C Compiler, Version 5.008, 5967               24-avr.-20 09:18
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\main.lst
 
@@ -242,14 +242,17 @@ CCS PCH C Compiler, Version 5.008, 5967               23-avr.-20 17:51
 ....................    while(true) 
 ....................    { 
 ....................     
-....................    // setup des valeurs et récupération minValue envoyé par JAVA 
-....................    minVal = 100; 
-014E:  CLRF   0D
-0150:  MOVLW  64
-0152:  MOVWF  0C
+....................    // setup des valeurs 
 ....................    time = 0; 
-0154:  CLRF   05
-0156:  CLRF   04
+014E:  CLRF   05
+0150:  CLRF   04
+....................     
+....................    // récupération minValue envoyé par JAVA 
+....................    minVal = 100;// (int16) getc(); 
+0152:  CLRF   0D
+0154:  MOVLW  64
+0156:  MOVWF  0C
+....................     
 ....................    // déclanchement de la sonde 
 ....................    triggerSonde(); 
 0158:  BRA    0004
