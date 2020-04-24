@@ -8,6 +8,7 @@ import java.awt.event.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Arrays;
 
 public class Gui extends JFrame {
 
@@ -166,12 +167,12 @@ public class Gui extends JFrame {
 					System.out.println("try");
 					int available = inStream.available();
 					System.out.println("available : " + available);
-					byte[] chunck = new byte[available];
-					System.out.println("chunck : " + chunck);
+					byte[] data = new byte[available];
+					System.out.println("data : " + Arrays.toString(data));
 					if (available > 0) {
-						inStream.read(chunck, 0, available);
-						System.out.println("chunk after read : " + chunck);
-						String value = new String(chunck);
+						inStream.read(data, 0, available);
+						System.out.println("chunk after read : " + Arrays.toString(data));
+						String value = new String(data);
 						System.out.println("value : " + value);
 						printText(value);
 					}
