@@ -150,6 +150,7 @@ public class Gui extends JFrame {
 	 * @throws IOException
 	 */
 	public void sendData(int valueToSend) throws IOException {
+		guiText.append(valueToSend + " cm définie comme valeur maximum \n");
 		outStream.write(valueToSend);
 	}
 
