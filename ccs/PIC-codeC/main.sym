@@ -3,9 +3,8 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
-004     @INTERRUPT_AREA
-005     @INTERRUPT_AREA
-006     @INTERRUPT_AREA
+004     lcdline
+005.0   flag
 006     lcd
 007     @INTERRUPT_AREA
 008     @INTERRUPT_AREA
@@ -22,60 +21,66 @@
 013     @INTERRUPT_AREA
 014     @INTERRUPT_AREA
 015     @INTERRUPT_AREA
-016     lcdline
-017-018 time
-019-01A distance
-01B-01C x
-01D-01E i
-01F-020 minVal
-021.0   flag
-022-025 buffer
-026     j
-027     c
-028     d
-029     u
-02A     @PRINTF_D_663.P1
-02A-02B parseDist.time
-02A-02B outputValueParser.value
-02A-02B @PRINTF_LD_9600_31766_31767.P1
-02A     init_lcd.@SCRATCH1
-02A     @PSTRINGC_663.@SCRATCH1
-02A     MAIN.@SCRATCH1
-02B     @PRINTF_D_663.P1
-02B     @PSTRINGC_663.@SCRATCH2
-02B     MAIN.@SCRATCH2
-02C     outputValueParser.output
-02C     @PRINTF_D_663.@SCRATCH1
-02C     @PRINTF_LD_9600_31766_31767.@SCRATCH1
-02D-02E @DIV1616.P1
-02D     @PRINTF_D_663.@SCRATCH2
-02D     @PRINTF_LD_9600_31766_31767.@SCRATCH2
-02E     @PRINTF_D_663.@SCRATCH3
-02E     @PRINTF_LD_9600_31766_31767.@SCRATCH3
-02F-030 @DIV1616.P1
-02F     @PRINTF_D_663.@SCRATCH4
-02F     @PRINTF_LD_9600_31766_31767.@SCRATCH4
-030     @DIV88.P1
-030     lcd_putc.c
-030     @PRINTF_LD_9600_31766_31767.@SCRATCH5
-031     @delay_ms1.P1
-031     @DIV88.P2
-031     lcd_gotoxy.x
-031     @DIV1616.@SCRATCH1
-031     @PRINTF_LD_9600_31766_31767.@SCRATCH6
-032     lcd_gotoxy.y
-032     @DIV88.@SCRATCH1
-032     @PRINTF_LD_9600_31766_31767.@SCRATCH7
-033     lcd_gotoxy.address
-034     lcd_send_byte.address
-035     lcd_send_byte.n
-036     lcd_read_byte.low
-036     lcd_send_byte.@SCRATCH1
-037     lcd_read_byte.high
-037     lcd_send_nibble.n
-038     lcd_read_byte.@SCRATCH1
-039     RDA_isr.@SCRATCH1
-03A     RDA_isr.@SCRATCH2
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     @INTERRUPT_AREA
+01B     @INTERRUPT_AREA
+01C-01D time
+01E-01F distance
+020-021 x
+022-023 i
+024-025 minVal
+026-029 buffer
+02A     j
+02B     c
+02C     d
+02D     u
+02E-02F @sprintf_string
+030     @PRINTF_D_723.P1
+030-031 outputValueParser.value
+030-031 @PRINTF_LD_9600_31766_31767.P1
+030-031 parseDist.time
+030     lcd_init.i
+030     MAIN.@SCRATCH1
+030     @PSTRINGC_723.@SCRATCH1
+031     @PRINTF_D_723.P1
+031     lcd_init.@SCRATCH1
+031     MAIN.@SCRATCH2
+031     @PSTRINGC_723.@SCRATCH2
+032     outputValueParser.output
+032     @PRINTF_D_723.@SCRATCH1
+032     @PRINTF_LD_9600_31766_31767.@SCRATCH1
+033-034 @DIV1616.P1
+033     @PRINTF_D_723.@SCRATCH2
+033     @PRINTF_LD_9600_31766_31767.@SCRATCH2
+034     @PRINTF_D_723.@SCRATCH3
+034     @PRINTF_LD_9600_31766_31767.@SCRATCH3
+035-036 @DIV1616.P1
+035     @PRINTF_D_723.@SCRATCH4
+035     @PRINTF_LD_9600_31766_31767.@SCRATCH4
+036     @DIV88.P1
+036     lcd_putc.c
+036     @PRINTF_LD_9600_31766_31767.@SCRATCH5
+037     @DIV88.P1
+037     lcd_gotoxy.x
+037     @delay_ms1.P1
+037     @DIV1616.@SCRATCH1
+037     @PRINTF_LD_9600_31766_31767.@SCRATCH6
+038     lcd_gotoxy.y
+038     @DIV88.@SCRATCH1
+038     @PRINTF_LD_9600_31766_31767.@SCRATCH7
+039     lcd_gotoxy.address
+03A     lcd_send_byte.address
+03B     lcd_send_byte.n
+03C     lcd_read_byte.low
+03C     lcd_send_byte.@SCRATCH1
+03D     lcd_send_nibble.n
+03D     lcd_read_byte.high
+03E     lcd_read_byte.@SCRATCH1
+03F     RDA_isr.@SCRATCH1
+040     RDA_isr.@SCRATCH2
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
@@ -85,53 +90,57 @@ FBC     CCP_2_HIGH
 FBE     CCP_1_LOW
 FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
 FE9-FEA @WRITE_PACKED_MEMORY.P3
-FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FE9-FEA @READ_PACKED_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000096  RDA_isr
-0000C8  @const694.call
-0000E4  @const696.call
-0000EE  @const700.call
-0000F8  @delay_ms1
-00011E  lcd_read_byte
-00015A  lcd_send_nibble
-00017C  lcd_send_byte
-0001B0  lcd_gotoxy
-0001E4  @goto10611
-000210  lcd_putc
-000258  @PSTRINGC_663
-000278  init_lcd
-0002CE  triggerSonde
-0002E0  @DIV1616
-000322  parseDist
-00033E  @DIV88
-000366  @PRINTF_D_663
-000410  outputValueParser
-00048E  @PRINTF_LD_9600_31766_31767
-00056C  @cinit1
-00056C  MAIN
-000590  @cinit2
+0000AE  LCD_INIT_STRING.call
+0000BE  LCD_INIT_STRING.data
+0000C2  RDA_isr
+0000F4  @const757.call
+000110  @const762.call
+00011A  @const764.call
+000124  @delay_ms1
+00014A  lcd_send_nibble
+000168  lcd_read_byte
+0001A4  lcd_send_byte
+0001D8  lcd_init
+000226  lcd_gotoxy
+00025A  @goto46648
+00027C  lcd_putc
+0002C4  @PSTRINGC_723
+0002E4  triggerSonde
+0002F6  @DIV1616
+000338  parseDist
+000354  @DIV88
+00037C  @PRINTF_D_723
+000426  outputValueParser
+0004A0  @PRINTF_LD_9600_31766_31767
+000586  MAIN
+000586  @cinit1
+0005AE  @cinit2
 
 Project Directory:
-    W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
+    D:\Utilisateurs\Arnaud\Documents\GitHub\ElecDigital_Projet\ccs\PIC-codeC\
 
 Project Files:
-    main.c                                                  [27-avr.-20 13:54  CRC=59ACB55E]
-    ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
-    C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
-    LCD420.c                                                [27-avr.-20 12:37  CRC=FCA0AC9C]
+    main.c                                                  [27-avr.-20 14:43  CRC=FA862084]
+    main.h                                                  [27-avr.-20 10:00  CRC=784CF644]
+    C:\Program Files (x86)\PICC\Devices\18F458.h            [23-mars-20 10:14  CRC=3B8B3D55]
+    LCD420.c                                                [27-avr.-20 13:14  CRC=FCA0AC9C]
 
-Source signature=E5ECE3E9
+Source signature=A79FAD55
+Program memory checksum=0000
+Hex file CRC=2A68
 
 Units:
-    main (main)
+    D:\Utilisateurs\Arnaud\Documents\GitHub\ElecDigital_Projet\ccs\PIC-codeC\main (main)
 
 Compiler Settings:
     Processor:      PIC18F458
@@ -140,6 +149,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   main.xsym

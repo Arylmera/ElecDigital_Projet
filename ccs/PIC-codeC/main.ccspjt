@@ -3,7 +3,7 @@ Target=main.hex
 Processor_Text=PIC18F458
 CCSVerions=5.008
 Compiler=PCH
-CCSVersion=5.008
+CCSVersion=5.094d
 [Target Data]
 FileList=main.c
 [Directories]
@@ -27,7 +27,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=1
+Days=2
 D1=11-04-2020
 D1_L=4
 D1_L1=[55081]Project Opened.
@@ -38,9 +38,13 @@ TotalDebug=0
 D1_E=8
 D1_D=0
 D1_L4=[55552]Project Closed.
+D2=27-04-2020
+D2_L=2
+D2_L1=[53049]Project Opened.
+D2_L2=[53114]Project Closed.
 
 [defines]
-buildcount=1
+buildcount=2
 [Units]
 Count=1
 1=main (main)
