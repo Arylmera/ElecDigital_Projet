@@ -7,7 +7,7 @@ CCSVersion=5.008
 [Target Data]
 FileList=main.c
 [Directories]
-Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;W:\Ephec\ElecDigitalProjet\ccs\test\
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;W:\Ephec\ElecDigitalProjet\ccs\test\;W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
 [W:\Ephec\ElecDigitalProjet\ccs\test\main]
 Type=4
 [mru-list]
@@ -15,9 +15,10 @@ Type=4
 [Opened Files]
 1=main.c
 2=C:\Users\guill\Desktop\test.c
-3=
+3=LCD420.c
 t1=1
 Count=1
+4=
 [main.c]
 Type=4
 

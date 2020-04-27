@@ -90,14 +90,14 @@ void main()
    // setup des valeurs
    time = 0;
 
-   // recuperation minValue envoye par JAVA
+   // rï¿½cupï¿½ration minValue envoyï¿½ par JAVA
    minVal = 100;// (int16) getc();
 
    // dï¿½clanchement de la sonde
    triggerSonde();
 
-   // recuperation valeur temps de la sonde
-   while(input(echo) == 0){} // attente debut
+   // rï¿½cupï¿½ration valeur temps de la sonde
+   while(input(echo) == 0){} // attente dï¿½but
    set_timer1(0);
    while(input(echo) == 1){} // attente fin ou overflow
    time = get_timer1();
@@ -146,14 +146,13 @@ void main()
    printf(lcd_putc, "%d", d);
    printf(lcd_putc, "%d", u);
 
-   // affichage sur 7seg de la distance
+   // afichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
-   // envoie distance à java
    printf("%ld", distance);
    printf("\n");
 
-   // attente pour eviter spam
+   // attente pour ï¿½viter spam
    delay_ms(500);
    }
 

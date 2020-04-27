@@ -74,15 +74,7 @@ void main()
    setup_low_volt_detect(FALSE);
    set_tris_c(0b01000010); // set RC1 as input (ECHO)
 
-   setup_spi(FALSE);
-   setup_wdt(WDT_OFF);
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
-   setup_comparator(NC_NC_NC_NC);
-   setup_vref(FALSE);
-   
-   enable_interrupts(INT_RDA);
-   enable_interrupts(GLOBAL);
-   setup_oscillator(False);
 
    while(true)
    {
@@ -90,14 +82,14 @@ void main()
    // setup des valeurs
    time = 0;
 
-   // recuperation minValue envoye par JAVA
+   // rï¿½cupï¿½ration minValue envoyï¿½ par JAVA
    minVal = 100;// (int16) getc();
 
    // dï¿½clanchement de la sonde
    triggerSonde();
 
-   // recuperation valeur temps de la sonde
-   while(input(echo) == 0){} // attente debut
+   // rï¿½cupï¿½ration valeur temps de la sonde
+   while(input(echo) == 0){} // attente dï¿½but
    set_timer1(0);
    while(input(echo) == 1){} // attente fin ou overflow
    time = get_timer1();
@@ -108,13 +100,11 @@ void main()
    // vï¿½rification borne minVal
    if (distance < minVal){
       // allumer red => trop proche
-      printf("1\n");
       output_high(RED);
       output_low(GREEN);
    }
    else {
       // allumer green => OK
-      printf("2\n");
       output_high(GREEN);
       output_low(RED);
    }
@@ -122,9 +112,11 @@ void main()
    // gestion du point si > que 100 !> cm -> m
    if(distance > 99){
       distance = distance / 10;
+      printf("1\n");
       output_high(dot);
    }
    else {
+     printf("2\n");
       output_low(dot);
    }
 
@@ -140,20 +132,14 @@ void main()
    d=(minVal-(c*100))/10;
    u=(minVal-(c*100))-(d*10);
 
-   lcd_gotoxy(1,1);
-   printf(lcd_putc, "Limie : ");
-   printf(lcd_putc, "%d", c);
-   printf(lcd_putc, "%d", d);
-   printf(lcd_putc, "%d", u);
 
-   // affichage sur 7seg de la distance
+   // afichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
-   // envoie distance à java
    printf("%ld", distance);
    printf("\n");
 
-   // attente pour eviter spam
+   // attente pour ï¿½viter spam
    delay_ms(500);
    }
 
