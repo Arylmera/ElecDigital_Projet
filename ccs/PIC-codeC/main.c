@@ -100,13 +100,15 @@ void main()
 
    lcd_init();
    delay_ms(500);
-   lcd_putc('\f');
+   printf(lcd_putc,"\f");
+   //lcd_putc('\f');
    lcd_gotoxy(1,1);
    printf(lcd_putc," Projet Electronique 2020 ");
    delay_ms(1000);
    printf(lcd_putc,"Groupe 2");
    delay_ms(1000);
-   lcd_putc('\f');
+   printf(lcd_putc,"\f");
+   //lcd_putc('\f');
 
    while(true)
    {
