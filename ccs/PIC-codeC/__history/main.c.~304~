@@ -139,14 +139,12 @@ void main()
    c=minVal/100;
    d=(minVal-(c*100))/10;
    u=(minVal-(c*100))-(d*10);
-   
-   /*
+
    lcd_gotoxy(1,1);
    printf(lcd_putc, "Limie : ");
    printf(lcd_putc, "%d", c);
    printf(lcd_putc, "%d", d);
    printf(lcd_putc, "%d", u);
-   */
 
    // affichage sur 7seg de la distance
    output_b(outputValueParser(distance));

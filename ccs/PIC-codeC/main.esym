@@ -1,7 +1,8 @@
-D G "__PCH__" 0 161 ""5.008""
-D G "__DEVICE__" 0 161 "458"
-D G "__DATE__" 0 161 ""27-avr.-20""
-D G "__TIME__" 0 161 ""12:51:49"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "RED" 0 13 "pin_E1"
+D G "__PCH__" 0 164 ""5.008""
+D G "__DEVICE__" 0 164 "458"
+D G "__DATE__" 0 164 ""27-avr.-20""
+D G "__TIME__" 0 164 ""12:53:27"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -939,7 +940,7 @@ C L "MAIN" 0 69 1 "FUNCTION"
 C L "MAIN" 0 69 1 "FUNCTION"
 C L "MAIN" 0 69 1 "FUNCTION"
 C L "MAIN" 0 69 1 "FUNCTION"
-C L "MAIN" 0 69 1 "FUNCTION"
+C L "MAIN" 0 69 6 "FUNCTION"
 C L "MAIN" 0 69 1 "FUNCTION"
 C L "MAIN" 0 69 1 "FUNCTION"
 F B "reset_cpu" 0 0
