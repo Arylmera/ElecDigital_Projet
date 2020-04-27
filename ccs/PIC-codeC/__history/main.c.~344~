@@ -20,7 +20,7 @@ char buffer[4];
 int j=0;
 int8 c,d,u;
 
-#INT_RDA
+#int_RDA
 void RDA_isr(void) {
   buffer[j]=getc();
   if(buffer[0]=='!' && flag==0) {
@@ -47,6 +47,14 @@ int16 outputValueParser(int16 value){
     output = x + i*16;
    }
    return output;
+}
+
+/*
+* parsing temps => distance
+*/
+int16 parseDist(int16 time){
+  return time / (286) ; // theoriquement 343 m/s
+  //return time/100;
 }
 
 /*
@@ -101,7 +109,7 @@ void main()
    time = 0;
 
    // recuperation minValue envoye par JAVA
-   minVal = 100;
+   minVal = 100;// (int16) getc();
 
    // dï¿½clanchement de la sonde
    triggerSonde();
@@ -109,17 +117,16 @@ void main()
    // recuperation valeur temps de la sonde
    while(input(echo) == 0){} // attente debut
    set_timer1(0);
-   while(input(echo) == 1){} // attente fin 
+   while(input(echo) == 1){} // attente fin ou overflow
    time = get_timer1();
 
    // temps => distance
-   distance = time/285;
+   distance = parseDist(time);
    
    // envoie distance ici java
-   printf(" %ld", distance);
+   printf("%ld", distance);
    printf("\n");
 
-   // si données recu depuis java sur RS232 > interuption INT_RSA
    if(flag==1){
      flag=0;
      c=buffer[1]-48;

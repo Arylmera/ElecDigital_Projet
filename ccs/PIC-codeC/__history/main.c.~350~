@@ -1,5 +1,5 @@
 #include <main.h>
-#include "./LCD420.c"
+#include "LCD420.c"
 #use fast_io(C)
 
 #use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7)
@@ -20,7 +20,7 @@ char buffer[4];
 int j=0;
 int8 c,d,u;
 
-#int_RDA
+#INT_RDA
 void RDA_isr(void) {
   buffer[j]=getc();
   if(buffer[0]=='!' && flag==0) {
@@ -53,8 +53,8 @@ int16 outputValueParser(int16 value){
 * parsing temps => distance
 */
 int16 parseDist(int16 time){
-  //return time / (285) ; // theoriquement 343 m/s
-  return time/100;
+  return time / (286) ; // theoriquement 343 m/s
+  //return time/100;
 }
 
 /*
@@ -65,6 +65,21 @@ void triggerSonde(){
    delay_us(10);
    output_low(trigger);
 }
+
+/*
+* Fonctione d'initalisation du LCD
+*/
+void init_lcd(){
+   delay_ms(100);
+   lcd_putc('\f');
+   lcd_gotoxy(1,1);
+   printf(lcd_putc,"Projet Electronique 2020 ");
+   delay_ms(500);
+   printf(lcd_putc,"Groupe 3");
+   delay_ms(500);
+   lcd_putc('\f');
+}
+
 
 /*
 * fonction principale
@@ -79,10 +94,13 @@ void main()
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
    setup_comparator(NC_NC_NC_NC);
    setup_vref(FALSE);
-   
-   enable_interrupts(INT_RDA);
+
+   enable_interrupts(INT_RDA); // interuption sur réception port RS232
    enable_interrupts(GLOBAL);
    setup_oscillator(False);
+
+   lcd_init();
+   init_lcd();
 
    while(true)
    {
@@ -90,20 +108,54 @@ void main()
    // setup des valeurs
    time = 0;
 
-   // rï¿½cupï¿½ration minValue envoyï¿½ par JAVA
-   minVal = 100;// (int16) getc();
+   // recuperation minValue envoye par JAVA
+   minVal = 100;
 
    // dï¿½clanchement de la sonde
    triggerSonde();
 
-   // rï¿½cupï¿½ration valeur temps de la sonde
-   while(input(echo) == 0){} // attente dï¿½but
+   // recuperation valeur temps de la sonde
+   while(input(echo) == 0){} // attente debut
    set_timer1(0);
    while(input(echo) == 1){} // attente fin ou overflow
    time = get_timer1();
 
    // temps => distance
    distance = parseDist(time);
+   
+   // envoie distance ici java
+   printf("%ld", time);
+   printf("\n");
+
+   // si données recu depuis java sur RS232 > interuption INT_RSA
+   if(flag==1){
+     flag=0;
+     c=buffer[1]-48;
+     d=buffer[2]-48;
+     u=buffer[3]-48;
+     minVal=(int16) (c*100+d*10+u);
+   }
+   
+   // création valeurs LCD MINvalue
+   c = minVal/100;
+   d = (minVal-(c*100))/10;
+   u = (minVal-(c*100))-(d*10);
+   // Affichage MinValue LCD
+   lcd_gotoxy(3,1);
+   printf(lcd_putc, "MinVal: ");
+   printf(lcd_putc, "%d", c);
+   printf(lcd_putc, "%d", d);
+   printf(lcd_putc, "%d", u);
+   // créeation valeurs Distance LCD
+   c = distance/100;
+   d = (distance-(c*100))/10;
+   u = (distance-(c*100))-(d*10);
+   // affichage distance LCD
+   lcd_gotoxy(3,3);
+   printf(lcd_putc, "Distance: ");
+   printf(lcd_putc, "%d", c);
+   printf(lcd_putc, "%d", d);
+   printf(lcd_putc, "%d", u);
 
    // vï¿½rification borne minVal
    if (distance < minVal){
@@ -128,31 +180,11 @@ void main()
       output_low(dot);
    }
 
-   if(flag==1){
-     flag=0;
-     c=buffer[1]-48;
-     d=buffer[2]-48;
-     u=buffer[3]-48;
-     minVal=(int16) (c*100+d*10+u);
-   }
-
-   c=minVal/100;
-   d=(minVal-(c*100))/10;
-   u=(minVal-(c*100))-(d*10);
-
-   lcd_gotoxy(1,1);
-   printf(lcd_putc, "Limie : ");
-   printf(lcd_putc, "%d", c);
-   printf(lcd_putc, "%d", d);
-   printf(lcd_putc, "%d", u);
-
-   // afichage sur 7seg de la distance
+   // affichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
-   printf("%ld", distance);
-   printf("\n");
 
-   // attente pour ï¿½viter spam
+   // attente pour eviter spam
    delay_ms(500);
    }
 

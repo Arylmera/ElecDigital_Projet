@@ -36,7 +36,6 @@
 02A-02B @PRINTF_LD_9600_31766_31767.P1
 02A-02B outputValueParser.value
 02A     lcd_init.i
-02A-02B parseDist.time
 02A     @PRINTF_D_663.P1
 02A     init_lcd.@SCRATCH1
 02A     @PSTRINGC_663.@SCRATCH1
@@ -59,9 +58,9 @@
 030     lcd_putc.c
 030     @DIV88.P1
 030     @PRINTF_LD_9600_31766_31767.@SCRATCH5
-031     lcd_gotoxy.x
 031     @DIV88.P1
-031     @delay_ms1.P2
+031     lcd_gotoxy.x
+031     @delay_ms1.P1
 031     @DIV1616.@SCRATCH1
 031     @PRINTF_LD_9600_31766_31767.@SCRATCH6
 032     lcd_gotoxy.y
@@ -77,33 +76,33 @@
 038     lcd_read_byte.@SCRATCH1
 039     RDA_isr.@SCRATCH1
 03A     RDA_isr.@SCRATCH2
-F83     PSP_DATA
 F83     lcd
+F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
 FBB     CCP_2
 FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
-FBE     CCP_1_LOW
 FBE     CCP_1
+FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
-FE1-FE2 @READ_PACKED_MEMORY.P1
-FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
 FE9-FEA @WRITE_PROGRAM_MEMORY.P1
-FE9-FEA @READ_PACKED_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
-FE9-FEA @READ_PROGRAM_MEMORY.P4
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
-FF6-FF8 @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000096  LCD_INIT_STRING.call
 0000B0  LCD_INIT_STRING.data
 0000B4  RDA_isr
-0000E6  @const694.call
-000100  @const696.call
-00010A  @const704.call
-000114  @const714.call
+0000E6  @const692.call
+000100  @const694.call
+00010A  @const702.call
+000114  @const712.call
 000120  @delay_ms1
 000146  lcd_send_nibble
 000168  lcd_read_byte
@@ -116,25 +115,24 @@ ROM Allocation:
 0002FA  init_lcd
 000348  triggerSonde
 00035A  @DIV1616
-00039C  parseDist
-0003BA  @PRINTF_LD_9600_31766_31767
-000498  @DIV88
-0004C0  @PRINTF_D_663
-00056A  outputValueParser
-0005E8  MAIN
-0005E8  @cinit1
-00060C  @cinit2
+00039C  @PRINTF_LD_9600_31766_31767
+00047A  @DIV88
+0004A2  @PRINTF_D_663
+00054C  outputValueParser
+0005CA  MAIN
+0005CA  @cinit1
+0005EE  @cinit2
 
 Project Directory:
     W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
 
 Project Files:
-    main.c                                                  [27-avr.-20 15:26  CRC=A9E02CE5]
+    main.c                                                  [27-avr.-20 15:45  CRC=830FFFB8]
     ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
     C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
     LCD420.c                                                [27-avr.-20 15:09  CRC=5ABCEF9F]
 
-Source signature=F258E176
+Source signature=CB88B449
 
 Units:
     main (main)

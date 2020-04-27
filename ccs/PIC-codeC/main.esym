@@ -1,7 +1,7 @@
-D G "__PCH__" 0 191 ""5.008""
-D G "__DEVICE__" 0 191 "458"
-D G "__DATE__" 0 191 ""27-avr.-20""
-D G "__TIME__" 0 191 ""15:26:16"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "__PCH__" 0 185 ""5.008""
+D G "__DEVICE__" 0 185 "458"
+D G "__DATE__" 0 185 ""27-avr.-20""
+D G "__TIME__" 0 185 ""15:45:22"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -920,31 +920,33 @@ C L "outputValueParser" 0 35 1 "*"
 V L "value" 0 38 "int16" `685 
 F G "outputValueParser" 0 38 "int16(int16 value)" `684 
 V L "output" 0 39 "int8" `686 
-C L "parseDist" 0 52 1 "*"
-V L "time" 0 55 "int16" `691 
-F G "parseDist" 0 55 "int16(int16 time)" `690 
-C L "parseDist" 0 52 2 "FUNCTION"
-C L "triggerSonde" 0 60 1 "*"
-F G "triggerSonde" 0 63 "void()" `692 
-C L "init_lcd" 0 69 1 "*"
-F G "init_lcd" 0 72 "void()" `693 
-C L "MAIN" 0 84 1 "*"
-F G "MAIN" 0 88 "void()" `697 
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 2 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
-C L "MAIN" 0 84 1 "FUNCTION"
+C L "triggerSonde" 0 52 1 "*"
+F G "triggerSonde" 0 55 "void()" `690 
+C L "init_lcd" 0 61 1 "*"
+F G "init_lcd" 0 64 "void()" `691 
+C L "MAIN" 0 76 1 "*"
+F G "MAIN" 0 80 "void()" `695 
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
+C L "MAIN" 0 76 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
