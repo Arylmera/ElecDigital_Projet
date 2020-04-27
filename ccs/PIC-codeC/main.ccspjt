@@ -3,7 +3,7 @@ Target=main.hex
 Processor_Text=PIC18F458
 CCSVerions=5.008
 Compiler=PCH
-CCSVersion=5.008
+CCSVersion=5.094d
 [Target Data]
 FileList=main.c
 [Directories]
@@ -39,14 +39,22 @@ D1_E=8
 D1_D=0
 D1_L4=[55552]Project Closed.
 D2=27-04-2020
-D2_L=4
+D2_L=12
 D2_L1=[53049]Project Opened.
 D2_L2=[53114]Project Closed.
 D2_L3=[53620]Project Opened.
 D2_L4=[53633]Project Closed.
+D2_L5=[72862]Project Opened.
+D2_L6=[72885]Project Closed.
+D2_L7=[73079]Project Opened.
+D2_L8=[73091]Project Closed.
+D2_L9=[73192]Project Opened.
+D2_L10=[73203]Project Closed.
+D2_L11=[73288]Project Opened.
+D2_L12=[73479]Project Closed.
 
 [defines]
-buildcount=2
+buildcount=9
 [Units]
 Count=1
 1=main (main)

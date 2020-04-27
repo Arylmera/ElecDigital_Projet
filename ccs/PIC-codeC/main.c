@@ -17,7 +17,7 @@
 int16 time, distance, x, i, minVal;
 boolean flag=0;
 char buffer[4];
-int j=0;
+int8 j=0;
 int8 c,d,u;
 
 #INT_RDA
@@ -62,13 +62,13 @@ void triggerSonde(){
 * Fonctione d'initalisation du LCD
 */
 void init_lcd(){
-   delay_ms(100);
+   delay_ms(500);
    lcd_putc('\f');
    lcd_gotoxy(1,1);
-   printf(lcd_putc,"Projet Electronique 2020 ");
-   delay_ms(500);
-   printf(lcd_putc,"Groupe 3");
-   delay_ms(500);
+   printf(lcd_putc," Projet Electronique ");
+   lcd_gotoxy(1,3);
+   printf(lcd_putc," 2020 Groupe 3 ");
+   delay_ms(1000);
    lcd_putc('\f');
 }
 
@@ -87,7 +87,7 @@ void main()
    setup_comparator(NC_NC_NC_NC);
    setup_vref(FALSE);
 
-   enable_interrupts(INT_RDA); // interuption sur réception port RS232
+   enable_interrupts(INT_RDA); // interuption sur rï¿½ception port RS232
    enable_interrupts(GLOBAL);
    setup_oscillator(False);
 
@@ -109,17 +109,17 @@ void main()
    // recuperation valeur temps de la sonde
    while(input(echo) == 0){} // attente debut
    set_timer1(0);
-   while(input(echo) == 1){} // attente fin 
+   while(input(echo) == 1){} // attente fin
    time = get_timer1();
 
    // temps => distance
    distance = time/285;
-   
+
    // envoie distance ici java
    printf(" %ld", distance);
    printf("\n");
 
-   // si données recu depuis java sur RS232 > interuption INT_RSA
+   // si donnï¿½es recu depuis java sur RS232 > interuption INT_RSA
    if(flag==1){
      flag=0;
      c=buffer[1]-48;
@@ -127,27 +127,27 @@ void main()
      u=buffer[3]-48;
      minVal=(int16) (c*100+d*10+u);
    }
-   
-   // création valeurs LCD MINvalue
+
+   // crï¿½ation valeurs LCD MINvalue
    c = minVal/100;
    d = (minVal-(c*100))/10;
    u = (minVal-(c*100))-(d*10);
    // Affichage MinValue LCD
    lcd_gotoxy(3,1);
-   printf(lcd_putc, "MinVal: ");
-   printf(lcd_putc, "%d", c);
-   printf(lcd_putc, "%d", d);
-   printf(lcd_putc, "%d", u);
-   // créeation valeurs Distance LCD
+   printf(lcd_putc, " MinVal: ");
+   printf(lcd_putc, " %d", c);
+   printf(lcd_putc, " %d", d);
+   printf(lcd_putc, " %d", u);
+   // crï¿½eation valeurs Distance LCD
    c = distance/100;
    d = (distance-(c*100))/10;
    u = (distance-(c*100))-(d*10);
    // affichage distance LCD
    lcd_gotoxy(3,3);
-   printf(lcd_putc, "Distance: ");
-   printf(lcd_putc, "%d", c);
-   printf(lcd_putc, "%d", d);
-   printf(lcd_putc, "%d", u);
+   printf(lcd_putc, " Distance: ");
+   printf(lcd_putc, " %d", c);
+   printf(lcd_putc, " %d", d);
+   printf(lcd_putc, " %d", u);
 
    // vï¿½rification borne minVal
    if (distance < minVal){
