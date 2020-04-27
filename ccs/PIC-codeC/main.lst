@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.008, 5967               27-avr.-20 15:45
+CCS PCH C Compiler, Version 5.008, 5967               27-avr.-20 15:48
 
                Filename:   W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\main.lst
 
@@ -1029,7 +1029,7 @@ CCS PCH C Compiler, Version 5.008, 5967               27-avr.-20 15:45
 ....................    set_timer1(0); 
 0634:  CLRF   FCF
 0636:  CLRF   FCE
-....................    while(input(echo) == 1){} // attente fin ou overflow 
+....................    while(input(echo) == 1){} // attente fin  
 0638:  BTFSC  F82.1
 063A:  BRA    0638
 ....................    time = get_timer1(); 
