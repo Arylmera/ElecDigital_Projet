@@ -34,16 +34,17 @@
 027     c
 028     d
 029     u
-02A     @PRINTF_D_663.P1
+02A     lcd_init.i
 02A-02B parseDist.time
 02A-02B outputValueParser.value
 02A-02B @PRINTF_LD_9600_31766_31767.P1
-02A     init_lcd.@SCRATCH1
-02A     @PSTRINGC_663.@SCRATCH1
+02A     @PRINTF_D_663.P2
 02A     MAIN.@SCRATCH1
+02A     @PSTRINGC_663.@SCRATCH1
 02B     @PRINTF_D_663.P1
-02B     @PSTRINGC_663.@SCRATCH2
+02B     lcd_init.@SCRATCH1
 02B     MAIN.@SCRATCH2
+02B     @PSTRINGC_663.@SCRATCH2
 02C     outputValueParser.output
 02C     @PRINTF_D_663.@SCRATCH1
 02C     @PRINTF_LD_9600_31766_31767.@SCRATCH1
@@ -85,50 +86,52 @@ FBC     CCP_2_HIGH
 FBE     CCP_1_LOW
 FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
 FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P2
 FE9-FEA @WRITE_PACKED_MEMORY.P3
-FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FE9-FEA @READ_PROGRAM_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-000096  RDA_isr
-0000C8  @const694.call
-0000E4  @const696.call
-0000EE  @const700.call
-0000F8  @delay_ms1
-00011E  lcd_read_byte
-00015A  lcd_send_nibble
-00017C  lcd_send_byte
-0001B0  lcd_gotoxy
-0001E4  @goto10611
-000210  lcd_putc
-000258  @PSTRINGC_663
-000278  init_lcd
-0002CE  triggerSonde
-0002E0  @DIV1616
-000322  parseDist
-00033E  @DIV88
-000366  @PRINTF_D_663
-000410  outputValueParser
-00048E  @PRINTF_LD_9600_31766_31767
-00056C  @cinit1
-00056C  MAIN
-000590  @cinit2
+000096  LCD_INIT_STRING.call
+0000B0  LCD_INIT_STRING.data
+0000B4  RDA_isr
+0000E6  @const696.call
+000102  @const698.call
+00010C  @const699.call
+000116  @delay_ms1
+00013C  lcd_send_nibble
+00015E  lcd_read_byte
+00019A  lcd_send_byte
+0001CE  lcd_init
+000226  lcd_gotoxy
+00025A  @goto10611
+000286  lcd_putc
+0002CE  @PSTRINGC_663
+0002EE  triggerSonde
+000300  @DIV1616
+000342  parseDist
+00035E  @DIV88
+000386  @PRINTF_D_663
+000430  outputValueParser
+0004AE  @PRINTF_LD_9600_31766_31767
+00058C  @cinit1
+00058C  MAIN
+0005B0  @cinit2
 
 Project Directory:
     W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
 
 Project Files:
-    main.c                                                  [27-avr.-20 13:54  CRC=59ACB55E]
+    main.c                                                  [27-avr.-20 14:37  CRC=980ACFE2]
     ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
     C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
     LCD420.c                                                [27-avr.-20 12:37  CRC=FCA0AC9C]
 
-Source signature=E5ECE3E9
+Source signature=244AFE6D
 
 Units:
     main (main)
