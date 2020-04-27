@@ -5,8 +5,8 @@ ROM used:   1972/16384 (6%)
             1.7 Average locations per line
             12.7 Average locations per statement
 
-RAM used:   44/1536 (3%) at main() level
-            59/1536 (4%) worst case
+RAM used:   50/1536 (3%) at main() level
+            65/1536 (4%) worst case
 
 Stack used: 6 worst case (5 in main + 1 for interrupts)
 Stack size: 31
@@ -20,8 +20,8 @@ Lines Stmts  %   Files
 ----- -----
  1129   155 Total
 
-Page ROM  %  RAM   Vol Diff  Functions:
----- --- --- ---   --- ----  ----------
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
 0     38   1    1             @delay_ms1
 0     30   1    0             @const640
 0     60   2    3   463  4.3  lcd_read_byte
@@ -60,10 +60,7 @@ Program metrics:
 
  Segment     Used  Free
 -----------  ----  ----
-00000-00002     4  0  
-00004-00006     0  4  
-00008-00094   142  0  
-00096-07FFE  1826  30792  
-
-
-
+00000-00002     4  0
+00004-00006     0  4
+00008-00094   142  0
+00096-07FFE  1826  30792

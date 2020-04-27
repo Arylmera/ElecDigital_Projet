@@ -3,9 +3,8 @@
 001     _RETURN_
 002     @SCRATCH
 003     @SCRATCH
-004     @INTERRUPT_AREA
-005     @INTERRUPT_AREA
-006     @INTERRUPT_AREA
+004     lcdline
+005.0   flag
 006     lcd
 007     @INTERRUPT_AREA
 008     @INTERRUPT_AREA
@@ -123,18 +122,18 @@ ROM Allocation:
 0005B0  @cinit2
 
 Project Directory:
-    W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
+    D:\Utilisateurs\Arnaud\Documents\GitHub\ElecDigital_Projet\ccs\PIC-codeC\
 
 Project Files:
     main.c                                                  [27-avr.-20 14:37  CRC=980ACFE2]
-    ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
+    ..\test\main.h                                          [27-fï¿½vr.-20 11:34  CRC=784CF644]
     C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
     LCD420.c                                                [27-avr.-20 12:37  CRC=FCA0AC9C]
 
 Source signature=244AFE6D
 
 Units:
-    main (main)
+    D:\Utilisateurs\Arnaud\Documents\GitHub\ElecDigital_Projet\ccs\PIC-codeC\main (main)
 
 Compiler Settings:
     Processor:      PIC18F458
@@ -143,6 +142,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   main.xsym
