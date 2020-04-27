@@ -1,4 +1,4 @@
-// Flex_LCD420.c
+/ Flex_LCD420.c
 
 // These pins are for my Microchip PicDem2-Plus board,
 // which I used to test this driver.

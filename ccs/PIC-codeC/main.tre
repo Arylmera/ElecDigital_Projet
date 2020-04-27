@@ -1,68 +1,69 @@
-ï¿½ï¿½main
-   ï¿½ï¿½MAIN  0/556  Ram=2
-   ï¿½  ï¿½ï¿½@cinit1  (Inline)  Ram=0
-   ï¿½  ï¿½ï¿½lcd_init  0/88  Ram=2
-   ï¿½  ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½lcd_send_nibble  0/34  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½lcd_send_nibble  0/34  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½@const640  0/30  Ram=0
-   ï¿½  ï¿½  ï¿½ï¿½lcd_send_byte  0/52  Ram=3
-   ï¿½  ï¿½     ï¿½ï¿½lcd_read_byte  0/60  Ram=3
-   ï¿½  ï¿½     ï¿½ï¿½lcd_send_nibble  0/34  Ram=1
-   ï¿½  ï¿½     ï¿½ï¿½lcd_send_nibble  0/34  Ram=1
-   ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½lcd_send_byte  0/52  Ram=3
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½lcd_gotoxy  0/52  Ram=3
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½@goto10611  0/44  Ram=0
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½lcd_send_byte  0/52  Ram=3
-   ï¿½  ï¿½  ï¿½     ï¿½ï¿½*
-   ï¿½  ï¿½  ï¿½ï¿½lcd_send_byte  0/52  Ram=3
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½  ï¿½ï¿½lcd_send_byte  0/52  Ram=3
-   ï¿½  ï¿½     ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½lcd_gotoxy  0/52  Ram=3
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@PSTRINGC_663  0/32  Ram=2
-   ï¿½  ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½     ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½  ï¿½ï¿½@PSTRINGC_663  0/32  Ram=2
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½triggerSonde  0/18  Ram=0
-   ï¿½  ï¿½ï¿½parseDist  0/28  Ram=2
-   ï¿½  ï¿½  ï¿½ï¿½@DIV1616  0/66  Ram=5
-   ï¿½  ï¿½ï¿½@DIV1616  0/66  Ram=5
-   ï¿½  ï¿½ï¿½@DIV1616  0/66  Ram=5
-   ï¿½  ï¿½ï¿½lcd_gotoxy  0/52  Ram=3
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@PSTRINGC_723  0/32  Ram=2
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@PRINTF_D_723  0/170  Ram=6
-   ï¿½  ï¿½  ï¿½ï¿½@DIV88  0/40  Ram=3
-   ï¿½  ï¿½  ï¿½ï¿½@DIV88  0/40  Ram=3
-   ï¿½  ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½  ï¿½ï¿½lcd_putc  0/72  Ram=1
-   ï¿½  ï¿½     ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@PRINTF_D_723  0/170  Ram=6
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@PRINTF_D_723  0/170  Ram=6
-   ï¿½  ï¿½  ï¿½ï¿½*
-   ï¿½  ï¿½ï¿½@DIV1616  0/66  Ram=5
-   ï¿½  ï¿½ï¿½outputValueParser  0/122  Ram=3
-   ï¿½  ï¿½  ï¿½ï¿½@DIV1616  0/66  Ram=5
-   ï¿½  ï¿½  ï¿½ï¿½@DIV1616  0/66  Ram=5
-   ï¿½  ï¿½ï¿½@PRINTF_LD_9600_31766_31767  0/230  Ram=9
-   ï¿½  ï¿½ï¿½@delay_ms1  0/38  Ram=1
-   ï¿½ï¿½RDA_isr  0/50  Ram=2
+ÀÄmain
+   ÃÄMAIN  0/556  Ram=2
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄlcd_init  0/92  Ram=2
+   ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/72  Ram=1
+   ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ³  ÃÄlcd_send_nibble  0/72  Ram=1
+   ³  ³  ÃÄ@const634  0/30  Ram=0
+   ³  ³  ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ÃÄlcd_read_byte  0/36  Ram=3
+   ³  ³     ³  ÃÄlcd_read_nibble  0/60  Ram=1
+   ³  ³     ³  ÀÄlcd_read_nibble  0/60  Ram=1
+   ³  ³     ÃÄlcd_send_nibble  0/72  Ram=1
+   ³  ³     ÀÄlcd_send_nibble  0/72  Ram=1
+   ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÃÄlcd_send_byte  0/66  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ³  ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄlcd_send_byte  0/66  Ram=3
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_send_byte  0/66  Ram=3
+   ³  ³     ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_657  0/32  Ram=2
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ÃÄ@PSTRINGC_657  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  0/38  Ram=1
+   ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄtriggerSonde  0/18  Ram=0
+   ³  ÃÄparseDist  0/28  Ram=2
+   ³  ³  ÀÄ@DIV1616  0/66  Ram=5
+   ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ÃÄlcd_gotoxy  0/64  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_657  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_657  0/170  Ram=6
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄ@DIV88  0/40  Ram=3
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄlcd_putc  0/72  Ram=1
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄlcd_putc  0/72  Ram=1
+   ³  ³     ÀÄ*
+   ³  ÃÄ@PRINTF_D_657  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_657  0/170  Ram=6
+   ³  ³  ÀÄ*
+   ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ÃÄoutputValueParser  0/126  Ram=3
+   ³  ³  ÃÄ@DIV1616  0/66  Ram=5
+   ³  ³  ÀÄ@DIV1616  0/66  Ram=5
+   ³  ÃÄ@PRINTF_LD_9600_31766_31767  0/222  Ram=9
+   ³  ÀÄ@delay_ms1  0/38  Ram=1
+   ÀÄRDA_isr  0/50  Ram=2

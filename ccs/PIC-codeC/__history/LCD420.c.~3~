@@ -1,4 +1,27 @@
-// Flex_LCD420.c
+name: CI
+
+on:
+  push:
+    branches:
+    - Release
+
+jobs:
+  firebase-deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@Release
+    - uses: actions/setup-node@Release
+      with:
+        node-version: '10.x'
+    - run: npm install
+    - run: npm run build:prod
+    - uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TO// Flex_LCD420.c
 
 // These pins are for my Microchip PicDem2-Plus board,
 // which I used to test this driver.
