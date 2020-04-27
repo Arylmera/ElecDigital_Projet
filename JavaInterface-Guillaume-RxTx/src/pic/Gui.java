@@ -12,6 +12,7 @@ public class Gui extends JFrame {
 	private static OutputStream outStream;
 	private static InputStream inStream;
 	private static SerialPort serialPort;
+	private static JLabel banner = new JLabel("OK");
 	private final JTextField guiValeurMax = new JTextField(10);
 	private static final JTextArea guiText = new JTextArea(20, 20);
 	private static int minValue = 0;
@@ -46,6 +47,7 @@ public class Gui extends JFrame {
 		add(guiBtnMax);
 		JButton guiBtnClose = new JButton("Close");
 		add(guiBtnClose);
+		add(banner);
 		add(guiText);
 
 		// key listener pour empécher tout caractère sauf les numéros, le backspace et la virgule (numérique)
@@ -149,7 +151,8 @@ public class Gui extends JFrame {
 	 */
 	public void sendData(int valueToSend) throws IOException {
 		guiText.append(valueToSend + " cm définie comme valeur maximum \n");
-		outStream.write(valueToSend);
+		String data = "!" + valueToSend;
+		outStream.write(data.getBytes());
 	}
 
 	/**
@@ -162,6 +165,14 @@ public class Gui extends JFrame {
 				try {
 					BufferedReader monBFR = new BufferedReader(new InputStreamReader(inStream));
 					String value = monBFR.readLine();
+					if (value.compareToIgnoreCase("1") == 0){ // plus grande = OK
+						banner.setText("OK");
+						banner.setForeground(Color.GREEN);
+					}
+					else if (value.compareToIgnoreCase("2") == 0) { // plus petite = Alerte
+						banner.setText("Alerte");
+						banner.setForeground(Color.RED);
+					}
 					printText(value);
 				} catch (IOException e) {
 					e.printStackTrace();
