@@ -33,11 +33,11 @@
 027     c
 028     d
 029     u
+02A-02B @PRINTF_LD_9600_31766_31767.P1
 02A-02B outputValueParser.value
 02A     lcd_init.i
-02A     @PRINTF_D_663.P1
-02A-02B @PRINTF_LD_9600_31766_31767.P2
 02A-02B parseDist.time
+02A     @PRINTF_D_663.P1
 02A     init_lcd.@SCRATCH1
 02A     @PSTRINGC_663.@SCRATCH1
 02A     MAIN.@SCRATCH1
@@ -60,8 +60,8 @@
 030     @DIV88.P1
 030     @PRINTF_LD_9600_31766_31767.@SCRATCH5
 031     lcd_gotoxy.x
-031     @delay_ms1.P1
-031     @DIV88.P2
+031     @DIV88.P1
+031     @delay_ms1.P2
 031     @DIV1616.@SCRATCH1
 031     @PRINTF_LD_9600_31766_31767.@SCRATCH6
 032     lcd_gotoxy.y
@@ -72,29 +72,29 @@
 035     lcd_send_byte.n
 036     lcd_read_byte.low
 036     lcd_send_byte.@SCRATCH1
-037     lcd_read_byte.high
 037     lcd_send_nibble.n
+037     lcd_read_byte.high
 038     lcd_read_byte.@SCRATCH1
 039     RDA_isr.@SCRATCH1
 03A     RDA_isr.@SCRATCH2
-F83     lcd
 F83     PSP_DATA
+F83     lcd
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2_LOW
 FBB     CCP_2
+FBB     CCP_2_LOW
 FBC     CCP_2_HIGH
 FBE     CCP_1_LOW
 FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P3
-FE9-FEA @WRITE_PROGRAM_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 000096  LCD_INIT_STRING.call
@@ -103,37 +103,38 @@ ROM Allocation:
 0000E6  @const694.call
 000100  @const696.call
 00010A  @const704.call
-000114  @delay_ms1
-00013A  lcd_send_nibble
-00015C  lcd_read_byte
-000198  lcd_send_byte
-0001CE  lcd_init
-000226  lcd_gotoxy
-00025A  @goto10611
-000286  lcd_putc
-0002CE  @PSTRINGC_663
-0002EE  init_lcd
-000344  triggerSonde
-000356  @DIV1616
-000398  parseDist
-0003B6  @PRINTF_LD_9600_31766_31767
-000494  @DIV88
-0004BC  @PRINTF_D_663
-000566  outputValueParser
-0005E4  MAIN
-0005E4  @cinit1
-000608  @cinit2
+000114  @const714.call
+000120  @delay_ms1
+000146  lcd_send_nibble
+000168  lcd_read_byte
+0001A4  lcd_send_byte
+0001DA  lcd_init
+000232  lcd_gotoxy
+000266  @goto10611
+000292  lcd_putc
+0002DA  @PSTRINGC_663
+0002FA  init_lcd
+000348  triggerSonde
+00035A  @DIV1616
+00039C  parseDist
+0003BA  @PRINTF_LD_9600_31766_31767
+000498  @DIV88
+0004C0  @PRINTF_D_663
+00056A  outputValueParser
+0005E8  MAIN
+0005E8  @cinit1
+00060C  @cinit2
 
 Project Directory:
     W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\
 
 Project Files:
-    main.c                                                  [27-avr.-20 15:14  CRC=5BDEBF8B]
+    main.c                                                  [27-avr.-20 15:26  CRC=A9E02CE5]
     ..\test\main.h                                          [27-févr.-20 11:34  CRC=784CF644]
     C:\Program Files (x86)\PICC\Devices\18F458.h            [03-juil.-13 15:28  CRC=1AB1DF0F]
     LCD420.c                                                [27-avr.-20 15:09  CRC=5ABCEF9F]
 
-Source signature=A457741C
+Source signature=F258E176
 
 Units:
     main (main)

@@ -134,23 +134,12 @@ void main()
      u=buffer[3]-48;
      minVal=(int16) (c*100+d*10+u);
    }
-   
-   // création valeurs LCD MINvalue
-   c = minVal/100;
-   d = (minVal-(c*100))/10;
-   u = (minVal-(c*100))-(d*10);
-   // Affichage MinValue LCD
-   lcd_gotoxy(3,1);
-   printf(lcd_putc, "MinVal: ");
-   printf(lcd_putc, "%d", c);
-   printf(lcd_putc, "%d", d);
-   printf(lcd_putc, "%d", u);
-   // créeation valeurs Distance LCD
-   c = distance/100;
-   d = (distance-(c*100))/10;
-   u = (distance-(c*100))-(d*10);
-   // affichage distance LCD
-   lcd_gotoxy(3,3);
+
+   c=distance/100;
+   d=(distance-(c*100))/10;
+   u=(distance-(c*100))-(d*10);
+
+   lcd_gotoxy(1,1);
    printf(lcd_putc, "Distance: ");
    printf(lcd_putc, "%d", c);
    printf(lcd_putc, "%d", d);
