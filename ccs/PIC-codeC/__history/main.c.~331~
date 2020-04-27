@@ -122,10 +122,6 @@ void main()
 
    // temps => distance
    distance = parseDist(time);
-   
-   // envoie distance ici java
-   printf("%ld", distance);
-   printf("\n");
 
    if(flag==1){
      flag=0;
@@ -171,6 +167,9 @@ void main()
    // affichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
+   // envoie distance � java
+   printf("%d", distance);
+   printf("\n");
 
    // attente pour eviter spam
    delay_ms(500);

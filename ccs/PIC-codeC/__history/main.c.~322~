@@ -53,8 +53,8 @@ int16 outputValueParser(int16 value){
 * parsing temps => distance
 */
 int16 parseDist(int16 time){
-  return time / (286) ; // theoriquement 343 m/s
-  //return time/100;
+  //return time / (285) ; // theoriquement 343 m/s
+  return time/100;
 }
 
 /*
@@ -73,7 +73,7 @@ void init_lcd(){
    delay_ms(500);
    lcd_putc('\f');
    lcd_gotoxy(1,1);
-   printf(lcd_putc,"Projet Electronique 2020 ");
+   printf(lcd_putc," Projet Electronique 2020 ");
    delay_ms(1000);
    printf(lcd_putc,"Groupe 2");
    delay_ms(1000);
@@ -122,10 +122,6 @@ void main()
 
    // temps => distance
    distance = parseDist(time);
-   
-   // envoie distance ici java
-   printf("%ld", distance);
-   printf("\n");
 
    if(flag==1){
      flag=0;
@@ -140,7 +136,7 @@ void main()
    u=(distance-(c*100))-(d*10);
 
    lcd_gotoxy(1,1);
-   printf(lcd_putc, "limite: ");
+   printf(lcd_putc, "Limite : ");
    printf(lcd_putc, "%d", c);
    printf(lcd_putc, "%d", d);
    printf(lcd_putc, "%d", u);
@@ -171,6 +167,9 @@ void main()
    // affichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
+   // envoie distance � java
+   printf("%ld", distance);
+   printf("\n");
 
    // attente pour eviter spam
    delay_ms(500);

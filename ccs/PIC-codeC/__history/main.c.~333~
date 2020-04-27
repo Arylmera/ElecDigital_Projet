@@ -123,7 +123,7 @@ void main()
    // temps => distance
    distance = parseDist(time);
    
-   // envoie distance ici java
+   // envoie distance � java
    printf("%ld", distance);
    printf("\n");
 

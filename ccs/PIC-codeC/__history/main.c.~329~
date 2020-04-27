@@ -73,7 +73,7 @@ void init_lcd(){
    delay_ms(500);
    lcd_putc('\f');
    lcd_gotoxy(1,1);
-   printf(lcd_putc,"Projet Electronique 2020 ");
+   printf(lcd_putc," Projet Electronique 2020 ");
    delay_ms(1000);
    printf(lcd_putc,"Groupe 2");
    delay_ms(1000);
@@ -122,10 +122,6 @@ void main()
 
    // temps => distance
    distance = parseDist(time);
-   
-   // envoie distance ici java
-   printf("%ld", distance);
-   printf("\n");
 
    if(flag==1){
      flag=0;
@@ -171,6 +167,9 @@ void main()
    // affichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
+   // envoie distance � java
+   printf("%ld", distance);
+   printf("\n");
 
    // attente pour eviter spam
    delay_ms(500);

@@ -1,7 +1,7 @@
-D G "__PCH__" 0 188 ""5.008""
-D G "__DEVICE__" 0 188 "458"
-D G "__DATE__" 0 188 ""27-avr.-20""
-D G "__TIME__" 0 188 ""14:57:04"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "__PCH__" 0 180 ""5.008""
+D G "__DEVICE__" 0 180 "458"
+D G "__DATE__" 0 180 ""27-avr.-20""
+D G "__TIME__" 0 180 ""15:14:30"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 5 16 "FUNCTION"
 v L "value" 2 31 "int8" `54 
 f B "set_tris_a" 2 31 "void(int8 value)" `53 
@@ -861,55 +861,42 @@ d G "INT_CANRX1" 2 762 "0x00A302"
 d G "INT_CANRX0" 2 763 "0x00A301"
 D G "LED" 1 12 "PIN_None"
 D G "DELAY" 1 13 "1000"
-D G "LCD_DB4" 3 8 "PIN_D4"
-D G "LCD_DB5" 3 9 "PIN_D5"
-D G "LCD_DB6" 3 10 "PIN_D6"
-D G "LCD_DB7" 3 11 "PIN_D7"
-D G "LCD_RS" 3 13 "PIN_E0"
-D G "LCD_RW" 3 14 "PIN_E1"
-D G "LCD_E" 3 15 "PIN_E2"
-D G "USE_RW_PIN" 3 39 "1"
-D G "LCD_LINE_1_ADDRESS" 3 43 "0x00"
-D G "LCD_LINE_2_ADDRESS" 3 44 "0x40"
-D G "LCD_LINE_3_ADDRESS" 3 45 "0x14"
-D G "LCD_LINE_4_ADDRESS" 3 46 "0x54"
-D G "lcd_type" 3 60 "2" "0=5x7, 1=5x10, 2=2 lines(or more)"
-V G "lcd_line" 3 62 "int8" `633 
-V G "LCD_INIT_STRING" 3 64 "[4]" `634 
-C L "jump_to_irs" 3 1 1 "FUNCTION"
-C L "jump_to_irs" 3 1 1 "FUNCTION"
-C L "jump_to_irs" 3 1 1 "FUNCTION"
-C L "jump_to_irs" 3 1 1 "FUNCTION"
-V L "nibble" 3 74 "int8" `638 
-F G "lcd_send_nibble" 3 75 "void(int8 nibble)" `637  "Note:  !! converts an integer expression"
-C L "lcd_send_nibble" 3 1 1 "FUNCTION"
-C L "lcd_read_nibble" 3 1 4 "FUNCTION"
-F G "lcd_read_nibble" 3 97 "int8()" `639 
-V L "retval" 3 98 "int8" `640  "Create bit variables so that we can easily set"
-C L "lcd_read_nibble" 3 1 1 "FUNCTION"
-C L "lcd_read_byte" 3 1 1 "FUNCTION"
-F G "lcd_read_byte" 3 128 "int8()" `645 
-V L "low" 3 129 "int8" `646 
-V L "high" 3 130 "int8" `647 
-C L "lcd_send_byte" 3 1 1 "FUNCTION"
-V L "address" 3 145 "int8" `649 
-V L "n" 3 145 "int8" `650 
-F G "lcd_send_byte" 3 146 "void(int8 address,int8 n)" `648 
-F G "lcd_init" 3 175 "void()" `651 
-V L "i" 3 176 "int8" `652 
-C L "lcd_init" 3 1 4 "FUNCTION"
-C L "lcd_init" 3 1 6 "FUNCTION"
-V L "x" 3 221 "int8" `654 
-V L "y" 3 221 "int8" `655 
-F G "lcd_gotoxy" 3 222 "void(int8 x,int8 y)" `653 
-V L "address" 3 223 "int8" `656 
-V L "c" 3 255 "int8" `658 
-F G "lcd_putc" 3 256 "void(int8 c,int8 x,int8 c)" `657 
-V L "x" 3 281 "int8" `660 
-V L "y" 3 281 "int8" `661 
-F G "lcd_getc" 3 282 "int8(int8 x,int8 y)" `659 
-V L "value" 3 283 "int8" `662 
-C L "lcd_getc" 3 1 1 "FUNCTION"
+C L "jump_to_irs" 3 2 31 "FUNCTION"
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+V G "lcd" 3 45 "{int4 data,int1 rs,int1 rw,int1 enable,int1 unused}" `639 
+D G "lcd_type" 3 50 "2" "0=5x7, 1=5x10, 2=2 lines"
+V G "LCD_INIT_STRING" 3 53 "[4]" `640 
+C L "jump_to_irs" 3 2 4 "FUNCTION"
+V G "LCD_WRITE" 3 61 "{int4 data,int1 rs,int1 rw,int1 enable,int1 unused}" `643 
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+V G "LCD_READ" 3 62 "{int4 data,int1 rs,int1 rw,int1 enable,int1 unused}" `645 
+C L "jump_to_irs" 3 2 1 "FUNCTION"
+V G "lcdline" 3 65 "int8" `647 
+F G "lcd_read_byte" 3 67 "int8()" `648  "Fonction de bas niveau"
+V L "low" 3 68 "int8" `649 
+V L "high" 3 68 "int8" `650 
+V L "n" 3 87 "int8" `652 
+F G "lcd_send_nibble" 3 87 "void(int8 n)" `651  "Fonction de bas niveau"
+V L "address" 3 96 "int8" `654 
+V L "n" 3 96 "int8" `655 
+F G "lcd_send_byte" 3 96 "void(int8 address,int8 n)" `653  "Fonction de bas niveau"
+F G "lcd_init" 3 110 "void()" `656 
+V L "i" 3 111 "int8" `657 
+V L "x" 3 128 "int8" `659 
+V L "y" 3 128 "int8" `660 
+F G "lcd_gotoxy" 3 128 "void(int8 x,int8 y)" `658 
+V L "address" 3 129 "int8" `661 
+V L "c" 3 141 "int8" `664 
+F G "lcd_putc" 3 141 "void(int8 c)" `663 
+V L "x" 3 153 "int8" `666 
+V L "y" 3 153 "int8" `667 
+F G "lcd_getc" 3 153 "int8(int8 x,int8 y)" `665 
+V L "value" 3 154 "int8" `668 
 D G "trigger" 0 7 "pin_C0"
 D G "echo" 0 8 "pin_C1"
 D G "dot" 0 9 "pin_E2"
@@ -917,47 +904,47 @@ D G "RX" 0 10 "pin_C7"
 D G "TX" 0 11 "pin_C6"
 D G "GREEN" 0 12 "pin_E0"
 D G "RED" 0 13 "pin_E1"
-V G "time" 0 17 "int16" `666 
-V G "distance" 0 17 "int16" `667 
-V G "x" 0 17 "int16" `668 
-V G "i" 0 17 "int16" `669 
-V G "minVal" 0 17 "int16" `670 
-V G "flag" 0 18 "int1" `671 
-V G "buffer" 0 19 "int8[4]" `672 
-V G "j" 0 20 "int8" `673 
-V G "c" 0 21 "int8" `674 
-V G "d" 0 21 "int8" `675 
-V G "u" 0 21 "int8" `676 
-F G "RDA_isr" 0 24 "void(int16 value)" `677 
+V G "time" 0 17 "int16" `672 
+V G "distance" 0 17 "int16" `673 
+V G "x" 0 17 "int16" `674 
+V G "i" 0 17 "int16" `675 
+V G "minVal" 0 17 "int16" `676 
+V G "flag" 0 18 "int1" `677 
+V G "buffer" 0 19 "int8[4]" `678 
+V G "j" 0 20 "int8" `679 
+V G "c" 0 21 "int8" `680 
+V G "d" 0 21 "int8" `681 
+V G "u" 0 21 "int8" `682 
+F G "RDA_isr" 0 24 "void()" `683 
 C L "outputValueParser" 0 35 1 "*"
-V L "value" 0 38 "int16" `679 
-F G "outputValueParser" 0 38 "int16(int16 value)" `678 
-V L "output" 0 39 "int8" `680 
+V L "value" 0 38 "int16" `685 
+F G "outputValueParser" 0 38 "int16(int16 value)" `684 
+V L "output" 0 39 "int8" `686 
 C L "parseDist" 0 52 1 "*"
-V L "time" 0 55 "int16" `685 
-F G "parseDist" 0 55 "int16(int16 time)" `684  "return time / (285) ; // theoriquement 343 m/s"
+V L "time" 0 55 "int16" `691 
+F G "parseDist" 0 55 "int16(int16 time)" `690 
+C L "parseDist" 0 52 2 "FUNCTION"
 C L "triggerSonde" 0 60 1 "*"
-F G "triggerSonde" 0 63 "void()" `686 
-C L "MAIN" 0 69 11 "*"
-C L "MAIN" 0 83 1 "*"
-F G "MAIN" 0 87 "void()" `687 
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 2 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
-C L "MAIN" 0 83 1 "FUNCTION"
+F G "triggerSonde" 0 63 "void()" `692 
+C L "init_lcd" 0 69 1 "*"
+F G "init_lcd" 0 72 "void()" `693 
+C L "MAIN" 0 84 1 "*"
+F G "MAIN" 0 88 "void()" `697 
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 2 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
+C L "MAIN" 0 84 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0
