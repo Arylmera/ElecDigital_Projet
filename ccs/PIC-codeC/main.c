@@ -93,11 +93,12 @@ void main()
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
    setup_comparator(NC_NC_NC_NC);
    setup_vref(FALSE);
-   
+
    enable_interrupts(INT_RDA);
    enable_interrupts(GLOBAL);
    setup_oscillator(False);
 
+   lcd_init();
    init_lcd();
 
    while(true)
@@ -132,9 +133,9 @@ void main()
    c=distance/100;
    d=(distance-(c*100))/10;
    u=(distance-(c*100))-(d*10);
-   
+
    lcd_gotoxy(1,1);
-   printf(lcd_putc, "Limie : ");
+   printf(lcd_putc, "Limite : ");
    printf(lcd_putc, "%d", c);
    printf(lcd_putc, "%d", d);
    printf(lcd_putc, "%d", u);
@@ -165,7 +166,7 @@ void main()
    // affichage sur 7seg de la distance
    output_b(outputValueParser(distance));
 
-   // envoie distance à java
+   // envoie distance ï¿½ java
    printf("%ld", distance);
    printf("\n");
 
