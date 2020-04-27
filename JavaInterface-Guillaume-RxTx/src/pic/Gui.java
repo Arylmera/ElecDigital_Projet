@@ -5,16 +5,14 @@ import gnu.io.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.Arrays;
+import java.io.*;
 
 public class Gui extends JFrame {
 
 	private static OutputStream outStream;
 	private static InputStream inStream;
 	private static SerialPort serialPort;
+	private static JLabel banner = new JLabel("OK");
 	private final JTextField guiValeurMax = new JTextField(10);
 	private static final JTextArea guiText = new JTextArea(20, 20);
 	private static int minValue = 0;
@@ -49,6 +47,7 @@ public class Gui extends JFrame {
 		add(guiBtnMax);
 		JButton guiBtnClose = new JButton("Close");
 		add(guiBtnClose);
+		add(banner);
 		add(guiText);
 
 		// key listener pour empécher tout caractère sauf les numéros, le backspace et la virgule (numérique)
@@ -152,7 +151,8 @@ public class Gui extends JFrame {
 	 */
 	public void sendData(int valueToSend) throws IOException {
 		guiText.append(valueToSend + " cm définie comme valeur maximum \n");
-		outStream.write(valueToSend);
+		String data = "!" + valueToSend;
+		outStream.write(data.getBytes());
 	}
 
 	/**
@@ -162,20 +162,18 @@ public class Gui extends JFrame {
 		public void serialEvent(SerialPortEvent event) {
 			System.out.println("Valeur détectée sur le port");
 			if ( event.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
-				System.out.println("if");
 				try {
-					System.out.println("try");
-					int available = inStream.available();
-					System.out.println("available : " + available);
-					byte[] data = new byte[available];
-					System.out.println("data : " + Arrays.toString(data));
-					if (available > 0) {
-						inStream.read(data, 0, available);
-						System.out.println("chunk after read : " + Arrays.toString(data));
-						String value = new String(data);
-						System.out.println("value : " + value);
-						printText(value);
+					BufferedReader monBFR = new BufferedReader(new InputStreamReader(inStream));
+					String value = monBFR.readLine();
+					if (value.compareToIgnoreCase("1") == 0){ // plus grande = OK
+						banner.setText("OK");
+						banner.setForeground(Color.GREEN);
 					}
+					else if (value.compareToIgnoreCase("2") == 0) { // plus petite = Alerte
+						banner.setText("Alerte");
+						banner.setForeground(Color.RED);
+					}
+					printText(value);
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
