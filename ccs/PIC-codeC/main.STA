@@ -13,12 +13,12 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  163    73  52  main.c
+  164    73  52  main.c
    16     0   0  ..\test\main.h
   766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
   162    68  48  LCD420.c
 ----- -----
- 1107   141 Total
+ 1108   141 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -35,14 +35,14 @@ Page ROM  %  RAM   Vol Diff  Functions:
 Program metrics:
     Functions               5
     Statements              141
-    Comments                212
+    Comments                213
     Volume (V)              2806
     Difficulty (D)          21.5
     Effort to implement (E) 60289
     Time to implement (T)   56 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   6
-    Maintainability (MI)    53
+    Maintainability (MI)    52
 
  Segment     Used  Free
 -----------  ----  ----
