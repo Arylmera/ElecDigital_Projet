@@ -68,7 +68,7 @@ void triggerSonde(){
 
 /*
 * Fonctione d'initalisation du LCD
-*/
+*
 void init_lcd(){
    delay_ms(500);
    lcd_putc('\f');
@@ -78,7 +78,7 @@ void init_lcd(){
    printf(lcd_putc,"Groupe 2");
    delay_ms(1000);
    lcd_putc('\f');
-}
+}*/
 
 /*
 * fonction principale
@@ -99,7 +99,14 @@ void main()
    setup_oscillator(False);
 
    lcd_init();
-   init_lcd();
+   delay_ms(500);
+   lcd_putc('\f');
+   lcd_gotoxy(1,1);
+   printf(lcd_putc," Projet Electronique 2020 ");
+   delay_ms(1000);
+   printf(lcd_putc,"Groupe 2");
+   delay_ms(1000);
+   lcd_putc('\f');
 
    while(true)
    {
