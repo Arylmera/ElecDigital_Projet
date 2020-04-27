@@ -39,9 +39,11 @@ D1_E=8
 D1_D=0
 D1_L4=[55552]Project Closed.
 D2=27-04-2020
-D2_L=2
+D2_L=4
 D2_L1=[53049]Project Opened.
 D2_L2=[53114]Project Closed.
+D2_L3=[53620]Project Opened.
+D2_L4=[53633]Project Closed.
 
 [defines]
 buildcount=2
