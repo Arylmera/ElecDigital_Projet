@@ -1,5 +1,6 @@
 #include <main.h>
-#include "LCD420.c"
+//#include "LCD420.c"
+#include "W:\Ephec\ElecDigitalProjet\ccs\PIC-codeC\LCD420.c"
 #use fast_io(C)
 
 #use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7)

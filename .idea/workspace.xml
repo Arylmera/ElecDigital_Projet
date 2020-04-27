@@ -1,41 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="390b8af3-459a-43c9-9ce0-5f4a83ac6b30" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/.idea/libraries/jssc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/Envoie_Recu_Donnees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/Gui$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/Gui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/jssc-2.8.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ElecDigitalProjet.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jar elec/elec.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/.idea/java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/java.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/bin/pic/Gui$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/bin/pic/Gui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/pic/Envoie_Recu_Donnees.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/pic/Gui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proteus/Last Loaded ProjectElecDigit.pdsbak" beforeDir="false" afterPath="$PROJECT_DIR$/Proteus/Last Loaded ProjectElecDigit.pdsbak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.STA" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.STA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.ccspjt" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.ccspjt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.cof" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.cof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.err" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.esym" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.esym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.hex" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.sym" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.tre" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.tre" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ccs/PIC-codeC/main.xsym" beforeDir="false" afterPath="$PROJECT_DIR$/ccs/PIC-codeC/main.xsym" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1b7ewM4rt2A2FH9gIfXe6T0OW6P" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="SvnConfiguration">
@@ -49,6 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587299613610</updated>
       <workItem from="1587299620274" duration="86000" />
+      <workItem from="1587987800049" duration="58000" />
     </task>
     <servers />
   </component>

@@ -23,23 +23,37 @@
     </expand>
     <select />
   </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5d2761b4-bfbb-4333-9bc5-459a002e9bff" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume-Jssc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterface-Guillaume-Jssc/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume-Jssc/out/production/JavaInterface/pic/Gui.class" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaInterface-Guillaume-Jssc/out/production/JavaInterface/pic/Gui.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/RXTXcomm.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/RXTXcomm.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/JavaInterface_Guillaume_jar/JavaInterface.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/JavaInterface_Guillaume_jar/JavaInterface.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume/.idea/JavaInterface-Guillaume.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaInterface-Guillaume/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proteus/Last Loaded ProjectElecDigit.pdsbak" beforeDir="false" afterPath="$PROJECT_DIR$/../Proteus/Last Loaded ProjectElecDigit.pdsbak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.STA" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.STA" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.ccspjt" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.ccspjt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.cof" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.cof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.err" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.err" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.esym" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.esym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.hex" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.hex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.sym" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.sym" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.tre" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.tre" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ccs/PIC-codeC/main.xsym" beforeDir="false" afterPath="$PROJECT_DIR$/../ccs/PIC-codeC/main.xsym" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ComposerSettings">
     <execution />
@@ -68,6 +82,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -89,7 +104,7 @@
       <recent name="W:\Ephec\ElecDigitalProjet\JavaInterface-Guillaume-RxTx" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Gui (1)">
+  <component name="RunManager">
     <configuration name="Gui (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pic.Gui" />
       <module name="JavaInterface" />
@@ -120,13 +135,6 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/JavaInterface_Guillaume_jar/JavaInterface.jar" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Gui (1)" />
-        <item itemvalue="JAR Application.JavaInterface.jar" />
-        <item itemvalue="Application.Gui" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -158,6 +166,7 @@
       <workItem from="1587651838347" duration="131000" />
       <workItem from="1587654030650" duration="1140000" />
       <workItem from="1587655199922" duration="19611000" />
+      <workItem from="1587987859217" duration="36000" />
     </task>
     <servers />
   </component>
