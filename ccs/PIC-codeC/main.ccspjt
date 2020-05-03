@@ -3,7 +3,7 @@ Target=main.hex
 Processor_Text=PIC18F458
 CCSVerions=5.008
 Compiler=PCH
-CCSVersion=5.008
+CCSVersion=5.094d
 [Target Data]
 FileList=main.c
 [Directories]
@@ -16,7 +16,7 @@ Type=4
 1=main.c
 2=
 3=
-t1=1
+t1=25
 Count=1
 4=\\Mac\OneDrive\Ephec\ElecDigitalProjet\ccs\PIC-codeC\LCD420.c
 5=
@@ -27,13 +27,13 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=2
+Days=3
 D1=11-04-2020
 D1_L=4
 D1_L1=[55081]Project Opened.
 D1_L2=[55116]Started Editing.
 D1_L3=[55552]Stopped Editing.
-TotalEdit=8
+TotalEdit=16
 TotalDebug=0
 D1_E=8
 D1_D=0
@@ -52,9 +52,17 @@ D2_L9=[73192]Project Opened.
 D2_L10=[73203]Project Closed.
 D2_L11=[73288]Project Opened.
 D2_L12=[73479]Project Closed.
+D3=03-05-2020
+D3_L=4
+D3_L1=[54507]Project Opened.
+D3_L2=[54611]Started Editing.
+D3_L3=[55043]Stopped Editing.
+D3_E=8
+D3_D=0
+D3_L4=[55043]Project Closed.
 
 [defines]
-buildcount=9
+buildcount=11
 [Units]
 Count=1
 1=main (main)

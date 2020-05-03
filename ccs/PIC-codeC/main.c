@@ -1,4 +1,5 @@
 #include <main.h>
+#include <stdbool.h>
 #include "LCD420.c"
 #use fast_io(C)
 
@@ -15,9 +16,9 @@
 #int_TIMER1
 
 int16 time, distance, x, i, minVal;
-boolean flag=0;
+bool flag=0;
 char buffer[4];
-int8 j=0;
+int j=0;
 int8 c,d,u;
 
 #INT_RDA
@@ -135,9 +136,9 @@ void main()
    // Affichage MinValue LCD
    lcd_gotoxy(3,1);
    printf(lcd_putc, " MinVal: ");
-   printf(lcd_putc, " %d", c);
-   printf(lcd_putc, " %d", d);
-   printf(lcd_putc, " %d", u);
+   printf(lcd_putc, "%d", c);
+   printf(lcd_putc, "%d", d);
+   printf(lcd_putc, "%d", u);
    // cr�eation valeurs Distance LCD
    c = distance/100;
    d = (distance-(c*100))/10;
@@ -145,9 +146,9 @@ void main()
    // affichage distance LCD
    lcd_gotoxy(3,3);
    printf(lcd_putc, " Distance: ");
-   printf(lcd_putc, " %d", c);
-   printf(lcd_putc, " %d", d);
-   printf(lcd_putc, " %d", u);
+   printf(lcd_putc, "%d", c);
+   printf(lcd_putc, "%d", d);
+   printf(lcd_putc, "%d", u);
 
    // v�rification borne minVal
    if (distance < minVal){

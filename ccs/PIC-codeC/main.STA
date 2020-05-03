@@ -1,70 +1,71 @@
 
-ROM used:   2140/16384 (7%)
-            2140/16384 (7%) including unused fragments
+ROM used:   2102/32768 (6%)
+            2102/32768 (6%) including unused fragments
 
-            1.9 Average locations per line
-            13.1 Average locations per statement
+            1.7 Average locations per line
+            12.9 Average locations per statement
 
-RAM used:   44/1536 (3%) at main() level
-            59/1536 (4%) worst case
+RAM used:   49/1536 (3%) at main() level
+            64/1536 (4%) worst case
 
-Stack used: 7 worst case (6 in main + 1 for interrupts)
+Stack used: 6 worst case (5 in main + 1 for interrupts)
 Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  184    95  58  main.c
-   16     0   0  ..\test\main.h
-  766     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
+  185    95  58  main.c
+   16     0   0  main.h
+  807     0   0  C:\Program Files (x86)\PICC\Devices\18F458.h
+   39     0   0  C:\Program Files (x86)\PICC\Devices\stdbool.h
   163    68  42  LCD420.c
 ----- -----
- 1129   163 Total
+ 1210   163 Total
 
-Page ROM  %  RAM   Vol Diff  Functions:
----- --- --- ---   --- ----  ----------
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
 0     38   1    1             @delay_ms1
-0     30   1    0             @const640
-0     60   1    3   463  4.3  lcd_read_byte
-0     34   1    1   134  2.2  lcd_send_nibble
-0     54   1    3   317  4.3  lcd_send_byte
-0     88   2    2   422  4.7  lcd_init
-0     52   1    3   321  5.5  lcd_gotoxy
-0     44   1    0             @goto10611
-0     72   2    1   308  5.0  lcd_putc
-0     50   1    2   187  4.4  RDA_isr
-0    126   3    3   273  5.5  outputValueParser
+0     20   0    0             @const702
+0     60   1    3    463  4.3  lcd_read_byte
+0     30   1    1    134  2.2  lcd_send_nibble
+0     54   1    3    317  4.3  lcd_send_byte
+0     78   2    2    422  4.7  lcd_init
+0     52   1    3    321  5.5  lcd_gotoxy
+0     34   1    0             @goto45218
+0     72   2    1    308  5.0  lcd_putc
+0     50   1    2    187  4.4  RDA_isr
+0    122   3    3    273  5.5  outputValueParser
 0     66   2    5             @DIV1616
-0     18   0    0    48  1.1  triggerSonde
-0     82   2    1   200  1.7  init_lcd
-0     22   1    0             @const692
-0     32   1    2             @PSTRINGC_663
-0     16   0    0             @const694
-0    656  15    2  2680  8.3  MAIN
-0    222   5    9             @PRINTF_LD_9600_31766_31767
-0     10   0    0             @const702
+0     18   0    0     48  1.1  triggerSonde
+0     82   2    1    200  1.7  init_lcd
+0     22   1    0             @const753
+0     32   1    2             @PSTRINGC_724
+0     16   0    0             @const758
+0    624  15    2   2680  8.3  MAIN
+0    230   5    9             @PRINTF_LD_9600_31766_31767
+0     10   0    0             @const766
 0     40   1    3             @DIV88
-0    170   4    6             @PRINTF_D_663
-0     12   0    0             @const712
+0    170   4    6             @PRINTF_D_724
+0     12   0    0             @const776
  Inline         0             @cinit1
 
 Program metrics:
     Functions               11
     Statements              163
-    Comments                212
+    Comments                241
     Volume (V)              7905
     Difficulty (D)          46.5
     Effort to implement (E) 367407
     Time to implement (T)   5 hours, 40 minutes
     Est Delivered Bugs (B)  2
     Cyclomatic Complexity   16
-    Maintainability (MI)    118
+    Maintainability (MI)    134
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
-00008-00094   142  0  
-00096-07FFE  1994  30624  
+00008-000AC   166  0  
+000AE-07FFE  1932  30662  
 
 
 
