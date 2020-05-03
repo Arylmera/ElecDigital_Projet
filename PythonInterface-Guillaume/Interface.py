@@ -1,6 +1,5 @@
 import time
 import serial
-import os
 import tkinter as tk
 
 serPort = 'COM2'
@@ -13,7 +12,6 @@ Lecture des valeur du port serial
 Print de la valeur recue
 '''
 def readValue() :
-    #os.system('cls')
     line = (serial.readline()).decode()   # read a '\n' terminated line
     line = line[:-1]
     if (line == '1') :
@@ -43,24 +41,29 @@ Lancement du programme
 '''
 window = tk.Tk()
 window.title("Projet Elec")
-window.geometry("400x200")
 
-labelMinVal = tk.Label(window, text='Valeur d\'alarme :')
+paramFrame = tk.Frame(window)
+outputFrame = tk.Frame(window)
+
+labelMinVal = tk.Label(paramFrame, text='Valeur d\'alarme :')
 labelMinVal.pack()
 
-inputMinVal = tk.Entry(window, textvariable=int, width=6)
+inputMinVal = tk.Entry(paramFrame, textvariable=int, width=6)
 inputMinVal.pack()
 
-sendBtn = tk.Button(window, text='send', command=sendMinValue)
+sendBtn = tk.Button(paramFrame, text='send', command=sendMinValue)
 sendBtn.pack()
 
 inputVal_text = tk.StringVar()
-intputVal = tk.Label(window, textvariable=inputVal_text)
+intputVal = tk.Label(outputFrame, textvariable=inputVal_text)
 intputVal.pack()
 
 outputVal_text = tk.StringVar()
-outputVal = tk.Label(window, textvariable=outputVal_text)
+outputVal = tk.Label(outputFrame, textvariable=outputVal_text)
 outputVal.pack()
+
+paramFrame.pack(padx=1, pady=1)
+outputFrame.pack(padx=20, pady=20)
 
 window.update()
 
