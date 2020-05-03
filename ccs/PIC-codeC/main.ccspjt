@@ -3,7 +3,7 @@ Target=main.hex
 Processor_Text=PIC18F458
 CCSVerions=5.008
 Compiler=PCH
-CCSVersion=5.094d
+CCSVersion=5.008
 [Target Data]
 FileList=main.c
 [Directories]
@@ -14,7 +14,7 @@ Type=4
 1=main.c
 [Opened Files]
 1=main.c
-2=LCD420.c
+2=
 3=
 t1=1
 Count=1
