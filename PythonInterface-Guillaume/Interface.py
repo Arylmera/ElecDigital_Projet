@@ -49,6 +49,7 @@ labelMinVal = tk.Label(paramFrame, text='Valeur d\'alarme :')
 labelMinVal.pack()
 
 inputMinVal = tk.Entry(paramFrame, textvariable=int, width=6)
+inputMinVal.insert(0, 100)
 inputMinVal.pack()
 
 sendBtn = tk.Button(paramFrame, text='send', command=sendMinValue)
