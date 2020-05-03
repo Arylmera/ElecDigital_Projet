@@ -9,7 +9,7 @@ serial = serial.Serial(serPort, baudRate)
 
 '''
 Lecture des valeur du port serial
-Print de la valeur recue
+Print de la valeur recue dans le GUI
 '''
 def readValue() :
     line = (serial.readline()).decode()   # read a '\n' terminated line
@@ -28,7 +28,7 @@ def readValue() :
     serial.flush()
 
 '''
-Envois de la valeur minimal a la sonde
+Envois de la valeur minimal a la sonde depuis l'entrée dans le GUI
 '''
 def sendMinValue():
     print("bouton")
@@ -37,7 +37,7 @@ def sendMinValue():
     print('Valeur ' + minValue + ' envoyée comme valeur minimale')
 
 '''
-Lancement du programme
+Lancement du programme et du GUI
 '''
 window = tk.Tk()
 window.title("Projet Elec")
