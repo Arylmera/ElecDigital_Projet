@@ -1,5 +1,4 @@
 #include <main.h>
-#include <stdbool.h>
 #include "LCD420.c"
 #use fast_io(C)
 
@@ -16,14 +15,14 @@
 #int_TIMER1
 
 int16 time, distance, x, i, minVal;
-bool flag=0;
+int flag=0;
 char buffer[4];
 int j=0;
 int8 c,d,u;
 
-#INT_RDA
+#int_RDA
 void RDA_isr(void) {
-  buffer[j]=getc();
+buffer[j]=getc();
   if(buffer[0]=='!' && flag==0) {
     j++;
     if(j>=4) {
