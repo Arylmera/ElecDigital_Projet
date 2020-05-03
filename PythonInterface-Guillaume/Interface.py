@@ -19,9 +19,11 @@ def readValue() :
     if (line == '1') :
         print('OK')
         inputVal_text.set('OK')
+        intputVal.config(fg='green')
     elif (line == '2') :
         print('Alerte')
         inputVal_text.set('Alerte')
+        intputVal.config(fg = 'red')
     else :
         print('distance de : '+ line + ' cm')
         outputVal_text.set('distance de : '+ line + ' cm')
@@ -49,12 +51,12 @@ labelMinVal.pack()
 inputMinVal = tk.Entry(window, textvariable=int, width=6)
 inputMinVal.pack()
 
+sendBtn = tk.Button(window, text='send', command=sendMinValue)
+sendBtn.pack()
+
 inputVal_text = tk.StringVar()
 intputVal = tk.Label(window, textvariable=inputVal_text)
 intputVal.pack()
-
-sendBtn = tk.Button(window, text='send', command=sendMinValue)
-sendBtn.pack()
 
 outputVal_text = tk.StringVar()
 outputVal = tk.Label(window, textvariable=outputVal_text)
