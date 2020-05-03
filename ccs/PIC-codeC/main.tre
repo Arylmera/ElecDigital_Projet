@@ -1,5 +1,5 @@
 ÀÄmain
-   ÃÄMAIN  0/624  Ram=2
+   ÃÄMAIN  0/656  Ram=2
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@cinit2  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/78  Ram=2
@@ -19,7 +19,7 @@
    ³  ³  ³  ³  ÀÄ*
    ³  ³  ³  ÃÄ@delay_ms1  0/38  Ram=1
    ³  ³  ³  ÃÄlcd_gotoxy  0/52  Ram=3
-   ³  ³  ³  ³  ÃÄ@goto53316  0/34  Ram=0
+   ³  ³  ³  ³  ÃÄ@goto37745  0/34  Ram=0
    ³  ³  ³  ³  ÀÄlcd_send_byte  0/54  Ram=3
    ³  ³  ³  ³     ÀÄ*
    ³  ³  ³  ÃÄlcd_send_byte  0/54  Ram=3
@@ -74,9 +74,15 @@
    ³  ³  ÀÄ*
    ³  ÃÄ@PRINTF_D_723  0/170  Ram=6
    ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_723  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/52  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_D_723  0/170  Ram=6
+   ³  ³  ÀÄ*
    ³  ÃÄ@DIV1616  0/66  Ram=5
    ³  ÃÄoutputValueParser  0/122  Ram=3
    ³  ³  ÃÄ@DIV1616  0/66  Ram=5
    ³  ³  ÀÄ@DIV1616  0/66  Ram=5
    ³  ÀÄ@delay_ms1  0/38  Ram=1
-   ÀÄRDA_isr  0/52  Ram=2
+   ÀÄRDA_isr  0/14  Ram=0
