@@ -15,14 +15,14 @@
 #int_TIMER1
 
 int16 time, distance, x, i, minVal;
-boolean flag=0;
+int flag=0;
 char buffer[4];
-int8 j=0;
+int j=0;
 int8 c,d,u;
 
-#INT_RDA
+#int_RDA
 void RDA_isr(void) {
-  buffer[j]=getc();
+buffer[j]=getc();
   if(buffer[0]=='!' && flag==0) {
     j++;
     if(j>=4) {
@@ -135,9 +135,9 @@ void main()
    // Affichage MinValue LCD
    lcd_gotoxy(3,1);
    printf(lcd_putc, " MinVal: ");
-   printf(lcd_putc, " %d", c);
-   printf(lcd_putc, " %d", d);
-   printf(lcd_putc, " %d", u);
+   printf(lcd_putc, "%d", c);
+   printf(lcd_putc, "%d", d);
+   printf(lcd_putc, "%d", u);
    // cr�eation valeurs Distance LCD
    c = distance/100;
    d = (distance-(c*100))/10;
@@ -145,9 +145,9 @@ void main()
    // affichage distance LCD
    lcd_gotoxy(3,3);
    printf(lcd_putc, " Distance: ");
-   printf(lcd_putc, " %d", c);
-   printf(lcd_putc, " %d", d);
-   printf(lcd_putc, " %d", u);
+   printf(lcd_putc, "%d", c);
+   printf(lcd_putc, "%d", d);
+   printf(lcd_putc, "%d", u);
 
    // v�rification borne minVal
    if (distance < minVal){
