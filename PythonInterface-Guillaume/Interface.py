@@ -32,8 +32,7 @@ Envois de la valeur minimal a la sonde depuis l'entrée dans le GUI
 '''
 def sendMinValue():
     minValue = inputMinVal.get()
-    #serial.writelines(('!' + minValue).encode())
-    serial.write(('!' + minValue + '\n').encode())
+    serial.write(('!' + minValue + '\n').encode())  # envois du string sous forme !<Value>\n
     print('Valeur ' + minValue + ' envoyée comme valeur minimale')
 
 '''
@@ -41,31 +40,31 @@ Lancement du programme et du GUI
 '''
 window = tk.Tk()
 window.title("Projet Elec")
-
+# définition des espaces d'affichages
 paramFrame = tk.Frame(window)
 outputFrame = tk.Frame(window)
-
+# définition du label d'alarme
 labelMinVal = tk.Label(paramFrame, text='Valeur d\'alarme :')
 labelMinVal.pack()
-
+# définition du champ d'insertion des données de distance minimal
 inputMinVal = tk.Entry(paramFrame, textvariable=int, width=6)
 inputMinVal.insert(0, 100)
 inputMinVal.pack()
-
+# définition du bouton d'envois de la donnée minimal
 sendBtn = tk.Button(paramFrame, text='send', command=sendMinValue)
 sendBtn.pack()
-
+# définition de l'affchage de la valeur minimale
 inputVal_text = tk.StringVar()
 intputVal = tk.Label(outputFrame, textvariable=inputVal_text)
 intputVal.pack()
-
+# définition du champ de réception de valeur
 outputVal_text = tk.StringVar()
 outputVal = tk.Label(outputFrame, textvariable=outputVal_text)
 outputVal.pack()
-
+# mise en place des blocs d'affichage
 paramFrame.pack(padx=1, pady=1)
 outputFrame.pack(padx=20, pady=20)
-
+# mise a jours de la window
 window.update()
 
 try:
