@@ -91,6 +91,8 @@ void main()
 
    lcd_init();
    init_lcd();
+   
+   minVal = 100;
 
    while(true)
    {
