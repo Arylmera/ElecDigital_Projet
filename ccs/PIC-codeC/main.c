@@ -2,7 +2,7 @@
 #include "LCD420.c"
 #use fast_io(C)
 
-#use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7)
+#use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits = 8)
 
 #define trigger pin_C0
 #define echo pin_C1
@@ -22,7 +22,9 @@ int8 c,d,u;
 
 #int_RDA
 void RDA_isr(void) {
-buffer[j]=getc();
+   gets(buffer);
+  /*
+  buffer[j]=getc();
   if(buffer[0]=='!' && flag==0) {
     j++;
     if(j>=4) {
@@ -30,6 +32,7 @@ buffer[j]=getc();
       flag=1;
     }
   }
+  */
 }
 
 /*
@@ -138,6 +141,7 @@ void main()
    printf(lcd_putc, "%d", c);
    printf(lcd_putc, "%d", d);
    printf(lcd_putc, "%d", u);
+   
    // cr�eation valeurs Distance LCD
    c = distance/100;
    d = (distance-(c*100))/10;
