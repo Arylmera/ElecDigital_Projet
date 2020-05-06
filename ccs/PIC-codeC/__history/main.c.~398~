@@ -1,7 +1,8 @@
 #include <main.h>
 #include "LCD420.c"
+#use fast_io(C)
 
-#use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits = 8, ERRORS)
+#use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits = 8)
 
 #define trigger pin_C0
 #define echo pin_C1
@@ -14,13 +15,15 @@
 #int_TIMER1
 
 int16 time, distance, x, i, minVal;
-boolean flag=0;
+int flag=0;
 char buffer[4];
-int8 j=0;
+int j=0;
 int8 c,d,u;
 
-#INT_RDA
+#int_RDA
 void RDA_isr(void) {
+  gets(buffer);
+  /*
   buffer[j]=getc();
   if(buffer[0]=='!' && flag==0) {
     j++;
@@ -29,6 +32,7 @@ void RDA_isr(void) {
       flag=1;
     }
   }
+  */
 }
 
 /*
@@ -78,16 +82,17 @@ void init_lcd(){
 void main()
 {
    setup_low_volt_detect(FALSE);
+   set_tris_c(0b01000010); // set RC1 as input (ECHO)
 
    setup_spi(FALSE);
    setup_wdt(WDT_OFF);
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
    setup_comparator(NC_NC_NC_NC);
    setup_vref(FALSE);
-   setup_oscillator(False);
 
    enable_interrupts(INT_RDA); // interuption sur r�ception port RS232
    enable_interrupts(GLOBAL);
+   setup_oscillator(False);
 
    lcd_init();
    init_lcd();
@@ -119,14 +124,13 @@ void main()
 
    // si donn�es recu depuis java sur RS232 > interuption INT_RSA
    if(flag==1){
+     flag=0;
      c=buffer[1]-48;
      d=buffer[2]-48;
      u=buffer[3]-48;
      minVal=(int16) (c*100+d*10+u);
-     flag=0;
    }
 
-   
    // cr�ation valeurs LCD MINvalue
    c = minVal/100;
    d = (minVal-(c*100))/10;

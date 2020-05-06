@@ -31,7 +31,6 @@ def readValue() :
 Envois de la valeur minimal a la sonde depuis l'entrée dans le GUI
 '''
 def sendMinValue():
-    print("bouton")
     minValue = inputMinVal.get()
     serial.writelines(('!' + minValue).encode())
     print('Valeur ' + minValue + ' envoyée comme valeur minimale')

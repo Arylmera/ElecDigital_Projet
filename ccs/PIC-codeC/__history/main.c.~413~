@@ -1,7 +1,8 @@
 #include <main.h>
 #include "LCD420.c"
+#use fast_io(C)
 
-#use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits = 8, ERRORS)
+#use rs232(baud=9600, parity=N, xmit=PIN_C6, rcv=PIN_C7, bits = 8)
 
 #define trigger pin_C0
 #define echo pin_C1
@@ -19,9 +20,12 @@ char buffer[4];
 int8 j=0;
 int8 c,d,u;
 
-#INT_RDA
+int test = 0;
+
+#int_rda
 void RDA_isr(void) {
   buffer[j]=getc();
+  test = 1;
   if(buffer[0]=='!' && flag==0) {
     j++;
     if(j>=4) {
@@ -78,16 +82,17 @@ void init_lcd(){
 void main()
 {
    setup_low_volt_detect(FALSE);
+   set_tris_c(0b01000010); // set RC1 as input (ECHO)
 
    setup_spi(FALSE);
    setup_wdt(WDT_OFF);
    setup_timer_1( T1_INTERNAL | T1_DIV_BY_1  );
    setup_comparator(NC_NC_NC_NC);
    setup_vref(FALSE);
-   setup_oscillator(False);
 
    enable_interrupts(INT_RDA); // interuption sur r�ception port RS232
    enable_interrupts(GLOBAL);
+   setup_oscillator(False);
 
    lcd_init();
    init_lcd();
@@ -126,7 +131,7 @@ void main()
      flag=0;
    }
 
-   
+   /*
    // cr�ation valeurs LCD MINvalue
    c = minVal/100;
    d = (minVal-(c*100))/10;
@@ -137,6 +142,11 @@ void main()
    printf(lcd_putc, "%d", c);
    printf(lcd_putc, "%d", d);
    printf(lcd_putc, "%d", u);
+   */
+   if (test == 1){
+   lcd_gotoxy(3,1);
+   printf(lcd_putc, " Interuption ");
+   }
    
    // cr�eation valeurs Distance LCD
    c = distance/100;
