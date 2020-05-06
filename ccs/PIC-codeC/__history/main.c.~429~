@@ -99,7 +99,7 @@ void main()
    time = 0;
 
    // recuperation minValue envoye par JAVA
-   //minVal = 100;
+   minVal = 100;
 
    // d�clanchement de la sonde
    triggerSonde();
